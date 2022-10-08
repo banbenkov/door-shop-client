@@ -6,7 +6,7 @@ export const fetchDoors = () => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_DOORS'})
-            const response = await axios.get(`http://localhost:5000/door`)
+            const response = await axios.get(`http://89.223.66.133:5000/door`)
             dispatch({type: 'FETCH_DOORS_SUCCESS', payload: response.data})
         } catch (e) {
             dispatch({
@@ -22,7 +22,7 @@ export const fetchDoor = (id) => {
         try {
             dispatch({type: 'FETCH_DOOR_DETAIL'})
             dispatch({type: 'FETCH_DOOR_IMAGE'})
-            const response = await axios.get(`http://localhost:5000/door/${id}`)
+            const response = await axios.get(`http://89.223.66.133:5000/door/${id}`)
             const imgArr = response.data.img.split(';')
             const img = imgArr.map((elem) => {
                 const elemRet = elem.trim();

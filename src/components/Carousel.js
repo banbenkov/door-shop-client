@@ -1,13 +1,20 @@
 import React from 'react';
 import styles from '../css/style.css';
-import InfiniteCarousel from 'react-leaf-carousel';
+import Slider from "react-slick";
 
 const Carousel = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3
+    };
     return (
         <section className="py-lg-0 no-overflow">
             <div className="container">
                 {/*<div className="row align-items-center gutter-1">*/}
-                    <div className="col-lg-6 mt-2">
+                    <div className="col-lg-6 mt-2 mb-1">
                         <div className="pr-lg-3">
                             <div className="level-1">
                                 {/*<span class="eyebrow text-muted">Hot Products</span>*/}
@@ -15,85 +22,48 @@ const Carousel = () => {
                             </div>
                         </div>
                     </div>
-                    <InfiniteCarousel
-                        breakpoints={[
-                            {
-                                breakpoint: 500,
-                                settings: {
-                                    slidesToShow: 2,
-                                    slidesToScroll: 2,
-                                },
-                            },
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 3,
-                                    slidesToScroll: 3,
-                                },
-                            },
-                        ]}
-                        dots={true}
-                        showSides={true}
-                        sidesOpacity={0}
-                        sideSize={0.1}
-                        slidesToScroll={3}
-                        slidesToShow={3}
-                        scrollOnDevice={true}
-                    >
+                <Slider {...settings}>
+                        <div className="card card-product col-lg-10">
+                            <figure className="card-image">
+                                <a href="#!" className="action"><i className="icon-heart"></i></a>
+                                <a href="#!">
+                                    <img src="images/doors/product1-4.jpg" alt="Image" />
+                                        <img src="images/doors/product2-4.jpg" alt="Image" />
+                                </a>
 
-                        <div className="card card-product">
+                            </figure>
+                            <a href="" className="card-body">
+                                <h3 className="card-title">Орион ДГ/ДО Капучино</h3>
+                                <span className="price">4500.00₽</span>
+                            </a>
+
+                        </div>
+                        <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <a href="#!">
-                                    <img src="images/demo/product-1.jpg" alt="Image" />
-                                        <img src="images/demo/product-1-3.jpg" alt="Image" />
+                                    <img src="images/doors/product21-1-main.jpg" alt="Image" />
                                 </a>
                             </figure>
                             <a href="" className="card-body">
-                                <h3 className="card-title">Межкомнатная дверь DUPLEX</h3>
-                                <span className="price">5000.00₽</span>
+                                <h3 className="card-title">Урбан Беленый Дуб</h3>
+                                <span className="price">4500.00₽</span>
                             </a>
                         </div>
-                        <div className="card card-product">
+                        <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <a href="#!">
-                                    <img src="images/demo/product-2.jpg" alt="Image" />
-                                        <img src="images/demo/product-2-2.jpg" alt="Image" />
-                                </a>
-                            </figure>
-                            <a href="" className="card-body">
-                                <h3 className="card-title">Межкомнатная дверь DUPLEX дуб</h3>
-                                <span className="price">6000.00₽</span>
-                            </a>
-                        </div>
-                        <div className="card card-product">
-                            <figure className="card-image">
-                                <a href="#!" className="action"><i className="icon-heart"></i></a>
-                                <a href="#!">
-                                    <img src="images/demo/product-3.jpg" alt="Image" />
+                                    <img src="images/doors/product12-1.jpg" alt="Image" />
 
                                 </a>
                             </figure>
                             <a href="" className="card-body">
-                                <h3 className="card-title">Межкомнатная дверь DUPLEX экошпон</h3>
-                                <span className="price">6500.00₽</span>
+                                <h3 className="card-title">Палитра Белая ДГ</h3>
+                                <span className="price">4400.00₽</span>
                             </a>
                         </div>
-                        <div className="card card-product">
-                            <figure className="card-image">
-                                <a href="#!" className="action"><i className="icon-heart"></i></a>
-                                <a href="#!">
-                                    <img src="images/demo/product-4.jpg" alt="Image" />
-
-                                </a>
-                            </figure>
-                            <a href="" className="card-body">
-                                <h3 className="card-title">Межкомнатная дверь альфа ПГ</h3>
-                                <span className="price">5400.00₽</span>
-                            </a>
-                        </div>
-                    </InfiniteCarousel>
+                </Slider>
                 </div>
             {/*</div>*/}
         </section>

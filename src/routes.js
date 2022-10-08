@@ -1,4 +1,4 @@
-import {DOOR_ROUTE, ABOUT_ROUTE, CATALOG_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE} from "./utils/consts";
+import {ABOUT_ROUTE, CATALOG_ROUTE, CATEGORY_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE} from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
 import Catalog from "./pages/Catalog";
@@ -25,5 +25,9 @@ export const publicRoutes = [
     {
         path: CONTACTS_ROUTE,
         Component: <Contacts/>
+    },
+    {
+        path: CATEGORY_ROUTE + '/:id',
+        Component: <Catalog/>
     },
 ]

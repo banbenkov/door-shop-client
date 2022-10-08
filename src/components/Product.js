@@ -4,7 +4,8 @@ import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchDoor} from "../actions/door";
 import InfiniteCarousel from "react-leaf-carousel";
-import {Carousel} from "@trendyol-js/react-carousel";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 const Product = () => {
@@ -22,8 +23,20 @@ const Product = () => {
         dispatch(fetchDoor(id))
     }, [])
 
-    height = door.height !== undefined ? door.height.split(";") : '';
-    width = door.width !== undefined ? door.width.split(";") : '';
+    height = door.height !== undefined ? door.height.split(";") : [];
+    width = door.width !== undefined ? door.width.split(";") : [];
+    height = height.map((elem, index) => {
+        return {
+            value: elem,
+            isActive: index === 0
+        }
+    })
+    width = width.map((elem, index) => {
+        return {
+            value: elem,
+            isActive: index === 0
+        }
+    })
 
     // function ImgComponent({ src, alt }) {
     //     return (
@@ -59,22 +72,20 @@ const Product = () => {
 
 
                     {/*carousel*/}
-                    <div className="col-lg-5">
-
-
-                        <div className="card card-product">
-                            <figure className="card-image">
-                                <a href="#!" className="action"><i className="icon-heart"></i></a>
-                                <a href="#!">
-                                    <img src={`../images/doors/${img[0]}`}/>
-                                </a>
-                            </figure>
-                        </div>
-
-
+                    <div className="col-lg-4 ml-6">
+                        <Carousel infiniteLoop={true} showStatus={false}>
+                            {img.map((elem) => (
+                                <div className="card card-product">
+                                    <figure className="card-image">
+                                        <a href="" className="action"><i className="icon-heart"></i></a>
+                                        <img src={`../images/doors/${elem}`}/>
+                                    </figure>
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
 
-                    <div className="col-lg-5 mr-8 ">
+                    <div className="col-lg-5 mr-4 ">
 
                         {/*description*/}
                         <div className="row">
@@ -92,9 +103,9 @@ const Product = () => {
                                     <label>Ширина (мм)</label>
                                     <div className="btn-group-toggle btn-group-square" data-toggle="buttons">
                                         {
-                                            width !== '' && width.map((elem, index) => (
-                                                <label className="btn">
-                                                    <input type="radio" name="customRadio" id={`option-${index + 1}`}/>{elem.trim()}
+                                            width !== [] && width.map((elem, index) => (
+                                                <label className={elem.isActive ? "btn active" : "btn"}>
+                                                    <input type="radio" name="customRadio" id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
                                             ))
                                         }
@@ -106,9 +117,9 @@ const Product = () => {
                                     <label>Высота (мм)</label>
                                     <div className="btn-group-toggle btn-group-square" data-toggle="buttons">
                                         {
-                                            height !== '' && height.map((elem, index) => (
-                                                <label className="btn">
-                                                    <input type="radio" name="customRadio" id={`option-${index + 1}`}/>{elem.trim()}
+                                            height !== [] && height.map((elem, index) => (
+                                                <label className={elem.isActive ? "btn active" : "btn"}>
+                                                    <input type="radio" name="customRadio" id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
                                             ))
                                         }
@@ -123,7 +134,7 @@ const Product = () => {
                                         <label className="btn active texture-venge">
                                             <input type="radio" name="color-select" id="option-2-1" checked/>
                                         </label>
-                                        <label className="btn text-beton">
+                                        <label className="btn texture-venge">
                                             <input type="radio" name="color-select" id="option-2-2"/>
                                         </label>
                                         <label className="btn text-grey">

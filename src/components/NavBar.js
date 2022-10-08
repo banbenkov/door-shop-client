@@ -1,22 +1,49 @@
 import * as React from 'react';
 import styles from '../css/style.css';
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import {ABOUT_ROUTE, CATALOG_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE} from "../utils/consts";
+import {useState} from "react";
 
 
 const NavBar = () => {
+    const [collapseMenu, setCollapseMenu] = useState(false);
+    const location = useLocation();
+    console.log(location)
     return (
         <header className="header">
+            {location.pathname === '/' && (<div className="py-1 bg-dark">
+                <div className="container">
+                    <div className="row">
+
+                        <div className="col-md-4">
+                            <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
+                                className="icon-map mr-1 text-opaque"></i>Санкт-Петербург,
+                                Петергофское шоссе, 73</h6>
+                        </div>
+                        <div className="col-md-4">
+                            <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
+                                className="icon-watch mr-1 text-opaque"></i>с 08:00 до 21:00 </h6>
+                        </div>
+                        <div className="col-md-4">
+                            <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
+                                className="icon-phone-call mr-1 text-opaque"></i> +7 (812) 985-94-58</h6>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>)}
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <a href="index.html" className="navbar-brand order-1 order-lg-2"><img src="images/logo.png"
                                                                                           alt="Logo"/></a>
 
-                    <div className="collapse navbar-collapse order-4 order-lg-1" id="navbarMenu">
+                    <div className={collapseMenu ? "collapse show navbar-collapse order-4 order-lg-1"
+                        : "collapse navbar-collapse order-4 order-lg-1"} id="navbarMenu">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
                                 <NavLink to={INDEX_ROUTE} className="nav-link" activeClassName='curr'
-                                         className={({ isActive }) => (isActive ? 'nav-link text-red' : 'nav-link')}
+                                         className={({isActive}) => (isActive ? 'nav-link text-red' : 'nav-link')}
                                 >
                                     Главная
                                 </NavLink>
@@ -26,7 +53,7 @@ const NavBar = () => {
                                          role="button"
                                          data-toggle="dropdown"
                                          aria-haspopup="true" aria-expanded="false" activeClassName='curr'
-                                         className={({ isActive }) => (isActive ? 'nav-link dropdown-toggle text-red' : 'nav-link dropdown-toggle')}>
+                                         className={({isActive}) => (isActive ? `nav-link ${!collapseMenu && 'dropdown-toggle'} text-red` : `nav-link ${!collapseMenu && 'dropdown-toggle'}`)}>
                                     Каталог
                                 </NavLink>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown-2">
@@ -36,7 +63,8 @@ const NavBar = () => {
                                                 <span className="eyebrow text-muted mb-1">Межкомнатные двери</span>
                                                 <ul className="menu-list">
                                                     <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Экошпон Лайт</a>
+                                                                                      className="menu-list-link">Экошпон
+                                                        Лайт</a>
                                                     </li>
                                                     <li className="menu-list-item"><a href="listing.html"
                                                                                       className="menu-list-link">Экошпон</a>
@@ -50,13 +78,16 @@ const NavBar = () => {
                                                 <span className="eyebrow text-muted mb-1">Фурнитура</span>
                                                 <ul className="menu-list">
                                                     <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Дверные ручки</a>
+                                                                                      className="menu-list-link">Дверные
+                                                        ручки</a>
                                                     </li>
                                                     <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Дверные петли</a>
+                                                                                      className="menu-list-link">Дверные
+                                                        петли</a>
                                                     </li>
                                                     <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Ригеля и ограничители</a>
+                                                                                      className="menu-list-link">Ригеля
+                                                        и ограничители</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -66,12 +97,14 @@ const NavBar = () => {
                                 </div>
                             </li>
                             <li className="nav-item">
-                                <NavLink to={ABOUT_ROUTE} activeClassName='curr' className={({ isActive }) => (isActive ? 'nav-link text-red' : 'nav-link')}>
+                                <NavLink to={ABOUT_ROUTE} activeClassName='curr'
+                                         className={({isActive}) => (isActive ? 'nav-link text-red' : 'nav-link')}>
                                     О нас
                                 </NavLink>
                             </li>
                             <li className="nav-item dropdown-lg">
-                                <NavLink to={CONTACTS_ROUTE} href="contact.html" className={({ isActive }) => (isActive ? 'nav-link text-red' : 'nav-link')}>
+                                <NavLink to={CONTACTS_ROUTE} href="contact.html"
+                                         className={({isActive}) => (isActive ? 'nav-link text-red' : 'nav-link')}>
                                     Контакты
                                 </NavLink>
 
@@ -79,7 +112,8 @@ const NavBar = () => {
                         </ul>
                     </div>
 
-                    <div className="collapse navbar-collapse order-5 order-lg-3" id="navbarMenu2">
+                    <div className={collapseMenu ? "collapse show navbar-collapse order-5 order-lg-3"
+                        : "collapse navbar-collapse order-5 order-lg-3"} id="navbarMenu2">
                         <ul className="navbar-nav ml-auto position-relative">
 
                             {/*search*/}
@@ -159,31 +193,11 @@ const NavBar = () => {
                                         </div>
                                         <div className="col-12">
                                             <div className="cart-item">
-                                                <a href="#!" className="cart-item-image"><img
-                                                    src="images/demo/product-1.jpg"
-                                                    alt="Image"/></a>
-                                                <div className="cart-item-body">
-                                                    <div className="row">
-                                                        <div className="col-9">
-                                                            <h5 className="cart-item-title">Межкомнатная дверь
-                                                                DUPLEX</h5>
-                                                            <small>Новая цена</small>
-                                                            <ul className="list list--horizontal fs-14">
-                                                                <li><s>6200.00₽</s></li>
-                                                                <li className="text-red">5000.00₽</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="col-3 text-right">
-                                                            <ul className="cart-item-options">
-                                                                <li><a href="" className="icon-x"></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                Избранных товаров нет
                                             </div>
                                         </div>
                                         <div className="col-12">
-                                            <a href="" className="btn btn-primary btn-block">Добавить всё в корзину</a>
+                                            {/*<a href="" className="btn btn-primary btn-block">Добавить всё в корзину</a>*/}
                                             <a href="" className="btn btn-outline-secondary btn-block">Просмотреть
                                                 избранные
                                                 товары</a>
@@ -255,15 +269,15 @@ const NavBar = () => {
                                 <a href="" className="nav-icon"><i className="icon-search"></i></a>
                             </li>
 
-                            {/*cart*/}
-                            <li className="nav-item dropdown dropdown-md dropdown-hover">
-                                <a href="" className="nav-icon"><i className="icon-shopping-bag"></i></a>
-                            </li>
-
                             {/*menu*/}
                             <li className="nav-item dropdown dropdown-md dropdown-hover">
-                                <a href="" className="nav-icon" data-toggle="collapse" data-target=".navbar-collapse"
-                                   aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                                <a onClick={() => {
+                                    setCollapseMenu(!collapseMenu)
+                                }}
+                                   className={collapseMenu ? 'nav-icon' : 'nav-icon collapsed'} data-toggle="collapse"
+                                   data-target=".navbar-collapse"
+                                   aria-controls="navbarMenu" aria-expanded={collapseMenu ? 'true' : 'false'}
+                                   aria-label="Toggle navigation">
                                     <i className="icon-menu"></i>
                                 </a>
                             </li>

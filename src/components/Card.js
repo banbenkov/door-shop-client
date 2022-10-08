@@ -14,7 +14,8 @@ const Card = ({door}) => {
                         <img src={`images/doors/${doorImg1}`} alt="Image" />
                         <img src={`images/doors/${doorImg2}`} alt="Image" />
                     </NavLink>
-                    <span className="badge badge-success">New</span>
+                    {door.isNew && (<span className="badge badge-success">Новое</span>)}
+
                 </figure>
                 <div className="card-footer">
                     <h3 className="card-title"><a href="">{door.title}</a></h3>

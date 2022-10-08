@@ -5,7 +5,8 @@ const Info = () => {
         <section className="py-lg-0 no-overflow vh-100">
             <div className="image image-scroll" style={{backgroundImage: `url(images/demo/contact-bg.jpg)`}}
                  data--100-bottom-top="transform: translateY(0%);"
-                 data-top-bottom="transform: translateY(25%);"></div>
+                 data-top-bottom="transform: translateY(25%);"
+                 ></div>
             <div className="container">
                 <div className="row align-items-lg-center justify-content-center vh-100 gutter-1">
                     <div className="col-8 col-lg-4">

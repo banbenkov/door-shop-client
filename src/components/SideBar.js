@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
+import MultiRangeSlider from "./multiRangeSlider";
 
 const SideBar = () => {
+    const [collapse1, setCollapse1] = useState(true);
+    const [collapse2, setCollapse2] = useState(false);
+    const [collapse3, setCollapse3] = useState(true);
+    const [collapse4, setCollapse4] = useState(true);
+
     return (
         <aside className="col-lg-3 sidebar">
             <div className="widget d-none d-lg-block">
                 <span className="widget-title">Каталог</span>
                 <ul id="page-nav" className="nav flex-column nav-accordion">
                     <li className="nav-item active">
-                        <a className="nav-link" data-toggle="collapse" href="#menu-1" role="button" aria-expanded="true"
+                        <a onClick={() => {setCollapse1(!collapse1)}} className="nav-link" data-toggle="collapse" role="button"
+                           aria-expanded={collapse1 ? 'true' : 'false'}
                            aria-controls="menu-2">Межкомнатные двери</a>
-                        <div className="collapse show" id="menu-1" data-parent="#page-nav">
+                        <div className={collapse1 ? 'collapse show' : 'collapse'} id="menu-1" data-parent="#page-nav">
                             <div>
                                 <ul className="nav flex-column">
                                     <li className="nav-item">
@@ -26,9 +33,10 @@ const SideBar = () => {
                         </div>
                     </li>
                     <li className="nav-item active">
-                        <a className="nav-link" data-toggle="collapse" href="#menu-2" role="button" aria-expanded="true"
+                        <a onClick={() => {setCollapse2(!collapse2)}} className="nav-link" data-toggle="collapse" role="button"
+                           aria-expanded={collapse2 ? 'true' : 'false'}
                            aria-controls="menu-2">Фурнитура</a>
-                        <div className="collapse show" id="menu-2" data-parent="#page-nav">
+                        <div className={collapse2 ? 'collapse show' : 'collapse'} id="menu-2" data-parent="#page-nav">
                             <div>
                                 <ul className="nav flex-column">
                                     <li className="nav-item">
@@ -54,32 +62,32 @@ const SideBar = () => {
                     <div className="card">
                         <div className="card-header" id="heading-1-3">
                             <h5 className="mb-0">
-                                <button className="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapse-1-3" aria-expanded="false" aria-controls="collapse-1-3">
-                                    Цвет
+                                <button onClick={() => {setCollapse3(!collapse3)}} className="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapse-1-3" aria-expanded={collapse3 ? 'true' : 'false'} aria-controls="collapse-1-3">
+                                    Декор дверей
                                 </button>
                             </h5>
                         </div>
-                        <div id="collapse-1-3" className="collapse" aria-labelledby="heading-1-3">
+                        <div id="collapse-1-3" className={collapse3 ? 'collapse show' : 'collapse'} aria-labelledby="heading-1-3">
                             <div className="card-body">
                                 <div className="btn-group-toggle btn-group-square btn-group-colors"
                                      data-toggle="buttons">
-                                    <label className="btn active text-red">
+                                    <label className="btn active texture-capuchino">
                                         <input type="checkbox" name="color-select" id="option-2-1" checked/>
                                     </label>
-                                    <label className="btn text-blue">
+                                    <label className="btn texture-olha">
                                         <input type="checkbox" name="color-select" id="option-2-2"/>
                                     </label>
-                                    <label className="btn text-yellow">
+                                    <label className="btn texture-perlamutr">
                                         <input type="checkbox" name="color-select" id="option-2-3"/>
                                     </label>
-                                    <label className="btn text-green">
+                                    <label className="btn texture-beton">
                                         <input type="checkbox" name="color-select" id="option-2-4"/>
                                     </label>
-                                    <label className="btn text-white">
+                                    <label className="btn texture-greye">
                                         <input type="checkbox" name="color-select" id="option-2-5"/>
                                     </label>
-                                    <label className="btn text-dark">
+                                    <label className="btn active texture-venge">
                                         <input type="checkbox" name="color-select" id="option-2-6"/>
                                     </label>
                                 </div>
@@ -89,15 +97,19 @@ const SideBar = () => {
                     <div className="card">
                         <div className="card-header" id="heading-1-4">
                             <h5 className="mb-0">
-                                <button className="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapse-1-4" aria-expanded="false" aria-controls="collapse-1-4">
+                                <button onClick={() => {setCollapse4(!collapse4)}} className="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapse-1-4" aria-expanded={collapse4 ? 'true' : 'false'} aria-controls="collapse-1-4">
                                     Цена
                                 </button>
                             </h5>
                         </div>
-                        <div id="collapse-1-4" className="collapse" aria-labelledby="heading-1-4">
-                            <div className="card-body">
-                                <input type="text" className="rangeslider" name="Range Slider" value="2000"/>
+                        <div id="collapse-1-4" className={collapse4 ? 'collapse show' : 'collapse'} aria-labelledby="heading-1-4">
+                            <div className="card-body pb-5 pl-2 pr-2">
+                                <MultiRangeSlider
+                                    min={0}
+                                    max={1000}
+                                    onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+                                />
                             </div>
                         </div>
                     </div>
