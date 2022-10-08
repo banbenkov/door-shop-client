@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../css/style.css';
 import Slider from "react-slick";
+import {NavLink} from "react-router-dom";
 
 const Carousel = () => {
     const settings = {
@@ -26,42 +27,42 @@ const Carousel = () => {
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
-                                <a href="#!">
+                                <NavLink to="/doors/1">
                                     <img src="images/doors/product1-4.jpg" alt="Image" />
                                         <img src="images/doors/product2-4.jpg" alt="Image" />
-                                </a>
+                                </NavLink>
 
                             </figure>
-                            <a href="" className="card-body">
+                            <NavLink to="/doors/1" className="card-body">
                                 <h3 className="card-title">Орион ДГ/ДО Капучино</h3>
                                 <span className="price">4500.00₽</span>
-                            </a>
+                            </NavLink>
 
                         </div>
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
-                                <a href="#!">
+                                <NavLink to="/doors/22">
                                     <img src="images/doors/product21-1-main.jpg" alt="Image" />
-                                </a>
+                                </NavLink>
                             </figure>
-                            <a href="" className="card-body">
+                            <NavLink to="/doors/22" className="card-body">
                                 <h3 className="card-title">Урбан Беленый Дуб</h3>
                                 <span className="price">4500.00₽</span>
-                            </a>
+                            </NavLink>
                         </div>
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
-                                <a href="#!">
+                                <NavLink to="/doors/13">
                                     <img src="images/doors/product12-1.jpg" alt="Image" />
 
-                                </a>
+                                </NavLink>
                             </figure>
-                            <a href="" className="card-body">
+                            <NavLink to="/doors/13" className="card-body">
                                 <h3 className="card-title">Палитра Белая ДГ</h3>
                                 <span className="price">4400.00₽</span>
-                            </a>
+                            </NavLink>
                         </div>
                 </Slider>
                 </div>

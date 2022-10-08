@@ -1,5 +1,7 @@
 export const INDEX_ROUTE = '/'
 export const CATALOG_ROUTE = '/doors'
-export const CATEGORY_ROUTE = '/category'
+export const CATEGORY_EKOSHPON_LIGHT_ROUTE = '/ekoshpon-light'
+export const CATEGORY_EKOSHPON_ROUTE = '/ekoshpon'
+export const CATEGORY_WHITE_ROUTE = '/white'
 export const ABOUT_ROUTE = '/about'
 export const CONTACTS_ROUTE = '/contact'

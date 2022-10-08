@@ -4,7 +4,7 @@ import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchDoor} from "../actions/door";
 import InfiniteCarousel from "react-leaf-carousel";
-import { Carousel } from 'react-responsive-carousel';
+import {Carousel} from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
@@ -17,6 +17,9 @@ const Product = () => {
     let width = [];
     const [collapse1, setCollapse1] = useState(true);
     const [collapse2, setCollapse2] = useState(false);
+    const [additionalPrice, setAdditionalPrice] = useState(0);
+    const [activeWidth, setActiveWidth] = useState(0)
+    const [activeHeight, setActiveHeight] = useState(0)
 
 
     useEffect(() => {
@@ -28,13 +31,13 @@ const Product = () => {
     height = height.map((elem, index) => {
         return {
             value: elem,
-            isActive: index === 0
+            isActive: index === activeHeight
         }
     })
     width = width.map((elem, index) => {
         return {
             value: elem,
-            isActive: index === 0
+            isActive: index === activeWidth
         }
     })
 
@@ -65,6 +68,16 @@ const Product = () => {
         setCollapse2(!collapse2);
     }
 
+    const soldCheckbox = ({ target: { checked } }, value) => {
+        if (checked === true) {
+            setAdditionalPrice(additionalPrice + value)
+        } else {
+            setAdditionalPrice(additionalPrice - value)
+        }
+
+
+    };
+
     return (
         <section className="hero bg-white mt-2 mb-2">
             <div className="container">
@@ -85,17 +98,64 @@ const Product = () => {
                         </Carousel>
                     </div>
 
-                    <div className="col-lg-5 mr-4 ">
+                    <div className="col-lg-6 mr-4 ">
 
                         {/*description*/}
                         <div className="row">
                             <div className="col-12">
                                 <span className="eyebrow text-muted">Межкомнатные двери</span>
                                 <h1>{door.title}</h1>
-                                <span className="price fs-18">{door.price}₽</span>
+                                <span className="price fs-18">{door.price}₽ {additionalPrice > 0 && `+ ${additionalPrice}₽`}</span>
                             </div>
                         </div>
-
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e ,1500)} type="checkbox" className="custom-control-input" id="customCheck1"/>
+                            <label className="custom-control-label" htmlFor="customCheck1">
+                                Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1500₽
+                            </label>
+                        </div>
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox" className="custom-control-input" id="customCheck2"/>
+                            <label className="custom-control-label" htmlFor="customCheck2">
+                                Сборка в блок-1000₽
+                            </label>
+                        </div>
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e, 900)} type="checkbox" className="custom-control-input" id="customCheck3"/>
+                            <label className="custom-control-label" htmlFor="customCheck3">
+                                Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы-900₽
+                            </label>
+                        </div>
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e, 600)} type="checkbox" className="custom-control-input" id="customCheck4"/>
+                            <label className="custom-control-label" htmlFor="customCheck4">
+                                Завертка сантехника "Code Deco" (Испания) на стяжках-600₽
+                            </label>
+                        </div>
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e, 300)} type="checkbox" className="custom-control-input" id="customCheck5"/>
+                            <label className="custom-control-label" htmlFor="customCheck5">
+                                Добор-300Р
+                            </label>
+                        </div>
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e, 3000)} type="checkbox" className="custom-control-input" id="customCheck6"/>
+                            <label className="custom-control-label" htmlFor="customCheck6">
+                                Установка-3000₽
+                            </label>
+                        </div>
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e, 500)} type="checkbox" className="custom-control-input" id="customCheck7"/>
+                            <label className="custom-control-label" htmlFor="customCheck7">
+                                Демонтаж-500Р
+                            </label>
+                        </div>
+                        <div className="custom-control custom-checkbox mb-1">
+                            <input onChange={e => soldCheckbox(e, 1400)} type="checkbox" className="custom-control-input" id="customCheck8"/>
+                            <label className="custom-control-label" htmlFor="customCheck8">
+                                Доставка по городу до парадной-1400₽
+                            </label>
+                        </div>
 
                         <div className="row gutter-2">
                             <div className="col-12">
@@ -105,7 +165,8 @@ const Product = () => {
                                         {
                                             width !== [] && width.map((elem, index) => (
                                                 <label className={elem.isActive ? "btn active" : "btn"}>
-                                                    <input type="radio" name="customRadio" id={`option-${index + 1}`}/>{elem.value.trim()}
+                                                    <input onChange={e => setActiveWidth(index)} type="radio" name="customRadio"
+                                                           id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
                                             ))
                                         }
@@ -119,7 +180,8 @@ const Product = () => {
                                         {
                                             height !== [] && height.map((elem, index) => (
                                                 <label className={elem.isActive ? "btn active" : "btn"}>
-                                                    <input type="radio" name="customRadio" id={`option-${index + 1}`}/>{elem.value.trim()}
+                                                    <input onChange={e => setActiveHeight(index)} type="radio" name="customRadio"
+                                                           id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
                                             ))
                                         }
@@ -156,14 +218,16 @@ const Product = () => {
                                         <div className="card-header" id="heading-1-1">
                                             <h5 className="mb-0">
                                                 <button className="btn btn-link" type="button" data-toggle="collapse"
-                                                        data-target="#collapse-1-1" aria-expanded={`${collapse1 ? 'true' : 'false'}`}
+                                                        data-target="#collapse-1-1"
+                                                        aria-expanded={`${collapse1 ? 'true' : 'false'}`}
                                                         aria-controls="collapse-1-1" onClick={openTab1}>
                                                     Характеристики
                                                 </button>
                                             </h5>
                                         </div>
 
-                                        <div id="collapse-1-1" className={`collapse ${collapse1 ? 'show' : ''}`} aria-labelledby="heading-1-1"
+                                        <div id="collapse-1-1" className={`collapse ${collapse1 ? 'show' : ''}`}
+                                             aria-labelledby="heading-1-1"
                                              data-parent="#accordion-1">
                                             <div className="card-body">
                                                 <ul className="list list--unordered">
@@ -182,13 +246,15 @@ const Product = () => {
                                             <h5 className="mb-0">
                                                 <button className="btn btn-link collapsed" type="button"
                                                         data-toggle="collapse" data-target="#collapse-1-2"
-                                                        aria-expanded={`${collapse2 ? 'true' : 'false'}`} aria-controls="collapse-1-2"
-                                                onClick={openTab2}>
+                                                        aria-expanded={`${collapse2 ? 'true' : 'false'}`}
+                                                        aria-controls="collapse-1-2"
+                                                        onClick={openTab2}>
                                                     Описание
                                                 </button>
                                             </h5>
                                         </div>
-                                        <div id="collapse-1-2" className={`collapse ${collapse2 ? 'show' : ''}`} aria-labelledby="heading-1-2"
+                                        <div id="collapse-1-2" className={`collapse ${collapse2 ? 'show' : ''}`}
+                                             aria-labelledby="heading-1-2"
                                              data-parent="#accordion-1">
                                             <div className="card-body">
                                                 <p>{door.description}</p>

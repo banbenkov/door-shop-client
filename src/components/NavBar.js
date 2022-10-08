@@ -1,14 +1,21 @@
 import * as React from 'react';
 import styles from '../css/style.css';
 import {NavLink, useLocation} from "react-router-dom";
-import {ABOUT_ROUTE, CATALOG_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE} from "../utils/consts";
+import logo from '../img/logo.png'
+import {
+    ABOUT_ROUTE,
+    CATALOG_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE,
+    CONTACTS_ROUTE,
+    INDEX_ROUTE
+} from "../utils/consts";
 import {useState} from "react";
 
 
 const NavBar = () => {
     const [collapseMenu, setCollapseMenu] = useState(false);
     const location = useLocation();
-    console.log(location)
     return (
         <header className="header">
             {location.pathname === '/' && (<div className="py-1 bg-dark">
@@ -35,7 +42,7 @@ const NavBar = () => {
             </div>)}
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
-                    <a href="index.html" className="navbar-brand order-1 order-lg-2"><img src="images/logo.png"
+                    <a href="index.html" className="navbar-brand order-1 order-lg-2"><img src={logo}
                                                                                           alt="Logo"/></a>
 
                     <div className={collapseMenu ? "collapse show navbar-collapse order-4 order-lg-1"
@@ -62,15 +69,15 @@ const NavBar = () => {
                                             <div className="col-lg-2">
                                                 <span className="eyebrow text-muted mb-1">Межкомнатные двери</span>
                                                 <ul className="menu-list">
-                                                    <li className="menu-list-item"><a href="listing.html"
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
                                                                                       className="menu-list-link">Экошпон
-                                                        Лайт</a>
+                                                        Лайт</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Экошпон</a>
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
+                                                                                      className="menu-list-link">Экошпон</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Белые</a>
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
+                                                                                      className="menu-list-link">Белые двери</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>

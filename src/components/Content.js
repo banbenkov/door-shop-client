@@ -3,18 +3,43 @@ import Card from "./Card";
 import styles from '../css/style.css'
 import {fetchDoors} from "../actions/door";
 import {useDispatch, useSelector} from "react-redux";
+import {useLocation, useParams} from "react-router-dom";
+import {CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE} from "../utils/consts";
 
 
 
 const Content = () => {
+    const location = useLocation();
     const dispatch = useDispatch()
-    const doors = useSelector(state => state.door.doors)
+    const doorsFetch = useSelector(state => state.door.doors)
     const [currentPage, setCurrentPage] = useState(1);
     const [doorPerPage] = useState(6)
-
+    let doors = [];
+    let categoryName = '';
     useEffect(() => {
         dispatch(fetchDoors())
     }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [currentPage])
+    switch (location.pathname) {
+        case CATEGORY_EKOSHPON_LIGHT_ROUTE:
+            doors = doorsFetch.filter(door => door.category === '1');
+            categoryName = 'Экошпон ЛАЙТ'
+            break;
+        case CATEGORY_EKOSHPON_ROUTE:
+            doors = doorsFetch.filter(door => door.category === '2');
+            categoryName = 'Экошпон'
+            break;
+        case CATEGORY_WHITE_ROUTE:
+            doors = doorsFetch.filter(door => door.category === '3');
+            categoryName = 'Белые двери'
+            break;
+        default:
+            doors = doorsFetch;
+            categoryName = 'Все двери'
+
+    }
 
     const lastDoorIndex = currentPage * doorPerPage;
     const firstDoorIndex = lastDoorIndex - doorPerPage;
@@ -34,7 +59,7 @@ const Content = () => {
         <div className="col-lg-9">
             <div className="row gutter-1 align-items-end">
                 <div className="col-md-6">
-                    <h1>Экошпон</h1>
+                    <h1>{categoryName}</h1>
                 </div>
                 <div className="col-md-6 text-md-right">
                     <ul className="list list--horizontal list--separated text-muted fs-14">
@@ -74,7 +99,7 @@ const Content = () => {
                                 : (<li className="page-item"><a className="page-link none-active">Предыдущая</a></li>)
                             }
                             {pageNumbers.map((number) => (
-                                <li onClick={() => paginate(number)} key={number} className={`page-item ${currentPage === number && 'active'} `}><a className="page-link" href="#!">{number}</a></li>
+                                <li onClick={() => paginate(number)} key={number} className={`page-item ${currentPage === number && 'active'} `}><a className="page-link">{number}</a></li>
                             ))}
                             {currentPage < pageNumbers.length ?
                                 (<li onClick={() => nextPaginate()} className="page-item"><a className="page-link">Следующая</a></li>)

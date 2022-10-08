@@ -3385,6 +3385,7 @@ input[type="button"].btn-block {
     color: #252222;
     text-decoration: none;
     background-color: transparent;
+    cursor: pointer;
     border-color: transparent; }
   .page-link:focus {
     z-index: 3;
@@ -14075,5 +14076,10 @@ div.code-toolbar > .toolbar span:focus {
   color: #4d4646;
 
 }
+
+.img-card{
+  height: 590px;
+}
+
 
 

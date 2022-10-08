@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import MultiRangeSlider from "./multiRangeSlider";
+import NavBar from "./NavBar";
+import {NavLink} from "react-router-dom";
 
 const SideBar = () => {
     const [collapse1, setCollapse1] = useState(true);
@@ -19,14 +21,14 @@ const SideBar = () => {
                         <div className={collapse1 ? 'collapse show' : 'collapse'} id="menu-1" data-parent="#page-nav">
                             <div>
                                 <ul className="nav flex-column">
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="#!">Экошпон лайт</a>
+                                    <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                        <NavLink className="nav-link" to='/ekoshpon-light'>Экошпон лайт</NavLink>
                                     </li>
-                                    <li className="nav-item active">
-                                        <a className="nav-link" href="#!">Экошпон</a>
+                                    <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                        <NavLink className="nav-link" to="/ekoshpon">Экошпон</NavLink>
                                     </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="#!">Белые</a>
+                                    <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                        <NavLink className="nav-link" to='/white'>Белые двери</NavLink>
                                     </li>
                                 </ul>
                             </div>

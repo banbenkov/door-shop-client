@@ -19,18 +19,25 @@ export const fetchDoors = () => {
 
 export const fetchDoor = (id) => {
     return async dispatch => {
+        let imgArr;
+        let img = [];
         try {
             dispatch({type: 'FETCH_DOOR_DETAIL'})
             dispatch({type: 'FETCH_DOOR_IMAGE'})
             const response = await axios.get(`http://89.223.66.133:5000/door/${id}`)
-            const imgArr = response.data.img.split(';')
-            const img = imgArr.map((elem) => {
-                const elemRet = elem.trim();
-                if (elemRet !== '') {
-                    return elemRet;
-                }
-            })
-            img.pop();
+            if (response.data.img.indexOf(';') !== -1) {
+                imgArr = response.data.img.split(';')
+                img = imgArr.map((elem) => {
+                    const elemRet = elem.trim();
+                    if (elemRet !== '') {
+                        return elemRet;
+                    }
+                })
+            } else {
+                img[0] = response.data.img;
+            }
+
+
             dispatch({type: 'FETCH_DOOR_DETAIL_SUCCESS', payload: response.data})
             dispatch({type: 'FETCH_DOOR_IMAGE_SUCCESS', payload: img})
         } catch (e) {
