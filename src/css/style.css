@@ -17884,15 +17884,15 @@ img {
     display: block;
     width: 100%;
     padding: 0.9375rem 1.875rem;
-    background: #ECE8E5;
-    color: #000;
+    background: #000;
+    color: #fff;
     text-align: center;
 }
 
-.category:hover figcaption {
-    background: #000;
-    color: #fff;
-}
+/*.category:hover figcaption {*/
+/*    background: #000;*/
+/*    color: #fff;*/
+/*}*/
 
 .category--alt figcaption {
     -webkit-transition: all 0.2s;
@@ -17902,16 +17902,16 @@ img {
     -moz-transition-delay: 0s;
     transition-delay: 0s;
     position: absolute;
-    bottom: -1.875rem;
+    bottom: 0;
     background: #000;
     color: #fff;
-    opacity: 0;
-}
-
-.category--alt:hover figcaption {
-    bottom: 0;
     opacity: 1;
 }
+
+/*.category--alt:hover figcaption {*/
+/*    bottom: 0;*/
+/*    opacity: 1;*/
+/*}*/
 
 .owl-carousel {
     position: relative;
