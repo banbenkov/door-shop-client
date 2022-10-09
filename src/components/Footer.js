@@ -2,6 +2,10 @@ import * as React from 'react';
 import styles from '../css/style.css';
 import {NavLink} from "react-router-dom";
 import {ABOUT_ROUTE, CATALOG_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE} from "../utils/consts";
+import masterCard from "../img/master-card-1.svg";
+import mir from "../img/mir.svg";
+import visa from "../img/visa-1.svg";
+
 
 
 
@@ -40,8 +44,9 @@ const Footer = () => {
                                 <span className="input-combined_indicator"></span>
                         </div>
                         <ul className="list list--horizontal">
-                            <li><a href="#!" className="text-hover-instagram"><i
-                                className="fs-28 icon-instagram-square-brands"></i></a>
+                            <li><a href="#!" className="text-hover-instagram">
+                                <i className="bi bi-instagram"></i>
+                            </a>
                             </li>
                         </ul>
                     </div>
@@ -51,11 +56,11 @@ const Footer = () => {
 
                         <div className="select-frame">
                             <h6 className="fs-14 text-white m-0"><i
-                                className="icon-map mr-1 text-opaque"></i>
+                                className="bi bi-map mr-1 text-opaque"></i>
                                 Санкт-Петербург,
                                 Петергофское шоссе, 73</h6>
                             <h6 className="fs-14 text-white m-0"><i
-                                className="icon-phone mr-1 text-opaque"></i>
+                                className="bi bi-telephone mr-1 text-opaque"></i>
                                 +7 (812) 985-94-58</h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="mr-3 text-opaque"></i>
@@ -65,9 +70,9 @@ const Footer = () => {
                                 +7 (905) 223-39-39</h6>
                         </div>
                         <ul className="list list--horizontal mt-2">
-                            <li><img src="images/demo/visa-1.svg" className="payment" alt="Image" /></li>
-                            <li><img src="images/demo/master-card-1.svg" className="payment" alt="Image" /></li>
-                            <li><img src="images/demo/mir.svg" className="payment" alt="Image" /></li>
+                            <li><img src={visa} className="payment" alt="Image" /></li>
+                            <li><img src={masterCard} className="payment" alt="Image" /></li>
+                            <li><img src={mir} className="payment" alt="Image" /></li>
                         </ul>
                     </div>
                 </div>

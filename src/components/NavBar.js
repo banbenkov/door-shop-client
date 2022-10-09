@@ -18,28 +18,29 @@ const NavBar = () => {
     const location = useLocation();
     return (
         <header className="header">
-            {location.pathname === '/' && (<div className="py-1 bg-dark">
-                <div className="container">
-                    <div className="row">
+            {location.pathname === '/' && (
+                <div className="py-1 bg-dark">
+                    <div className="container">
+                        <div className="row">
 
-                        <div className="col-md-4">
-                            <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
-                                className="icon-map mr-1 text-opaque"></i>Санкт-Петербург,
-                                Петергофское шоссе, 73</h6>
-                        </div>
-                        <div className="col-md-4">
-                            <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
-                                className="icon-watch mr-1 text-opaque"></i>с 08:00 до 21:00 </h6>
-                        </div>
-                        <div className="col-md-4">
-                            <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
-                                className="icon-phone-call mr-1 text-opaque"></i> +7 (812) 985-94-58</h6>
-                        </div>
+                            <div className="col-md-4">
+                                <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
+                                    className="bi bi-geo-alt mr-1 text-opaque"></i>Санкт-Петербург,
+                                    Петергофское шоссе, 73</h6>
+                            </div>
+                            <div className="col-md-4">
+                                <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
+                                    className="bi bi-watch mr-1 text-opaque"></i>с 08:00 до 21:00 </h6>
+                            </div>
+                            <div className="col-md-4">
+                                <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
+                                    className="bi bi-telephone mr-1 text-opaque"></i>+7 (812) 985-94-58</h6>
+                            </div>
 
 
+                        </div>
                     </div>
-                </div>
-            </div>)}
+                </div>)}
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <a href="index.html" className="navbar-brand order-1 order-lg-2"><img src={logo}
@@ -69,15 +70,17 @@ const NavBar = () => {
                                             <div className="col-lg-2">
                                                 <span className="eyebrow text-muted mb-1">Межкомнатные двери</span>
                                                 <ul className="menu-list">
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
-                                                                                      className="menu-list-link">Экошпон
+                                                    <li className="menu-list-item"><NavLink
+                                                        to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
+                                                        className="menu-list-link">Экошпон
                                                         Лайт</NavLink>
                                                     </li>
                                                     <li className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
-                                                                                      className="menu-list-link">Экошпон</NavLink>
+                                                                                            className="menu-list-link">Экошпон</NavLink>
                                                     </li>
                                                     <li className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
-                                                                                      className="menu-list-link">Белые двери</NavLink>
+                                                                                            className="menu-list-link">Белые
+                                                        двери</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>
