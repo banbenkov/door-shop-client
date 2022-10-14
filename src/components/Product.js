@@ -17,14 +17,17 @@ const Product = () => {
     let width = [];
     const [collapse1, setCollapse1] = useState(true);
     const [collapse2, setCollapse2] = useState(false);
-    const [additionalPrice, setAdditionalPrice] = useState(door.price);
-    const [activeWidth, setActiveWidth] = useState(0)
-    const [activeHeight, setActiveHeight] = useState(0)
-
-
+    const [additionalPrice, setAdditionalPrice] = useState(0);
+    const [activeWidth, setActiveWidth] = useState(0);
+    const [activeHeight, setActiveHeight] = useState(0);
+    let doorPrice = 0;
     useEffect(() => {
         dispatch(fetchDoor(id))
+
     }, [])
+    useEffect(() => {
+        setAdditionalPrice(door.price)
+    }, [door.price])
 
     height = door.height !== undefined ? door.height.split(";") : [];
     width = door.width !== undefined ? door.width.split(";") : [];
@@ -40,6 +43,7 @@ const Product = () => {
             isActive: index === activeWidth
         }
     })
+
 
     // function ImgComponent({ src, alt }) {
     //     return (

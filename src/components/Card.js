@@ -6,7 +6,7 @@ const Card = ({door}) => {
     let doorImg2 = '';
     const doorImg1 = pictures[0];
     if (pictures.length > 1) {
-        const doorImg2 = pictures[1].trim();
+        doorImg2 = pictures[1].trim();
     }
     return (
         <div className="col-6 col-md-4">
