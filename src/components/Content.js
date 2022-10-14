@@ -41,6 +41,8 @@ const Content = () => {
 
     }
 
+    doors.sort((a,b) => a.rate - b.rate);
+
     const lastDoorIndex = currentPage * doorPerPage;
     const firstDoorIndex = lastDoorIndex - doorPerPage;
     const currentDoors = doors.slice(firstDoorIndex, lastDoorIndex);
