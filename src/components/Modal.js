@@ -21,7 +21,7 @@ const Modal = () => {
                     </div>
                     <div className="modal-body">
                         <p>
-                            Оставьте свой номер и мы вам перезвоним
+                            Оставьте свой номер и мы вам перезвоним!
                         </p>
                         <div className="form-group mb-2">
                             <label htmlFor="exampleInput-1">Ваше имя</label>
