@@ -1,0 +1,58 @@
+import React from 'react';
+import {useDispatch} from "react-redux";
+
+const Modal = () => {
+    const dispatch = useDispatch();
+    const closeModal = () => {
+        dispatch({type: 'HIDE_MODAL'})
+    }
+    return (
+        <div className="modal fade show" id="exampleModal-1" tabIndex="-1"
+             aria-labelledby="exampleModalLabel" style={{display: 'block', paddingRight: '17px'}}
+             aria-modal="true" role="dialog">
+            <div className="modal-dialog" role="document">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLabel">Заказать</h5>
+                        <button onClick={closeModal} type="button" className="close" data-dismiss="modal"
+                                aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div className="modal-body">
+                        <p>
+                            Оставьте свой номер и мы вам перезвоним
+                        </p>
+                        <div className="form-group mb-2">
+                            <label htmlFor="exampleInput-1">Ваше имя</label>
+                            <input id="exampleInput-1" className="form-control form-control-sm"
+                                   type="text"  />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label htmlFor="exampleInput-1">Ваш номер</label>
+                            <input id="exampleInput-1" className="form-control form-control-sm"
+                                   type="text" />
+                        </div>
+                    </div>
+                    <div className="modal-footer">
+                        <div className="container-fluid">
+                            <div className="row gutter-0">
+                                <div className="col">
+                                    <button onClick={closeModal} type="button" className="btn btn-block btn-secondary"
+                                            data-dismiss="modal">Закрыть
+                                    </button>
+                                </div>
+                                <div className="col">
+                                    <button type="button" className="btn btn-block btn-primary">Заказать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Modal;

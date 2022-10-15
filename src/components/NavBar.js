@@ -11,11 +11,13 @@ import {
     INDEX_ROUTE
 } from "../utils/consts";
 import {useState} from "react";
+import {useSelector} from "react-redux";
 
 
 const NavBar = () => {
     const [collapseMenu, setCollapseMenu] = useState(false);
     const location = useLocation();
+    const showModal = useSelector(state => state.modal.show);
     return (
         <header className="header">
             {location.pathname === '/' && (
@@ -297,6 +299,7 @@ const NavBar = () => {
 
                 </nav>
             </div>
+            {showModal && (<div className="modal-backdrop fade show"></div>)}
         </header>
     );
 };

@@ -6,6 +6,7 @@ import {fetchDoor} from "../actions/door";
 import InfiniteCarousel from "react-leaf-carousel";
 import {Carousel} from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Modal from "./Modal";
 
 
 const Product = () => {
@@ -13,6 +14,7 @@ const Product = () => {
     const dispatch = useDispatch();
     const door = useSelector(state => state.doorDetail.door);
     const img = useSelector(state => state.doorImg.image);
+    const showModal = useSelector(state => state.modal.show)
     let height = [];
     let width = [];
     const [collapse1, setCollapse1] = useState(true);
@@ -44,26 +46,6 @@ const Product = () => {
         }
     })
 
-
-    // function ImgComponent({ src, alt }) {
-    //     return (
-    //         <div className="card card-product">
-    //             <figure className="card-image">
-    //                 <a href="#!" className="action"><i className="icon-heart"></i></a>
-    //                 <a href="#!">
-    //                     <img src={src} alt={alt} />
-    //                 </a>
-    //             </figure>
-    //         </div>
-    //     );
-    // }
-    //
-    // const ImgDataIterator = img.map((element) => (
-    //
-    //     <ImgComponent src={`../images/doors/${element.trim()}`}  alt={'Дверь'}/>
-    //
-    // ));
-
     const openTab1 = (e) => {
         setCollapse1(!collapse1);
     }
@@ -72,7 +54,7 @@ const Product = () => {
         setCollapse2(!collapse2);
     }
 
-    const soldCheckbox = ({ target: { checked } }, value) => {
+    const soldCheckbox = ({target: {checked}}, value) => {
         if (checked === true) {
             setAdditionalPrice(additionalPrice + value)
         } else {
@@ -81,6 +63,10 @@ const Product = () => {
 
 
     };
+
+    const openModal = () => {
+        dispatch({type: 'SHOW_MODAL'})
+    }
 
     return (
         <section className="hero bg-white mt-2 mb-2">
@@ -113,61 +99,71 @@ const Product = () => {
                             </div>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e ,1000)} type="checkbox" className="custom-control-input" id="customCheck1"/>
+                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox"
+                                   className="custom-control-input" id="customCheck1"/>
                             <label className="custom-control-label" htmlFor="customCheck1">
-                                Коробка комплект (2,5шт)-1000₽
+                                Коробка комплект(2,5шт)-1000₽
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e ,1000)} type="checkbox" className="custom-control-input" id="customCheck2"/>
+                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox"
+                                   className="custom-control-input" id="customCheck2"/>
                             <label className="custom-control-label" htmlFor="customCheck2">
                                 Наличник комплект(5шт)-1000₽
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 300)} type="checkbox" className="custom-control-input" id="customCheck3"/>
+                            <input onChange={e => soldCheckbox(e, 300)} type="checkbox" className="custom-control-input"
+                                   id="customCheck3"/>
                             <label className="custom-control-label" htmlFor="customCheck3">
                                 Добор-300Р
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e ,1500)} type="checkbox" className="custom-control-input" id="customCheck4"/>
+                            <input onChange={e => soldCheckbox(e, 1500)} type="checkbox"
+                                   className="custom-control-input" id="customCheck4"/>
                             <label className="custom-control-label" htmlFor="customCheck4">
                                 Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1500₽
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox" className="custom-control-input" id="customCheck5"/>
+                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox"
+                                   className="custom-control-input" id="customCheck5"/>
                             <label className="custom-control-label" htmlFor="customCheck5">
                                 Сборка в блок-1000₽
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 900)} type="checkbox" className="custom-control-input" id="customCheck6"/>
+                            <input onChange={e => soldCheckbox(e, 900)} type="checkbox" className="custom-control-input"
+                                   id="customCheck6"/>
                             <label className="custom-control-label" htmlFor="customCheck6">
                                 Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы-900₽
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 600)} type="checkbox" className="custom-control-input" id="customCheck7"/>
+                            <input onChange={e => soldCheckbox(e, 600)} type="checkbox" className="custom-control-input"
+                                   id="customCheck7"/>
                             <label className="custom-control-label" htmlFor="customCheck7">
                                 Завертка сантехника "Code Deco" (Испания) на стяжках-600₽
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 3000)} type="checkbox" className="custom-control-input" id="customCheck8"/>
+                            <input onChange={e => soldCheckbox(e, 3000)} type="checkbox"
+                                   className="custom-control-input" id="customCheck8"/>
                             <label className="custom-control-label" htmlFor="customCheck8">
                                 Установка-3000₽
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 500)} type="checkbox" className="custom-control-input" id="customCheck9"/>
+                            <input onChange={e => soldCheckbox(e, 500)} type="checkbox" className="custom-control-input"
+                                   id="customCheck9"/>
                             <label className="custom-control-label" htmlFor="customCheck9">
                                 Демонтаж-500Р
                             </label>
                         </div>
                         <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 1400)} type="checkbox" className="custom-control-input" id="customCheck10"/>
+                            <input onChange={e => soldCheckbox(e, 1400)} type="checkbox"
+                                   className="custom-control-input" id="customCheck10"/>
                             <label className="custom-control-label" htmlFor="customCheck10">
                                 Доставка по городу до парадной-1400₽
                             </label>
@@ -181,7 +177,8 @@ const Product = () => {
                                         {
                                             width !== [] && width.map((elem, index) => (
                                                 <label className={elem.isActive ? "btn active" : "btn"}>
-                                                    <input onChange={e => setActiveWidth(index)} type="radio" name="customRadio"
+                                                    <input onChange={e => setActiveWidth(index)} type="radio"
+                                                           name="customRadio"
                                                            id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
                                             ))
@@ -196,7 +193,8 @@ const Product = () => {
                                         {
                                             height !== [] && height.map((elem, index) => (
                                                 <label className={elem.isActive ? "btn active" : "btn"}>
-                                                    <input onChange={e => setActiveHeight(index)} type="radio" name="customRadio"
+                                                    <input onChange={e => setActiveHeight(index)} type="radio"
+                                                           name="customRadio"
                                                            id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
                                             ))
@@ -222,8 +220,9 @@ const Product = () => {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <a href="" className="btn btn-block btn-primary">Заказать</a>
+                                <a onClick={openModal} className="btn btn-block btn-primary">Заказать</a>
                             </div>
+                            {showModal && (<Modal/>)}
                         </div>
 
                         {/*accordion*/}

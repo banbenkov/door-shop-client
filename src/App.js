@@ -6,13 +6,13 @@ import Footer from "./components/Footer";
 
 
 function App() {
-  return (
-    <BrowserRouter>
-        <NavBar />
-        <AppRouter />
-        <Footer />
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <NavBar/>
+            <AppRouter/>
+            <Footer/>
+        </BrowserRouter>
+    );
 }
 
 export default App;
