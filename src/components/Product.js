@@ -7,6 +7,8 @@ import InfiniteCarousel from "react-leaf-carousel";
 import {Carousel} from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Modal from "./Modal";
+import AdditionCat1 from "./AdditionCat1";
+import AdditionCat2 from "./AdditionCat2";
 
 
 const Product = () => {
@@ -98,76 +100,8 @@ const Product = () => {
                                 <span className="price fs-18">{additionalPrice}₽</span>
                             </div>
                         </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox"
-                                   className="custom-control-input" id="customCheck1"/>
-                            <label className="custom-control-label" htmlFor="customCheck1">
-                                Коробка комплект(2,5шт)-1000₽
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox"
-                                   className="custom-control-input" id="customCheck2"/>
-                            <label className="custom-control-label" htmlFor="customCheck2">
-                                Наличник комплект(5шт)-1000₽
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 300)} type="checkbox" className="custom-control-input"
-                                   id="customCheck3"/>
-                            <label className="custom-control-label" htmlFor="customCheck3">
-                                Добор-300Р
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 1500)} type="checkbox"
-                                   className="custom-control-input" id="customCheck4"/>
-                            <label className="custom-control-label" htmlFor="customCheck4">
-                                Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1500₽
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 1000)} type="checkbox"
-                                   className="custom-control-input" id="customCheck5"/>
-                            <label className="custom-control-label" htmlFor="customCheck5">
-                                Сборка в блок-1000₽
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 900)} type="checkbox" className="custom-control-input"
-                                   id="customCheck6"/>
-                            <label className="custom-control-label" htmlFor="customCheck6">
-                                Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы-900₽
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 600)} type="checkbox" className="custom-control-input"
-                                   id="customCheck7"/>
-                            <label className="custom-control-label" htmlFor="customCheck7">
-                                Завертка сантехника "Code Deco" (Испания) на стяжках-600₽
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 3000)} type="checkbox"
-                                   className="custom-control-input" id="customCheck8"/>
-                            <label className="custom-control-label" htmlFor="customCheck8">
-                                Установка-3000₽
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 500)} type="checkbox" className="custom-control-input"
-                                   id="customCheck9"/>
-                            <label className="custom-control-label" htmlFor="customCheck9">
-                                Демонтаж-500Р
-                            </label>
-                        </div>
-                        <div className="custom-control custom-checkbox mb-1">
-                            <input onChange={e => soldCheckbox(e, 1400)} type="checkbox"
-                                   className="custom-control-input" id="customCheck10"/>
-                            <label className="custom-control-label" htmlFor="customCheck10">
-                                Доставка по городу до парадной-1400₽
-                            </label>
-                        </div>
+                        {door.category === '1' ? (<AdditionCat1 soldCheckbox={soldCheckbox} />)
+                            : (<AdditionCat2 soldCheckbox={soldCheckbox} />)}
 
                         <div className="row gutter-2">
                             <div className="col-12">
