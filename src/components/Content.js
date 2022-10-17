@@ -4,7 +4,12 @@ import styles from '../css/style.css'
 import {fetchDoors} from "../actions/door";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation, useParams} from "react-router-dom";
-import {CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE} from "../utils/consts";
+import {
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_WHITE_ROUTE
+} from "../utils/consts";
 
 
 
@@ -21,7 +26,10 @@ const Content = () => {
     }, [])
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [currentPage])
+    }, [currentPage]);
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [location])
     switch (location.pathname) {
         case CATEGORY_EKOSHPON_LIGHT_ROUTE:
             doors = doorsFetch.filter(door => door.category === '1');
@@ -34,6 +42,10 @@ const Content = () => {
         case CATEGORY_WHITE_ROUTE:
             doors = doorsFetch.filter(door => door.category === '3');
             categoryName = 'Белые двери'
+            break;
+        case CATEGORY_CLASSIC_ROUTE:
+            doors = doorsFetch.filter(door => door.category === '4');
+            categoryName = 'Классика';
             break;
         default:
             doors = doorsFetch;

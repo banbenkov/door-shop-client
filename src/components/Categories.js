@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../css/style.css';
 import vendor from '../css/vendor.css';
 import {NavLink} from "react-router-dom";
+import {CATEGORY_CLASSIC_ROUTE} from "../utils/consts";
 
 const Categories = () => {
     return (
@@ -48,14 +49,14 @@ const Categories = () => {
                         </NavLink>
                     </div>
                     <div className="col-6 col-lg-3">
-                        <a href="">
+                        <NavLink to={CATEGORY_CLASSIC_ROUTE}>
                             <figure className="category category--alt">
                                 <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(images/furnitura/hand.jpg)`}}></span>
+                                                             style={{backgroundImage: `url(images/doors/product31-2.jpg)`}}></span>
                                 </div>
-                                <figcaption>Фурнитура</figcaption>
+                                <figcaption>Классика</figcaption>
                             </figure>
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
             </div>

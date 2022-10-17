@@ -4,7 +4,7 @@ import {NavLink, useLocation} from "react-router-dom";
 import logo from '../img/logo.png'
 import {
     ABOUT_ROUTE,
-    CATALOG_ROUTE,
+    CATALOG_ROUTE, CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
     CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
@@ -83,6 +83,9 @@ const NavBar = () => {
                                                     <li className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
                                                                                             className="menu-list-link">Белые
                                                         двери</NavLink>
+                                                    </li>
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
+                                                                                            className="menu-list-link">Классика</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>

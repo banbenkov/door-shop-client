@@ -3,8 +3,9 @@ import {
     CATALOG_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
     CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE,
+    CATEGORY_CLASSIC_ROUTE,
     CONTACTS_ROUTE,
-    INDEX_ROUTE
+    INDEX_ROUTE,
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -45,4 +46,8 @@ export const publicRoutes = [
         path: CATEGORY_WHITE_ROUTE,
         Component: <Catalog/>
     },
+    {
+        path: CATEGORY_CLASSIC_ROUTE,
+        Component: <Catalog />
+    }
 ]

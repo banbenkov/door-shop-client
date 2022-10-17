@@ -1,6 +1,11 @@
 import React, {useEffect} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
-import {CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE} from "../utils/consts";
+import {
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_WHITE_ROUTE
+} from "../utils/consts";
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 
@@ -29,6 +34,10 @@ const Breadcrumbs = () => {
                 nameCategoryDoor = 'Белые двери';
                 linkCategoryDoor = CATEGORY_WHITE_ROUTE;
                 break;
+            case '4':
+                nameCategoryDoor = 'Классика';
+                linkCategoryDoor = CATEGORY_CLASSIC_ROUTE;
+                break;
             default:
                 nameCategoryDoor = 'Все двери';
                 linkCategoryDoor = '/doors'
@@ -46,12 +55,16 @@ const Breadcrumbs = () => {
             linkCategory = CATEGORY_EKOSHPON_ROUTE;
             break;
         case CATEGORY_WHITE_ROUTE:
-            nameCategory = 'Белые двери'
+            nameCategory = 'Белые двери';
             linkCategory = CATEGORY_WHITE_ROUTE;
+            break;
+        case CATEGORY_CLASSIC_ROUTE:
+            nameCategory = 'Классика';
+            linkCategory = CATEGORY_CLASSIC_ROUTE;
             break;
         default:
             nameCategory = 'Все двери';
-            linkCategory = '/doors'
+            linkCategory = '/doors';
 
     }
 

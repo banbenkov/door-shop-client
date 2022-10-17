@@ -3,6 +3,12 @@ import MultiRangeSlider from "./multiRangeSlider";
 import NavBar from "./NavBar";
 import {NavLink, useLocation} from "react-router-dom";
 import {useSelector} from "react-redux";
+import {
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_WHITE_ROUTE
+} from "../utils/consts";
 
 const SideBar = () => {
     const location = useLocation();
@@ -40,13 +46,16 @@ const SideBar = () => {
                             <div>
                                 <ul className="nav flex-column">
                                     <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                        <NavLink className="nav-link" to='/ekoshpon-light'>Экошпон лайт</NavLink>
+                                        <NavLink className="nav-link" to={CATEGORY_EKOSHPON_LIGHT_ROUTE}>Экошпон лайт</NavLink>
                                     </li>
                                     <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                        <NavLink className="nav-link" to="/ekoshpon">Экошпон</NavLink>
+                                        <NavLink className="nav-link" to={CATEGORY_EKOSHPON_ROUTE}>Экошпон</NavLink>
                                     </li>
                                     <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                        <NavLink className="nav-link" to='/white'>Белые двери</NavLink>
+                                        <NavLink className="nav-link" to={CATEGORY_WHITE_ROUTE}>Белые двери</NavLink>
+                                    </li>
+                                    <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                        <NavLink className="nav-link" to={CATEGORY_CLASSIC_ROUTE}>Классика</NavLink>
                                     </li>
                                 </ul>
                             </div>
