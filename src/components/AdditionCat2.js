@@ -1,27 +1,27 @@
 import React from 'react';
 
-const AdditionCat2 = ({soldCheckbox}) => {
+const AdditionCat2 = ({category, soldCheckbox}) => {
     return (
         <div>
             <div className="custom-control custom-checkbox mb-1">
                 <input onChange={e => soldCheckbox(e, 2000)} type="checkbox"
                        className="custom-control-input" id="customCheck1"/>
                 <label className="custom-control-label" htmlFor="customCheck1">
-                    Коробка комплект(2,5шт)-2000₽
+                    Коробка {category === '2' && 'телескоп'} комплект(2,5шт)-2000₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
                 <input onChange={e => soldCheckbox(e, 2000)} type="checkbox"
                        className="custom-control-input" id="customCheck2"/>
                 <label className="custom-control-label" htmlFor="customCheck2">
-                    Наличник комплект(5шт)-2000₽
+                    Наличник {category === '2' && 'телескоп'} комплект(5шт)-2000₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
                 <input onChange={e => soldCheckbox(e, 700)} type="checkbox" className="custom-control-input"
                        id="customCheck3"/>
                 <label className="custom-control-label" htmlFor="customCheck3">
-                    Добор-700Р
+                    Добор {category === '2' && 'телескоп'} -700Р
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">

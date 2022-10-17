@@ -101,7 +101,7 @@ const Product = () => {
                             </div>
                         </div>
                         {door.category === '1' || door.category === '4' ? (<AdditionCat1 soldCheckbox={soldCheckbox} />)
-                            : (<AdditionCat2 soldCheckbox={soldCheckbox} />)}
+                            : (<AdditionCat2 category={door.category} soldCheckbox={soldCheckbox} />)}
 
                         <div className="row gutter-2">
                             <div className="col-12">
