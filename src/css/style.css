@@ -22318,5 +22318,23 @@ div.code-toolbar > .toolbar span:focus {
     }
 }
 
+@media (min-width: 576px) {
+    .iimg-carousel {
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .img-carousel {
+        height: 455px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .img-carousel {
+        height: 690px;
+    }
+}
+
 
 

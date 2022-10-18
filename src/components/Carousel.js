@@ -24,26 +24,26 @@ const Carousel = () => {
                         </div>
                     </div>
                 <Slider {...settings}>
-                        <div className="card card-product col-lg-10">
+                        <div className="card card-product col-lg-10 ml-3">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/1">
-                                    <img src="images/doors/product1-4.jpg" alt="Image" />
-                                        <img src="images/doors/product2-4.jpg" alt="Image" />
+                                    <img className="img-carousel" src="images/doors/product1-4.jpg" alt="Image" />
+                                        <img className="img-carousel" src="images/doors/product2-4.jpg" alt="Image" />
                                 </NavLink>
 
                             </figure>
                             <NavLink to="/doors/1" className="card-body">
                                 <h3 className="card-title">Орион ДГ/ДО Капучино</h3>
-                                <span className="price">4500.00₽</span>
+                                <span className="price">2500.00₽</span>
                             </NavLink>
 
                         </div>
-                        <div className="card card-product col-lg-10">
+                        <div className="card card-product col-lg-10 ml-3">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/22">
-                                    <img src="images/doors/product21-1-main.jpg" alt="Image" />
+                                    <img className="img-carousel" src="images/doors/product21-1-main.jpg" alt="Image" />
                                 </NavLink>
                             </figure>
                             <NavLink to="/doors/22" className="card-body">
@@ -51,19 +51,32 @@ const Carousel = () => {
                                 <span className="price">4500.00₽</span>
                             </NavLink>
                         </div>
-                        <div className="card card-product col-lg-10">
+                        <div className="card card-product col-lg-10 ml-3">
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/13">
-                                    <img src="images/doors/product12-1.jpg" alt="Image" />
+                                    <img className="img-carousel" src="images/doors/product12-1.jpg" alt="Image" />
 
                                 </NavLink>
                             </figure>
                             <NavLink to="/doors/13" className="card-body">
                                 <h3 className="card-title">Палитра Белая ДГ</h3>
-                                <span className="price">4400.00₽</span>
+                                <span className="price">2600.00₽</span>
                             </NavLink>
                         </div>
+                    <div className="card card-product col-lg-10 ml-3">
+                        <figure className="card-image">
+                            <a href="#!" className="action"><i className="icon-heart"></i></a>
+                            <NavLink to="/doors/16">
+                                <img className="img-carousel" src="images/doors/product15-1.jpg" alt="Image" />
+
+                            </NavLink>
+                        </figure>
+                        <NavLink to="/doors/16" className="card-body">
+                            <h3 className="card-title">Меркурий граф белый</h3>
+                            <span className="price">5900.00₽</span>
+                        </NavLink>
+                    </div>
                 </Slider>
                 </div>
             {/*</div>*/}

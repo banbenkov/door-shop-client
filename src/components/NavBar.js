@@ -303,6 +303,7 @@ const NavBar = () => {
                 </nav>
             </div>
             {showModal && (<div className="modal-backdrop fade show"></div>)}
+
         </header>
     );
 };

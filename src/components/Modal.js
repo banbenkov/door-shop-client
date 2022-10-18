@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
+import {fetchDoor} from "../actions/door";
+import {sendOrder} from "../actions/order";
 
-const Modal = () => {
+const Modal = ({order}) => {
+    const [phone, setPhone] = useState('');
+    const [name, setName] = useState('');
     const dispatch = useDispatch();
     const closeModal = () => {
+        dispatch({type: 'HIDE_MODAL'})
+    }
+    const createOrder = (order) => {
+        order.name = name;
+        order.phoneNumber = phone;
+        order.width = order.width.value
+        order.height = order.height.value
+        dispatch(sendOrder(order))
+        window.scrollTo(0, 0);
         dispatch({type: 'HIDE_MODAL'})
     }
     return (
@@ -25,12 +38,12 @@ const Modal = () => {
                         </p>
                         <div className="form-group mb-2">
                             <label htmlFor="exampleInput-1">Ваше имя</label>
-                            <input id="exampleInput-1" className="form-control form-control-sm"
+                            <input value={name} onChange={e => setName(e.target.value)} id="exampleInput-1" className="form-control form-control-sm"
                                    type="text"  />
                         </div>
                         <div className="form-group mb-2">
                             <label htmlFor="exampleInput-1">Ваш номер</label>
-                            <input id="exampleInput-1" className="form-control form-control-sm"
+                            <input value={phone} onChange={e => setPhone(e.target.value)} id="exampleInput-1" className="form-control form-control-sm"
                                    type="text" />
                         </div>
                     </div>
@@ -43,7 +56,7 @@ const Modal = () => {
                                     </button>
                                 </div>
                                 <div className="col">
-                                    <button type="button" className="btn btn-block btn-primary">Заказать
+                                    <button onClick={() => {createOrder(order)}} type="button" className="btn btn-block btn-primary">Заказать
                                     </button>
                                 </div>
                             </div>

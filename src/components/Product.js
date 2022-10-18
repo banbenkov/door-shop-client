@@ -16,6 +16,7 @@ const Product = () => {
     const dispatch = useDispatch();
     const door = useSelector(state => state.doorDetail.door);
     const img = useSelector(state => state.doorImg.image);
+    const alert = useSelector(state => state.alert);
     const showModal = useSelector(state => state.modal.show)
     let height = [];
     let width = [];
@@ -24,7 +25,16 @@ const Product = () => {
     const [additionalPrice, setAdditionalPrice] = useState(0);
     const [activeWidth, setActiveWidth] = useState(0);
     const [activeHeight, setActiveHeight] = useState(0);
-    let doorPrice = 0;
+    const [order, setOrder] = useState({
+        title: '',
+        decor: '',
+        width: '',
+        height: '',
+        price: 0,
+        additions: '',
+        phoneNumber: '',
+        name: ''
+    });
     useEffect(() => {
         dispatch(fetchDoor(id))
 
@@ -32,6 +42,19 @@ const Product = () => {
     useEffect(() => {
         setAdditionalPrice(door.price)
     }, [door.price])
+    useEffect(() => {
+        setOrder({
+            title: door.title,
+            decor: door.decor,
+            width: width[activeWidth],
+            height: height[activeHeight],
+            price: door.price,
+            additions: '',
+            phoneNumber: order.phoneNumber,
+            name: order.name
+        })
+    }, [door])
+
 
     height = door.height !== undefined ? door.height.split(";") : [];
     width = door.width !== undefined ? door.width.split(";") : [];
@@ -48,6 +71,8 @@ const Product = () => {
         }
     })
 
+
+
     const openTab1 = (e) => {
         setCollapse1(!collapse1);
     }
@@ -56,13 +81,32 @@ const Product = () => {
         setCollapse2(!collapse2);
     }
 
-    const soldCheckbox = ({target: {checked}}, value) => {
+    const soldCheckbox = ({target: {checked}}, value, addition) => {
         if (checked === true) {
-            setAdditionalPrice(additionalPrice + value)
+            setAdditionalPrice(additionalPrice + value);
+            setOrder({
+                title: order.title,
+                decor: order.decor,
+                width: order.width,
+                height: order.height,
+                price: additionalPrice + value,
+                additions: order.additions + addition + '\n',
+                phoneNumber: order.phoneNumber,
+                name: order.name
+            })
         } else {
-            setAdditionalPrice(additionalPrice - value)
+            setAdditionalPrice(additionalPrice - value);
+            setOrder({
+                title: order.title,
+                decor: order.decor,
+                width: order.width,
+                height: order.height,
+                price: additionalPrice - value,
+                additions: order.additions.replace(addition + '\n', ''),
+                phoneNumber: order.phoneNumber,
+                name: order.name
+            })
         }
-
 
     };
 
@@ -70,12 +114,48 @@ const Product = () => {
         dispatch({type: 'SHOW_MODAL'})
     }
 
+    const setHeight = (index) => {
+        setActiveHeight(index);
+        setOrder({
+            title: order.title,
+            decor: order.decor,
+            width: order.width,
+            height: height[index],
+            price: order.price,
+            additions: order.additions,
+            phoneNumber: order.phoneNumber,
+            name: order.name
+        })
+    }
+
+    const setWidth = (index) => {
+        setActiveWidth(index);
+        setOrder({
+            title: order.title,
+            decor: order.decor,
+            width: width[index],
+            height: order.height,
+            price: order.price,
+            additions: order.additions,
+            phoneNumber: order.phoneNumber,
+            name: order.name
+        })
+    }
+
+    const hideAlert = () => {
+        dispatch({type: "HIDE_ALERT"})
+    }
+
     return (
-        <section className="hero bg-white mt-2 mb-2">
+        <section className="hero bg-white mb-2">
             <div className="container">
+                <div className={alert.show ? "alert alert-success alert-dismissible fade show" : "alert alert-success alert-dismissible fade"} role="alert">
+                    <strong>Заказ получен!</strong> Оператор перезвонит в ближайшее время.
+                    <button onClick={() => hideAlert()} type="button" className="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
                 <div className="row gutter-2 gutter-md-4 justify-content-between">
-
-
                     {/*carousel*/}
                     <div className="col-lg-4 ml-6">
                         <Carousel infiniteLoop={true} showStatus={false}>
@@ -101,7 +181,7 @@ const Product = () => {
                             </div>
                         </div>
                         {door.category === '1' || door.category === '4' ? (<AdditionCat1 soldCheckbox={soldCheckbox} />)
-                            : (<AdditionCat2 category={door.category} soldCheckbox={soldCheckbox} />)}
+                            : (<AdditionCat2 soldCheckbox={soldCheckbox} />)}
 
                         <div className="row gutter-2">
                             <div className="col-12">
@@ -111,7 +191,7 @@ const Product = () => {
                                         {
                                             width !== [] && width.map((elem, index) => (
                                                 <label className={elem.isActive ? "btn active" : "btn"}>
-                                                    <input onChange={e => setActiveWidth(index)} type="radio"
+                                                    <input onChange={e => setWidth(index)} type="radio"
                                                            name="customRadio"
                                                            id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
@@ -127,7 +207,7 @@ const Product = () => {
                                         {
                                             height !== [] && height.map((elem, index) => (
                                                 <label className={elem.isActive ? "btn active" : "btn"}>
-                                                    <input onChange={e => setActiveHeight(index)} type="radio"
+                                                    <input onChange={e => setHeight(index)} type="radio"
                                                            name="customRadio"
                                                            id={`option-${index + 1}`}/>{elem.value.trim()}
                                                 </label>
@@ -156,7 +236,7 @@ const Product = () => {
                             <div className="col-12">
                                 <a onClick={openModal} className="btn btn-block btn-primary">Заказать</a>
                             </div>
-                            {showModal && (<Modal/>)}
+                            {showModal && (<Modal order={order}/>)}
                         </div>
 
                         {/*accordion*/}

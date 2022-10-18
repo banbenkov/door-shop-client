@@ -5,13 +5,15 @@ import doorDetailReducer from "./doorDetailReducer";
 import doorReducer from "./doorReducer";
 import doorImageReducer from "./doorImageReducer";
 import modalReducer from "./modalReducer";
+import alertReduser from "./alertReduser";
 
 
 const rootReducer = combineReducers({
     door: doorReducer,
     doorDetail: doorDetailReducer,
     doorImg: doorImageReducer,
-    modal: modalReducer
+    modal: modalReducer,
+    alert: alertReduser
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
