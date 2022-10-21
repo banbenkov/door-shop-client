@@ -20,11 +20,18 @@ const Product = () => {
     const showModal = useSelector(state => state.modal.show)
     let height = [];
     let width = [];
+    let texture = [];
+    let textureRu = [];
     const [collapse1, setCollapse1] = useState(true);
     const [collapse2, setCollapse2] = useState(false);
     const [additionalPrice, setAdditionalPrice] = useState(0);
+    const [generalPrice, setGeneralPrice] = useState(0);
     const [activeWidth, setActiveWidth] = useState(0);
     const [activeHeight, setActiveHeight] = useState(0);
+    const [activeTexture, setActiveTexture] = useState(0);
+    const [activeTextureRu, setActiveTextureRu] = useState(0);
+    const [countProduct, setCountProduct] = useState(1);
+    const [delivery, setDelivery] = useState(false)
     const [order, setOrder] = useState({
         title: '',
         decor: '',
@@ -41,11 +48,12 @@ const Product = () => {
     }, [])
     useEffect(() => {
         setAdditionalPrice(door.price)
+        setGeneralPrice(door.price)
     }, [door.price])
     useEffect(() => {
         setOrder({
             title: door.title,
-            decor: door.decor,
+            decor: textureRu[activeTexture],
             width: width[activeWidth],
             height: height[activeHeight],
             price: door.price,
@@ -58,6 +66,8 @@ const Product = () => {
 
     height = door.height !== undefined ? door.height.split(";") : [];
     width = door.width !== undefined ? door.width.split(";") : [];
+    // texture = door.decor !== undefined ? door.decor.split(";") : [];
+    // textureRu = door.decorRu !== undefined ? door.decorRu.split(";") : [];
     height = height.map((elem, index) => {
         return {
             value: elem,
@@ -70,7 +80,18 @@ const Product = () => {
             isActive: index === activeWidth
         }
     })
-
+    texture = texture.map((elem, index) => {
+        return {
+            value: elem,
+            isActive: index === activeTexture
+        }
+    })
+    textureRu = textureRu.map((elem, index) => {
+        return {
+            value: elem,
+            isActive: index === activeTexture
+        }
+    })
 
 
     const openTab1 = (e) => {
@@ -83,7 +104,14 @@ const Product = () => {
 
     const soldCheckbox = ({target: {checked}}, value, addition) => {
         if (checked === true) {
-            setAdditionalPrice(additionalPrice + value);
+            if (addition !== 'Доставка по городу до парадной-1400₽') {
+                setAdditionalPrice(additionalPrice + value);
+                setGeneralPrice(generalPrice + value * countProduct);
+            } else {
+                setAdditionalPrice(additionalPrice + value);
+                setGeneralPrice(generalPrice + value);
+            }
+
             setOrder({
                 title: order.title,
                 decor: order.decor,
@@ -95,7 +123,13 @@ const Product = () => {
                 name: order.name
             })
         } else {
-            setAdditionalPrice(additionalPrice - value);
+            if (addition !== 'Доставка по городу до парадной-1400₽') {
+                setAdditionalPrice(additionalPrice - value);
+                setGeneralPrice(generalPrice - value * countProduct);
+            } else {
+                setAdditionalPrice(additionalPrice - value);
+                setGeneralPrice(generalPrice - value);
+            }
             setOrder({
                 title: order.title,
                 decor: order.decor,
@@ -106,6 +140,11 @@ const Product = () => {
                 phoneNumber: order.phoneNumber,
                 name: order.name
             })
+        }
+        if (addition === 'Доставка по городу до парадной-1400₽' && checked === true) {
+            setDelivery(true);
+        } else if (addition === 'Доставка по городу до парадной-1400₽' && checked === false) {
+            setDelivery(false);
         }
 
     };
@@ -142,16 +181,58 @@ const Product = () => {
         })
     }
 
+    const setTexture = (index) => {
+        setActiveTexture(index);
+        setOrder({
+            title: order.title,
+            decor: textureRu[index],
+            width: order.width,
+            height: order.height,
+            price: order.price,
+            additions: order.additions,
+            phoneNumber: order.phoneNumber,
+            name: order.name
+        })
+    }
+
     const hideAlert = () => {
         dispatch({type: "HIDE_ALERT"})
+    }
+
+    const upCount = () => {
+        if (delivery === true) {
+            setCountProduct(countProduct + 1);
+            setGeneralPrice(generalPrice + additionalPrice - 1400);
+        } else {
+            setCountProduct(countProduct + 1);
+            setGeneralPrice(generalPrice + additionalPrice);
+        }
+
+    }
+
+    const downCount = () => {
+        if (countProduct > 1) {
+            if (delivery === true) {
+                setCountProduct(countProduct - 1);
+                setGeneralPrice(generalPrice - additionalPrice + 1400);
+            } else {
+                setCountProduct(countProduct - 1);
+                setGeneralPrice(generalPrice - additionalPrice);
+            }
+
+        }
+
     }
 
     return (
         <section className="hero bg-white mb-2">
             <div className="container">
-                <div className={alert.show ? "alert alert-success alert-dismissible fade show" : "alert alert-success alert-dismissible fade"} role="alert">
+                <div
+                    className={alert.show ? "alert alert-success alert-dismissible fade show" : "alert alert-success alert-dismissible fade"}
+                    role="alert">
                     <strong>Заказ получен!</strong> Оператор перезвонит в ближайшее время.
-                    <button onClick={() => hideAlert()} type="button" className="close" data-dismiss="alert" aria-label="Close">
+                    <button onClick={() => hideAlert()} type="button" className="close" data-dismiss="alert"
+                            aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -177,11 +258,11 @@ const Product = () => {
                             <div className="col-12">
                                 <span className="eyebrow text-muted">Межкомнатные двери</span>
                                 <h1>{door.title}</h1>
-                                <span className="price fs-18">{additionalPrice}₽</span>
+                                <span className="price fs-18">{generalPrice}₽</span>
                             </div>
                         </div>
-                        {door.category === '1' || door.category === '4' ? (<AdditionCat1 soldCheckbox={soldCheckbox} />)
-                            : (<AdditionCat2 soldCheckbox={soldCheckbox} />)}
+                        {door.category === '1' || door.category === '4' ? (<AdditionCat1 soldCheckbox={soldCheckbox}/>)
+                            : (<AdditionCat2 soldCheckbox={soldCheckbox}/>)}
 
                         <div className="row gutter-2">
                             <div className="col-12">
@@ -217,19 +298,40 @@ const Product = () => {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <div className="form-group">
-                                    <label>Цвет</label>
-                                    <div className="btn-group-toggle btn-group-square btn-group-colors"
+                                {/*<label className="label-texture">Декор</label>*/}
+                                {
+                                    textureRu !== [] && textureRu.map((elem, index) => (
+                                        <label className="label-texture">{elem.isActive && elem.value.trim()}</label>
+                                    ))
+                                }
+                                <div className="form-group-texture">
+
+                                    <div className="btn-group-toggle btn-group-square"
                                          data-toggle="buttons">
-                                        <label className="btn active texture-venge">
-                                            <input type="radio" name="color-select" id="option-2-1" checked/>
-                                        </label>
-                                        <label className="btn texture-venge">
-                                            <input type="radio" name="color-select" id="option-2-2"/>
-                                        </label>
-                                        <label className="btn text-grey">
-                                            <input type="radio" name="color-select" id="option-2-3"/>
-                                        </label>
+                                        {
+                                            texture !== [] && texture.map((elem, index) => (
+                                                    <label
+                                                        className={elem.isActive ? `btn active texture-${elem.value.trim()}` : `btn texture-${elem.value.trim()}`}>
+                                                        <input onChange={e => setTexture(index)} type="radio"
+                                                               name="color-select" id="option-2-1"
+                                                        />
+
+                                                    </label>
+                                            ))
+                                        }
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <div className="form-group">
+                                    <label>Количество</label>
+                                    <div className="col-3">
+                                        <div className="row">
+                                        <button onClick={() => {downCount()}} type="button" className="btn btn-sm btn-primary col-3">-</button>
+                                        <input value={countProduct} className="form-control form-control-sm col-4" type="text"/>
+                                        <button onClick={() => {upCount()}} type="button" className="btn btn-sm btn-primary col-3">+</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
