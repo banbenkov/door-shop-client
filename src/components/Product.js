@@ -66,8 +66,8 @@ const Product = () => {
 
     height = door.height !== undefined ? door.height.split(";") : [];
     width = door.width !== undefined ? door.width.split(";") : [];
-    // texture = door.decor !== undefined ? door.decor.split(";") : [];
-    // textureRu = door.decorRu !== undefined ? door.decorRu.split(";") : [];
+    texture = door.decor !== undefined ? door.decor.split(";") : [];
+    textureRu = door.decorRu !== undefined ? door.decorRu.split(";") : [];
     height = height.map((elem, index) => {
         return {
             value: elem,
@@ -238,7 +238,7 @@ const Product = () => {
                 </div>
                 <div className="row gutter-2 gutter-md-4 justify-content-between">
                     {/*carousel*/}
-                    <div className="col-lg-4 ml-6">
+                    <div className="col-lg-4 ml-4">
                         <Carousel infiniteLoop={true} showStatus={false}>
                             {img.map((elem) => (
                                 <div className="card card-product">

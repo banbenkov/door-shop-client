@@ -22371,6 +22371,202 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-belie {
+    background-image: url("../../public/images/texture/belie.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-belie::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-jasmin {
+    background-image: url("../../public/images/texture/jasmin.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-jasmin::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-mindal {
+    background-image: url("../../public/images/texture/mindal.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-mindal::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-italy-oreh {
+    background-image: url("../../public/images/texture/italy-oreh.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-italy-oreh::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-dub-beleni {
+    background-image: url("../../public/images/texture/dub-beleni.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-dub-beleni::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-graf-beli {
+    background-image: url("../../public/images/texture/graf-beli.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-graf-beli::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-kraft-beli {
+    background-image: url("../../public/images/texture/kraft-beli.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-kraft-beli::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-kraft-natural {
+    background-image: url("../../public/images/texture/kraft-natural.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-kraft-natural::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-kraft-seri {
+    background-image: url("../../public/images/texture/kraft-seri.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-kraft-seri::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-cherni-zhemchug {
+    background-image: url("../../public/images/texture/cherni-zhemchug.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-cherni-zhemchug::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-san-remo {
+    background-image: url("../../public/images/texture/san-remo.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-san-remo::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+
+.texture-dub-svetli {
+    background-image: url("../../public/images/texture/dub-svetli.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-dub-svetli::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-milan-oreh {
+    background-image: url("../../public/images/texture/milan-oreh.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-milan-oreh::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-dub-zolotoi {
+    background-image: url("../../public/images/texture/dub-zolotoi.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-dub-zolotoi::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-dub-temni {
+    background-image: url("../../public/images/texture/dub-temni.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-dub-temni::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 
 
 .slick-prev:before,
