@@ -3,7 +3,7 @@ import {useDispatch} from "react-redux";
 import {fetchDoor} from "../actions/door";
 import {sendOrder} from "../actions/order";
 
-const Modal = ({order}) => {
+const Modal = ({order, price}) => {
     const [phone, setPhone] = useState('');
     const [name, setName] = useState('');
     const dispatch = useDispatch();
@@ -13,11 +13,12 @@ const Modal = ({order}) => {
     const createOrder = (order) => {
         order.name = name;
         order.phoneNumber = phone;
-        order.width = order.width.value
-        order.height = order.height.value
-        dispatch(sendOrder(order))
+        order.width = order.width.value;
+        order.height = order.height.value;
+        order.price = price;
+        dispatch(sendOrder(order));
         window.scrollTo(0, 0);
-        dispatch({type: 'HIDE_MODAL'})
+        dispatch({type: 'HIDE_MODAL'});
     }
     return (
         <div className="modal fade show" id="exampleModal-1" tabIndex="-1"

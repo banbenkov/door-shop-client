@@ -40,6 +40,7 @@ const Product = () => {
         price: 0,
         additions: '',
         phoneNumber: '',
+        amount: 1,
         name: ''
     });
     useEffect(() => {
@@ -58,6 +59,7 @@ const Product = () => {
             height: height[activeHeight],
             price: door.price,
             additions: '',
+            amount: 1,
             phoneNumber: order.phoneNumber,
             name: order.name
         })
@@ -119,6 +121,7 @@ const Product = () => {
                 height: order.height,
                 price: additionalPrice + value,
                 additions: order.additions + addition + '\n',
+                amount: order.amount,
                 phoneNumber: order.phoneNumber,
                 name: order.name
             })
@@ -137,6 +140,7 @@ const Product = () => {
                 height: order.height,
                 price: additionalPrice - value,
                 additions: order.additions.replace(addition + '\n', ''),
+                order: order.amount(),
                 phoneNumber: order.phoneNumber,
                 name: order.name
             })
@@ -162,6 +166,7 @@ const Product = () => {
             height: height[index],
             price: order.price,
             additions: order.additions,
+            amount: order.amount,
             phoneNumber: order.phoneNumber,
             name: order.name
         })
@@ -176,6 +181,7 @@ const Product = () => {
             height: order.height,
             price: order.price,
             additions: order.additions,
+            amount: order.amount,
             phoneNumber: order.phoneNumber,
             name: order.name
         })
@@ -190,6 +196,7 @@ const Product = () => {
             height: order.height,
             price: order.price,
             additions: order.additions,
+            amount: order.amount,
             phoneNumber: order.phoneNumber,
             name: order.name
         })
@@ -207,6 +214,17 @@ const Product = () => {
             setCountProduct(countProduct + 1);
             setGeneralPrice(generalPrice + additionalPrice);
         }
+        setOrder({
+            title: order.title,
+            decor: order.decor,
+            width: order.width,
+            height: order.height,
+            price: order.price,
+            additions: order.additions,
+            amount: order.amount + 1,
+            phoneNumber: order.phoneNumber,
+            name: order.name
+        })
 
     }
 
@@ -219,6 +237,18 @@ const Product = () => {
                 setCountProduct(countProduct - 1);
                 setGeneralPrice(generalPrice - additionalPrice);
             }
+
+            setOrder({
+                title: order.title,
+                decor: order.decor,
+                width: order.width,
+                height: order.height,
+                price: order.price,
+                additions: order.additions,
+                amount: order.amount - 1,
+                phoneNumber: order.phoneNumber,
+                name: order.name
+            })
 
         }
 
@@ -239,7 +269,7 @@ const Product = () => {
                 <div className="row gutter-2 gutter-md-4 justify-content-between">
                     {/*carousel*/}
                     <div className="col-lg-4 ml-4">
-                        <Carousel infiniteLoop={true} showStatus={false}>
+                        <Carousel infiniteLoop={true} showStatus={false} selectedItem={activeTexture}>
                             {img.map((elem) => (
                                 <div className="card card-product">
                                     <figure className="card-image">
@@ -338,7 +368,7 @@ const Product = () => {
                             <div className="col-12">
                                 <a onClick={openModal} className="btn btn-block btn-primary">Заказать</a>
                             </div>
-                            {showModal && (<Modal order={order}/>)}
+                            {showModal && (<Modal order={order} price={generalPrice}/>)}
                         </div>
 
                         {/*accordion*/}
