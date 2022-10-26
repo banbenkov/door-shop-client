@@ -15,6 +15,7 @@ const Modal = ({order, price}) => {
         order.phoneNumber = phone;
         order.width = order.width.value;
         order.height = order.height.value;
+        order.decor = order.decor.value;
         order.price = price;
         dispatch(sendOrder(order));
         window.scrollTo(0, 0);

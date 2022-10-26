@@ -54,7 +54,7 @@ const Product = () => {
     useEffect(() => {
         setOrder({
             title: door.title,
-            decor: textureRu[activeTexture].value,
+            decor: textureRu[activeTexture],
             width: width[activeWidth],
             height: height[activeHeight],
             price: door.price,
@@ -191,7 +191,7 @@ const Product = () => {
         setActiveTexture(index);
         setOrder({
             title: order.title,
-            decor: textureRu[index].value,
+            decor: textureRu[index],
             width: order.width,
             height: order.height,
             price: order.price,
