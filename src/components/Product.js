@@ -110,7 +110,7 @@ const Product = () => {
                 setAdditionalPrice(additionalPrice + value);
                 setGeneralPrice(generalPrice + value * countProduct);
             } else {
-                setAdditionalPrice(additionalPrice + value);
+                // setAdditionalPrice(additionalPrice + value);
                 setGeneralPrice(generalPrice + value);
             }
 
@@ -130,7 +130,7 @@ const Product = () => {
                 setAdditionalPrice(additionalPrice - value);
                 setGeneralPrice(generalPrice - value * countProduct);
             } else {
-                setAdditionalPrice(additionalPrice - value);
+                // setAdditionalPrice(additionalPrice - value);
                 setGeneralPrice(generalPrice - value);
             }
             setOrder({
@@ -209,7 +209,7 @@ const Product = () => {
     const upCount = () => {
         if (delivery === true) {
             setCountProduct(countProduct + 1);
-            setGeneralPrice(generalPrice + additionalPrice - 1400);
+            setGeneralPrice(generalPrice + additionalPrice );
         } else {
             setCountProduct(countProduct + 1);
             setGeneralPrice(generalPrice + additionalPrice);
@@ -232,7 +232,7 @@ const Product = () => {
         if (countProduct > 1) {
             if (delivery === true) {
                 setCountProduct(countProduct - 1);
-                setGeneralPrice(generalPrice - additionalPrice + 1400);
+                setGeneralPrice(generalPrice - additionalPrice);
             } else {
                 setCountProduct(countProduct - 1);
                 setGeneralPrice(generalPrice - additionalPrice);

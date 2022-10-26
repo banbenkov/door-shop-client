@@ -3,11 +3,26 @@ import {Dispatch} from "redux";
 
 
 export const fetchDoors = () => {
+    let min = 0;
+    let max = 0;
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_DOORS'})
             const response = await axios.get(`http://89.223.66.133:5000/door`)
+            response.data.map((elem, i) => {
+
+                if (min > elem.price || min === 0) {
+                    min = elem.price
+                }
+                if (max < elem.price) {
+                    max = elem.price
+                }
+
+
+            })
+            const priceFilter = {min, max}
             dispatch({type: 'FETCH_DOORS_SUCCESS', payload: response.data})
+            dispatch({type: 'SET_PRICE', payload: priceFilter})
         } catch (e) {
             dispatch({
                 type: 'FETCH_DOORS_ERROR',

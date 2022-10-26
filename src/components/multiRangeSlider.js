@@ -2,8 +2,11 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import PropTypes from "prop-types";
 import "../css/multiRangeSlider.css";
 import styled from '../css/style.css'
+import {useDispatch, useSelector} from "react-redux";
 
 const MultiRangeSlider = ({ min, max, onChange }) => {
+    const dispatch = useDispatch();
+    const priceFilter = useSelector(state => state.priceFilter)
     const [minVal, setMinVal] = useState(min);
     const [maxVal, setMaxVal] = useState(max);
     const minValRef = useRef(min);
@@ -40,7 +43,13 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
     // Get min and max values when their state changes
     useEffect(() => {
         onChange({ min: minVal, max: maxVal });
+
     }, [minVal, maxVal, onChange]);
+
+    useEffect(() => {
+        dispatch({type: 'SET_CURR_PRICE', payload: {min: minVal, max: maxVal}})
+    }, [minVal, maxVal])
+
 
     return (
         <div>

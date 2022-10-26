@@ -16,6 +16,7 @@ const Content = () => {
         const location = useLocation();
         const dispatch = useDispatch()
         const doorsFetch = useSelector(state => state.door.doors)
+        const priceFilter = useSelector(state => state.priceFilter)
         const [collapse, setCollapse] = useState(false);
         const [sort, setSort] = useState(false);
         const [currentPage, setCurrentPage] = useState(1);
@@ -38,23 +39,23 @@ const Content = () => {
         }, [location])
         switch (location.pathname) {
             case CATEGORY_EKOSHPON_LIGHT_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '1');
+                doors = doorsFetch.filter(door => door.category === '1' && door.price >= priceFilter.currMinPrice && door.price <= priceFilter.currMaxPrice);
                 categoryName = 'Экошпон ЛАЙТ'
                 break;
             case CATEGORY_EKOSHPON_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '2');
+                doors = doorsFetch.filter(door => door.category === '2' && door.price >= priceFilter.currMinPrice && door.price <= priceFilter.currMaxPrice);
                 categoryName = 'Экошпон'
                 break;
             case CATEGORY_WHITE_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '3');
+                doors = doorsFetch.filter(door => door.category === '3' && door.price >= priceFilter.currMinPrice && door.price <= priceFilter.currMaxPrice);
                 categoryName = 'Белые двери'
                 break;
             case CATEGORY_CLASSIC_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '4');
+                doors = doorsFetch.filter(door => door.category === '4' && door.price >= priceFilter.currMinPrice && door.price <= priceFilter.currMaxPrice);
                 categoryName = 'Классика';
                 break;
             default:
-                doors = doorsFetch;
+                doors = doorsFetch.filter(door => door.price >= priceFilter.currMinPrice && door.price <= priceFilter.currMaxPrice);
                 categoryName = 'Все двери'
 
         }
@@ -72,6 +73,8 @@ const Content = () => {
                 doors.sort((a, b) => a.price - b.price);
             }
         }, [sort]);
+
+
 
 
         lastDoorIndex = currentPage * doorPerPage;

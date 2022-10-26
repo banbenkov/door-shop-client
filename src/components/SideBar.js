@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import MultiRangeSlider from "./multiRangeSlider";
 import NavBar from "./NavBar";
 import {NavLink, useLocation} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
@@ -12,24 +12,13 @@ import {
 
 const SideBar = () => {
     const location = useLocation();
+    const dispatch = useDispatch();
+    const priceFilter = useSelector(state => state.priceFilter)
     const [collapse1, setCollapse1] = useState(true);
     const [collapse2, setCollapse2] = useState(false);
     const [collapse3, setCollapse3] = useState(true);
     const [collapse4, setCollapse4] = useState(true);
-    const doorsFetch = useSelector(state => state.door.doors);
-    let minPrice = 0;
-    let maxPrice = 0;
-    doorsFetch.map((elem, i) => {
 
-        if (minPrice > elem.price || minPrice === 0) {
-            minPrice = elem.price;
-        }
-        if (maxPrice < elem.price) {
-            maxPrice = elem.price;
-        }
-
-
-    })
 
     return (
         <aside className="col-lg-3 sidebar">
@@ -87,7 +76,7 @@ const SideBar = () => {
             </div>
 
             <div className="widget">
-                <span className="widget-title">Фтльтры <a href="" className="small text-red">очистить</a></span>
+                <span className="widget-title">Фтльтры <a onClick={() => {dispatch({type: 'SET_DEFAULT_PRICE'})}} className="small text-red">очистить</a></span>
                 <div className="accordion" id="accordion-1">
 
                     <div className="card">
@@ -137,10 +126,10 @@ const SideBar = () => {
                         <div id="collapse-1-4" className={collapse4 ? 'collapse show' : 'collapse'}
                              aria-labelledby="heading-1-4">
                             <div className="card-body pb-5 pl-2 pr-2">
-                                {minPrice !== 0 && (<MultiRangeSlider
-                                    min={minPrice}
-                                    max={maxPrice}
-                                    onChange={({min, max}) => console.log(`min = ${min}, max = ${max}`)}
+                                {priceFilter.minPrice !== 0 && (<MultiRangeSlider
+                                    min={priceFilter.minPrice}
+                                    max={priceFilter.maxPrice}
+                                    onChange={({min, max}) => {}}
                                 />)}
 
                             </div>
