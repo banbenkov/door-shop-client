@@ -140,7 +140,7 @@ const Product = () => {
                 height: order.height,
                 price: additionalPrice - value,
                 additions: order.additions.replace(addition + '\n', ''),
-                order: order.amount(),
+                order: order.amount,
                 phoneNumber: order.phoneNumber,
                 name: order.name
             })
