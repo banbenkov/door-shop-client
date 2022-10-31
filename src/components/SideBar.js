@@ -28,6 +28,11 @@ const SideBar = () => {
         dispatch({type: 'SET_VIEW_DO'})
     }
 
+    const clickClear = () => {
+        dispatch({type: 'SET_DEFAULT_PRICE'})
+        dispatch({type: 'SET_DEFAULT_VIEW'})
+    }
+
 
     return (
         <aside className="col-lg-3 sidebar">
@@ -85,7 +90,7 @@ const SideBar = () => {
             </div>
 
             <div className="widget">
-                <span className="widget-title">Фтльтры <a onClick={() => {dispatch({type: 'SET_DEFAULT_PRICE'})}} className="small text-red">очистить</a></span>
+                <span className="widget-title">Фтльтры <a onClick={() => clickClear()} className="small text-red">очистить</a></span>
                 <div className="accordion" id="accordion-1">
 
                     <div className="card">
