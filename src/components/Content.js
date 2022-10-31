@@ -17,6 +17,7 @@ const Content = () => {
         const dispatch = useDispatch()
         const doorsFetch = useSelector(state => state.door.doors)
         const priceFilter = useSelector(state => state.priceFilter)
+        const viewFilter = useSelector(state => state.viewFilter)
         const [collapse, setCollapse] = useState(false);
         const [sort, setSort] = useState(false);
         const [currentPage, setCurrentPage] = useState(1);
@@ -39,7 +40,9 @@ const Content = () => {
         }, [location])
         switch (location.pathname) {
             case CATEGORY_EKOSHPON_LIGHT_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '1' && door.price >= priceFilter.currMinPrice && door.price <= priceFilter.currMaxPrice);
+                doors = doorsFetch.filter(door => door.category === '1'
+                    && door.price >= priceFilter.currMinPrice
+                    && door.price <= priceFilter.currMaxPrice);
                 categoryName = 'Экошпон ЛАЙТ'
                 break;
             case CATEGORY_EKOSHPON_ROUTE:

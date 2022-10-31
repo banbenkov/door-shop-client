@@ -7,6 +7,7 @@ import doorImageReducer from "./doorImageReducer";
 import modalReducer from "./modalReducer";
 import alertReduser from "./alertReduser";
 import priceFilterReducer from "./priceFilterReducer";
+import viewFilterReducer from "./viewFilterReducer";
 
 
 const rootReducer = combineReducers({
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
     doorImg: doorImageReducer,
     modal: modalReducer,
     alert: alertReduser,
-    priceFilter: priceFilterReducer
+    priceFilter: priceFilterReducer,
+    viewFilter: viewFilterReducer
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))

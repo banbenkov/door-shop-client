@@ -14,10 +14,19 @@ const SideBar = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     const priceFilter = useSelector(state => state.priceFilter)
+    const viewFilter = useSelector(state => state.viewFilter)
     const [collapse1, setCollapse1] = useState(true);
     const [collapse2, setCollapse2] = useState(false);
     const [collapse3, setCollapse3] = useState(true);
     const [collapse4, setCollapse4] = useState(true);
+
+    const setDgFilter = () => {
+        dispatch({type: 'SET_VIEW_DG'})
+    }
+
+    const setDoFilter = () => {
+        dispatch({type: 'SET_VIEW_DO'})
+    }
 
 
     return (
@@ -95,15 +104,15 @@ const SideBar = () => {
                              aria-labelledby="heading-1-3">
                             <div className="card-body">
                                 <div className="custom-control custom-checkbox mb-1">
-                                    <input type="checkbox"
-                                           className="custom-control-input" id="customCheck1"/>
+                                    <input onClick={() => setDoFilter()} type="checkbox"
+                                           className="custom-control-input" id="customCheck1" checked={viewFilter.do}/>
                                     <label className="custom-control-label" htmlFor="customCheck1">
                                         Остекленные
                                     </label>
                                 </div>
                                 <div className="custom-control custom-checkbox mb-1">
-                                    <input type="checkbox"
-                                           className="custom-control-input" id="customCheck2"/>
+                                    <input onClick={() => setDgFilter()} type="checkbox"
+                                           className="custom-control-input" id="customCheck2" checked={viewFilter.dg}/>
                                     <label className="custom-control-label" htmlFor="customCheck2">
                                         Глухие
                                     </label>
