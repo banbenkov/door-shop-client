@@ -21,7 +21,7 @@ const Card = ({door}) => {
 
                 </figure>
                 <div className="card-footer">
-                    <h3 className="card-title"><a href="">{door.title}</a></h3>
+                    <h3 className="card-title"><NavLink to={`../doors/${door.id}`} >{door.title}</NavLink></h3>
                     <span className="price">{door.price}₽</span>
                 </div>
             </div>
