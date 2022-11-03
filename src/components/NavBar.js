@@ -6,7 +6,7 @@ import {
     ABOUT_ROUTE,
     CATALOG_ROUTE, CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE
 } from "../utils/consts";
@@ -86,6 +86,9 @@ const NavBar = () => {
                                                     </li>
                                                     <li className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
                                                                                             className="menu-list-link">Классика</NavLink>
+                                                    </li>
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
+                                                                                            className="menu-list-link">Эмаль</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>

@@ -6,6 +6,7 @@ import {
     CATEGORY_CLASSIC_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE,
+    CATEGORY_FURNITURE_DOORHANDLE, CATEGORY_EMAL_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -49,5 +50,13 @@ export const publicRoutes = [
     {
         path: CATEGORY_CLASSIC_ROUTE,
         Component: <Catalog />
-    }
+    },
+    {
+        path: CATEGORY_EMAL_ROUTE,
+        Component: <Catalog />
+    },
+    // {
+    //     path: CATEGORY_FURNITURE_DOORHANDLE,
+    //     Component: <CatalogFurniture />
+    // }
 ]

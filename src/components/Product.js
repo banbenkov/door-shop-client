@@ -291,7 +291,7 @@ const Product = () => {
                                 <span className="price fs-18">{generalPrice}₽</span>
                             </div>
                         </div>
-                        {door.category === '1' || door.category === '4' ? (<AdditionCat1 soldCheckbox={soldCheckbox}/>)
+                        {door.category === '1' || door.category === '4' || door.category === '5' ? (<AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>)
                             : (<AdditionCat2 soldCheckbox={soldCheckbox}/>)}
 
                         <div className="row gutter-2">

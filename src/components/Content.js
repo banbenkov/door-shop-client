@@ -7,7 +7,7 @@ import {useLocation, useParams} from "react-router-dom";
 import {
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 
@@ -69,6 +69,13 @@ const Content = () => {
                     && door.price <= priceFilter.currMaxPrice
                     && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
                 categoryName = 'Классика';
+                break;
+            case CATEGORY_EMAL_ROUTE:
+                doors = doorsFetch.filter(door => door.category === '5'
+                    && door.price >= priceFilter.currMinPrice
+                    && door.price <= priceFilter.currMaxPrice
+                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
+                categoryName = 'Эмаль';
                 break;
             default:
                 doors = doorsFetch.filter(door => door.price >= priceFilter.currMinPrice

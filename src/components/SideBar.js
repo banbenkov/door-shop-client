@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 
@@ -59,6 +59,9 @@ const SideBar = () => {
                                     </li>
                                     <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                         <NavLink className="nav-link" to={CATEGORY_CLASSIC_ROUTE}>Классика</NavLink>
+                                    </li>
+                                    <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                        <NavLink className="nav-link" to={CATEGORY_EMAL_ROUTE}>Эмаль</NavLink>
                                     </li>
                                 </ul>
                             </div>
