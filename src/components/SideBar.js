@@ -36,7 +36,7 @@ const SideBar = () => {
 
     return (
         <aside className="col-lg-3 sidebar">
-            <div className="widget d-none d-lg-block">
+            <div className="widget">
                 <span className="widget-title">Каталог</span>
                 <ul id="page-nav" className="nav flex-column nav-accordion">
                     <li className="nav-item active">
