@@ -6,7 +6,7 @@ import {
     ABOUT_ROUTE,
     CATALOG_ROUTE, CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_WHITE_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE
 } from "../utils/consts";
@@ -95,9 +95,9 @@ const NavBar = () => {
                                             <div className="col-lg-2">
                                                 <span className="eyebrow text-muted mb-1">Фурнитура</span>
                                                 <ul className="menu-list">
-                                                    <li className="menu-list-item"><a href="listing.html"
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE}
                                                                                       className="menu-list-link">Дверные
-                                                        ручки</a>
+                                                        ручки</NavLink>
                                                     </li>
                                                     <li className="menu-list-item"><a href="listing.html"
                                                                                       className="menu-list-link">Дверные

@@ -6,13 +6,15 @@ import {
     CATEGORY_CLASSIC_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE,
-    CATEGORY_FURNITURE_DOORHANDLE, CATEGORY_EMAL_ROUTE
+    CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_EMAL_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
 import Catalog from "./pages/Catalog";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
+import CatalogFurniture from "./pages/CatalogFurniture";
+import FurniturePage from "./pages/FurniturePage";
 
 export const publicRoutes = [
     {
@@ -55,8 +57,12 @@ export const publicRoutes = [
         path: CATEGORY_EMAL_ROUTE,
         Component: <Catalog />
     },
-    // {
-    //     path: CATEGORY_FURNITURE_DOORHANDLE,
-    //     Component: <CatalogFurniture />
-    // }
+     {
+         path: CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
+         Component: <CatalogFurniture />
+     },
+    {
+        path: CATEGORY_FURNITURE_DOORHANDLE_ROUTE + '/:id',
+        Component: <FurniturePage />
+    }
 ]

@@ -8,6 +8,8 @@ import modalReducer from "./modalReducer";
 import alertReduser from "./alertReduser";
 import priceFilterReducer from "./priceFilterReducer";
 import viewFilterReducer from "./viewFilterReducer";
+import furnitureReducer from "./furnitureReducer";
+import furnitureDetailReducer from "./furnitureDetailReducer";
 
 
 const rootReducer = combineReducers({
@@ -17,7 +19,9 @@ const rootReducer = combineReducers({
     modal: modalReducer,
     alert: alertReduser,
     priceFilter: priceFilterReducer,
-    viewFilter: viewFilterReducer
+    viewFilter: viewFilterReducer,
+    furniture: furnitureReducer,
+    furnitureDetail: furnitureDetailReducer
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
