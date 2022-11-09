@@ -9,6 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Modal from "./Modal";
 import AdditionCat1 from "./AdditionCat1";
 import AdditionCat2 from "./AdditionCat2";
+import {Helmet} from "react-helmet";
 
 
 const Product = () => {
