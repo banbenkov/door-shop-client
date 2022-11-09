@@ -1,6 +1,6 @@
 {
-  "short_name": "Двери-Арсенал",
-  "name": "Двери-Арсенал",
+  "short_name": "Межкомнатные Двери-Арсенал",
+  "name": "Межкомнатные Двери-Арсенал",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,17 +8,17 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo.png",
+      "src": "images/logo.png",
       "type": "image/png",
       "sizes": "75x75"
     },
     {
-      "src": "logo.png",
+      "src": "images/logo.png",
       "type": "image/png",
       "sizes": "75x75"
     }
   ],
-  "start_url": ".",
+  "start_url": "http://dveri-arsenal.ru/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
