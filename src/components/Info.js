@@ -27,7 +27,7 @@ const Info = () => {
                                 <div className="card-body text-center">
                                     <i className="icon-mail fs-40 mb-4"></i>
                                     <h3 className="mb-1">Напишите нам</h3>
-                                    <a href="" className="fs-18 underlined">Отправить сообщение</a>
+                                    <a href="mailto:arsenalstroy_08@mail.ru" className="fs-18 underlined">Отправить сообщение</a>
                                     <p className="mt-1">Мы ответим в течение 24 часов</p>
                                 </div>
                             </div>
