@@ -4,7 +4,7 @@ import {
     CATALOG_ROUTE,
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router";
@@ -14,7 +14,8 @@ const CatalogMenu = () => {
     const [collapse1, setCollapse1] = useState(true);
     const [collapse2, setCollapse2] = useState(false);
     useEffect(() => {
-        if (location.pathname === CATEGORY_FURNITURE_DOORHANDLE_ROUTE) {
+        if (location.pathname === CATEGORY_FURNITURE_DOORHANDLE_ROUTE
+            || location.pathname === CATEGORY_FURNITURE_LATCH_ROUTE) {
             setCollapse2(true);
         }
     }, [])
@@ -61,6 +62,9 @@ const CatalogMenu = () => {
                             <ul className="nav flex-column">
                                 <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE} className="nav-link">Дверные ручки</NavLink>
+                                </li>
+                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                    <NavLink to={CATEGORY_FURNITURE_LATCH_ROUTE} className="nav-link">Замки</NavLink>
                                 </li>
                             </ul>
                         </div>

@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import Card from "./Card";
 import styles from '../css/style.css'
-import {fetchDoors} from "../actions/door";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation, useParams} from "react-router-dom";
 import {
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 import {fetchDoorhandles} from "../actions/doorhandle";
 import CardFurniture from "./CardFurniture";
+import {fetchLatches} from "../actions/latch";
 
 
 const ContentFurniture = () => {
@@ -30,8 +30,13 @@ const ContentFurniture = () => {
         let pageNumbers = [];
 
         useEffect(() => {
-            dispatch(fetchDoorhandles())
-        }, [])
+            if (location.pathname === CATEGORY_FURNITURE_DOORHANDLE_ROUTE) {
+                dispatch(fetchDoorhandles())
+            } else if (location.pathname === CATEGORY_FURNITURE_LATCH_ROUTE) {
+                dispatch(fetchLatches())
+            }
+
+        }, [location])
         useEffect(() => {
             window.scrollTo(0, 0);
         }, [currentPage]);

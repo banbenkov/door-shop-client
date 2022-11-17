@@ -6,7 +6,7 @@ import {
     CATEGORY_CLASSIC_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE,
-    CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_EMAL_ROUTE
+    CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -63,6 +63,14 @@ export const publicRoutes = [
      },
     {
         path: CATEGORY_FURNITURE_DOORHANDLE_ROUTE + '/:id',
+        Component: <FurniturePage />
+    },
+    {
+        path: CATEGORY_FURNITURE_LATCH_ROUTE,
+        Component: <CatalogFurniture />
+    },
+    {
+        path: CATEGORY_FURNITURE_LATCH_ROUTE + '/:id',
         Component: <FurniturePage />
     }
 ]

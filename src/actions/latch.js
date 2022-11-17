@@ -2,11 +2,11 @@ import axios from "axios";
 import {Dispatch} from "redux";
 
 
-export const fetchDoorhandles = () => {
+export const fetchLatches = () => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_FURNITURE'})
-            const response = await axios.get(`http://89.223.66.133:5000/doorhandle`)
+            const response = await axios.get(`http://localhost:5000/latch`)
             dispatch({type: 'FETCH_FURNITURE_SUCCESS', payload: response.data})
         } catch (e) {
             dispatch({
@@ -17,11 +17,11 @@ export const fetchDoorhandles = () => {
     }
 }
 
-export const fetchDoorhandle = (id) => {
+export const fetchLatch = (id) => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_FURNITURE_DETAIL'})
-            const response = await axios.get(`http://89.223.66.133:5000/doorhandle/${id}`)
+            const response = await axios.get(`http://localhost:5000/latch/${id}`)
             dispatch({type: 'FETCH_FURNITURE_DETAIL_SUCCESS', payload: response.data})
         } catch (e) {
             dispatch({

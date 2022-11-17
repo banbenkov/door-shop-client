@@ -4,9 +4,14 @@ import {NavLink, useLocation} from "react-router-dom";
 import logo from '../img/logo.png'
 import {
     ABOUT_ROUTE,
-    CATALOG_ROUTE, CATEGORY_CLASSIC_ROUTE,
+    CATALOG_ROUTE,
+    CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_WHITE_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_EMAL_ROUTE,
+    CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
+    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE
 } from "../utils/consts";
@@ -99,13 +104,8 @@ const NavBar = () => {
                                                                                       className="menu-list-link">Дверные
                                                         ручки</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Дверные
-                                                        петли</a>
-                                                    </li>
-                                                    <li className="menu-list-item"><a href="listing.html"
-                                                                                      className="menu-list-link">Ригеля
-                                                        и ограничители</a>
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_LATCH_ROUTE}
+                                                                                      className="menu-list-link">Замки</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>

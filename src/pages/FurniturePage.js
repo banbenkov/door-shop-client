@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useLocation} from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Product from "../components/Product";
-import ProductDoorhandle from "../components/ProductDoorhandle";
+import ProductFurniture from "../components/ProductFurniture";
 import {useSelector} from "react-redux";
 import {Helmet} from "react-helmet";
 
@@ -24,7 +24,7 @@ const FurniturePage = () => {
                 />
             </Helmet>
             <Breadcrumbs/>
-            <ProductDoorhandle/>
+            <ProductFurniture/>
         </div>
     );
 };

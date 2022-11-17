@@ -3,7 +3,7 @@ import {NavLink, useLocation} from "react-router-dom";
 import {
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
@@ -24,11 +24,16 @@ const Breadcrumbs = () => {
     door = useSelector(state => state.doorDetail.door);
     furniture = useSelector(state => state.furnitureDetail.furniture)
     if (door !== {}) {
-        if (location.pathname.indexOf('/doorhandle') !== -1) {
+        if (location.pathname.indexOf(CATEGORY_FURNITURE_DOORHANDLE_ROUTE) !== -1) {
             nameCategoryDoor = 'Дверные ручки';
             linkCategoryDoor = CATEGORY_FURNITURE_DOORHANDLE_ROUTE
             orderName = furniture.title;
-        } else {
+        } else if (location.pathname.indexOf(CATEGORY_FURNITURE_LATCH_ROUTE) !== -1) {
+            nameCategoryDoor = 'Замки';
+            linkCategoryDoor = CATEGORY_FURNITURE_LATCH_ROUTE
+            orderName = furniture.title;
+        }
+        else {
             switch (door.category) {
                 case '1':
                     nameCategoryDoor = 'Экошпон Лайт';
@@ -90,6 +95,10 @@ const Breadcrumbs = () => {
         case CATEGORY_FURNITURE_DOORHANDLE_ROUTE:
             nameCategory = 'Дверные ручки';
             linkCategory = CATEGORY_FURNITURE_DOORHANDLE_ROUTE;
+            break;
+        case CATEGORY_FURNITURE_LATCH_ROUTE:
+            nameCategory = 'Замки';
+            linkCategory = CATEGORY_FURNITURE_LATCH_ROUTE;
             break;
         default:
             nameCategory = 'Все двери';
