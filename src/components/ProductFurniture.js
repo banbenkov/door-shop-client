@@ -233,13 +233,13 @@ const ProductFurniture = () => {
                                              collapse2={collapse2}
                                              furniture={furniture}
                                              openTab1={openTab1}
-                                             opentTab2={openTab2}/>
+                                             openTab2={openTab2} />
                         || location.pathname.indexOf(CATEGORY_FURNITURE_LATCH_ROUTE) !== -1 &&
                         <AccordionLatch collapse1={collapse1}
                                         collapse2={collapse2}
                                         furniture={furniture}
                                         openTab1={openTab1}
-                                        opentTab2={openTab2}/>}
+                                        openTab2={openTab2} />}
 
 
                         <div className="row gutter-2">
