@@ -22567,6 +22567,32 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-seriy {
+    background-image: url("../../public/images/texture/seriy.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-seriy::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-slonovaya-kost {
+    background-image: url("../../public/images/texture/slonovaya-kost.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-slonovaya-kost::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 
 
 .slick-prev:before,
@@ -22595,7 +22621,7 @@ div.code-toolbar > .toolbar span:focus {
 }
 
 @media (min-width: 576px) {
-    .iimg-carousel {
+    .img-carousel {
         height: 200px;
     }
 }

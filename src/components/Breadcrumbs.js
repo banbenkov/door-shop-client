@@ -3,7 +3,11 @@ import {NavLink, useLocation} from "react-router-dom";
 import {
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_EMAL_ROUTE,
+    CATEGORY_EMALIT_ROUTE,
+    CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
+    CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
@@ -60,6 +64,11 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_EMAL_ROUTE;
                     orderName = door.title;
                     break;
+                case '6':
+                    nameCategoryDoor = 'Эмалит';
+                    linkCategoryDoor = CATEGORY_EMALIT_ROUTE;
+                    orderName = door.title;
+                    break;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'
@@ -91,6 +100,10 @@ const Breadcrumbs = () => {
         case CATEGORY_EMAL_ROUTE:
             nameCategory = 'Эмаль';
             linkCategory = CATEGORY_EMAL_ROUTE;
+            break;
+        case CATEGORY_EMALIT_ROUTE:
+            nameCategory = 'Эмалит';
+            linkCategory = CATEGORY_EMALIT_ROUTE;
             break;
         case CATEGORY_FURNITURE_DOORHANDLE_ROUTE:
             nameCategory = 'Дверные ручки';
