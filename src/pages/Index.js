@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 import Categories from "../components/Categories";
 import {useLocation} from "react-router-dom";
 import {Helmet} from "react-helmet";
+import Reviews from "../components/Reviews";
 
 const Index = () => {
     const { pathname } = useLocation();
@@ -25,7 +26,7 @@ const Index = () => {
             <Swiper />
             <Carousel />
             <Categories />
-
+            <Reviews />
         </div>
     );
 };

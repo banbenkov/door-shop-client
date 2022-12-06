@@ -8,7 +8,7 @@ const Categories = () => {
     return (
         <section className="mb-2">
             <div className="container">
-                <div className="row align-items-end">
+                <div className="row align-items-end mb-1">
                     <div className="col-8 col-md-6">
                         <span className="eyebrow text-muted">Каталог</span>
                         <h2>Популярные категории</h2>

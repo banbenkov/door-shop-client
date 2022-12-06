@@ -22646,6 +22646,40 @@ label-texture {
 }
 
 
+/*Отзывы ->*/
+
+.container-m {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:20px;
+}
+
+.card-review {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    border: none;
+    height: 290px;
+    margin-top: 10px
+}
+
+.u-color {
+    color: gray
+}
+
+.user-image img {
+    border: 1px solid gray;
+    padding: 2px
+}
+
+.star-blue {
+    color: blue !important;
+}
+/*<- Отзывы*/
 
 
 

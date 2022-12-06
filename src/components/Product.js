@@ -64,6 +64,8 @@ const Product = () => {
             phoneNumber: order.phoneNumber,
             name: order.name
         })
+       
+
     }, [door])
 
 
@@ -419,7 +421,7 @@ const Product = () => {
                                              aria-labelledby="heading-1-2"
                                              data-parent="#accordion-1">
                                             <div className="card-body">
-                                                <p>{door.description}</p>
+                                                <p>{`${door.description}`}</p>
                                             </div>
                                         </div>
                                     </div>
