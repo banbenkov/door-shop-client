@@ -2,11 +2,16 @@ import {
     ABOUT_ROUTE,
     CATALOG_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_WHITE_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_WHITE_ROUTE,
     CATEGORY_CLASSIC_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE,
-    CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_EMALIT_ROUTE
+    CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
+    CATEGORY_EMAL_ROUTE,
+    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_EMALIT_ROUTE,
+    PORTFOLIO_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -15,6 +20,7 @@ import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import CatalogFurniture from "./pages/CatalogFurniture";
 import FurniturePage from "./pages/FurniturePage";
+import Portfolio from "./pages/Portfolio";
 
 export const publicRoutes = [
     {
@@ -76,5 +82,9 @@ export const publicRoutes = [
     {
         path: CATEGORY_FURNITURE_LATCH_ROUTE + '/:id',
         Component: <FurniturePage />
-    }
+    },
+    {
+        path: PORTFOLIO_ROUTE,
+        Component: <Portfolio />
+    },
 ]

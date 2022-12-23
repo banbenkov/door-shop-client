@@ -13,7 +13,7 @@ import {
     CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
-    INDEX_ROUTE
+    INDEX_ROUTE, PORTFOLIO_ROUTE
 } from "../utils/consts";
 import {useState} from "react";
 import {useSelector} from "react-redux";
@@ -118,13 +118,19 @@ const NavBar = () => {
                                 </div>
                             </li>
                             <li className="nav-item">
-                                <NavLink to={ABOUT_ROUTE} activeClassName='curr'
+                                <NavLink to={PORTFOLIO_ROUTE}
+                                         className={({isActive}) => (isActive ? 'nav-link text-red' : 'nav-link')}>
+                                    Портфолио
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to={ABOUT_ROUTE}
                                          className={({isActive}) => (isActive ? 'nav-link text-red' : 'nav-link')}>
                                     О нас
                                 </NavLink>
                             </li>
                             <li className="nav-item dropdown-lg">
-                                <NavLink to={CONTACTS_ROUTE} href="contact.html"
+                                <NavLink to={CONTACTS_ROUTE}
                                          className={({isActive}) => (isActive ? 'nav-link text-red' : 'nav-link')}>
                                     Контакты
                                 </NavLink>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from '../css/style.css';
 import {NavLink} from "react-router-dom";
-import {ABOUT_ROUTE, CATALOG_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE} from "../utils/consts";
+import {ABOUT_ROUTE, CATALOG_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE, PORTFOLIO_ROUTE} from "../utils/consts";
 import masterCard from "../img/master-card-1.svg";
 import mir from "../img/mir.svg";
 import visa from "../img/visa-1.svg";
@@ -25,8 +25,10 @@ const Footer = () => {
                                                                       className="menu-list-link">Главная</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CATALOG_ROUTE}
                                                                       className="menu-list-link">Каталог</NavLink></li>
-                                    <li className="menu-list-item"><NavLink to={ABOUT_ROUTE} className="menu-list-link">О
-                                        нас</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={PORTFOLIO_ROUTE}
+                                                                            className="menu-list-link">Портфолио</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={ABOUT_ROUTE} className="menu-list-link">
+                                        О нас</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CONTACTS_ROUTE}
                                                                       className="menu-list-link">Контакты</NavLink></li>
                                 </ul>
