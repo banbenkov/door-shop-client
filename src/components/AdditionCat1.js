@@ -12,6 +12,10 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
             case '5':
                 setPriceBox(2300);
                 setPriceNalich(2300);
+                if (door.id === 50 || door.id === 51) {
+                    setPriceBox(2500);
+                    setPriceNalich(2500);
+                }
                 break
             default:
                 setPriceBox(1000);
@@ -30,7 +34,8 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
 
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceNalich, `Наличник комплект(5шт)-${priceNalich}₽`)} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceNalich, `Наличник комплект(5шт)-${priceNalich}₽`)}
+                       type="checkbox"
                        className="custom-control-input" id="customCheck2"/>
                 <label className="custom-control-label" htmlFor="customCheck2">
                     Наличник комплект(5шт)-{priceNalich}₽
