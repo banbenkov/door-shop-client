@@ -12,7 +12,7 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
             case '5':
                 setPriceBox(2300);
                 setPriceNalich(2300);
-                if (door.id === 50 || door.id === 51) {
+                if (door.id >= 50 || door.id <= 55) {
                     setPriceBox(2500);
                     setPriceNalich(2500);
                 }
