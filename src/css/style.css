@@ -22661,12 +22661,21 @@ label-texture {
     padding:20px;
 }
 
-.card-review {
+.card-review-big {
     background-color: #fff;
     border-radius: 12px;
     padding: 15px;
     border: none;
-    height: 290px;
+    height: 420px;
+    margin-top: 10px
+}
+
+.card-review-small {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    border: none;
+    height: 300px;
     margin-top: 10px
 }
 
@@ -22723,6 +22732,8 @@ label-texture {
         margin-bottom: 5px;
     }
 }
+
+
 
 
 
