@@ -1,9 +1,8 @@
 const express = require('express')
 const path = require('path')
+const http = require('http')
 const https = require( "https" );  // для организации https
 const fs = require( "fs" )
-
-const PORT = 443
 
 httpsOptions = {
     key: fs.readFileSync("dveri-arsenal.ru.key"),
@@ -18,4 +17,13 @@ app.get('*', (req,res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 
-https.createServer(httpsOptions, app).listen(PORT)
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(httpsOptions, app);
+
+httpServer.listen(80, () => {
+    console.log('HTTP server running on port 80')
+})
+
+httpsServer.listen(443, () => {
+    console.log('HTTPS server running on port 443')
+})
