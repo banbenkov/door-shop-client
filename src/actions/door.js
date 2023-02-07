@@ -8,7 +8,7 @@ export const fetchDoors = () => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_DOORS'})
-            const response = await axios.get(`https://89.223.66.133:5000/door`)
+            const response = await axios.get(`https://89.223.66.133:444/door`)
             response.data.map((elem, i) => {
 
                 if (min > elem.price || min === 0) {
@@ -39,7 +39,7 @@ export const fetchDoor = (id) => {
         try {
             dispatch({type: 'FETCH_DOOR_DETAIL'})
             dispatch({type: 'FETCH_DOOR_IMAGE'})
-            const response = await axios.get(`https://89.223.66.133:5000/door/${id}`)
+            const response = await axios.get(`https://89.223.66.133:444/door/${id}`)
             if (response.data.img.indexOf(';') !== -1) {
                 imgArr = response.data.img.split(';')
                 img = imgArr.map((elem) => {
