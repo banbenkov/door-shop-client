@@ -5,7 +5,7 @@ import {Dispatch} from "redux";
 export const sendOrder = (order) => {
     return async dispatch => {
         try {
-            const response = await axios.post(`http://89.223.66.133:5000/order`, order)
+            const response = await axios.post(`https://dveri-arsenal.ru:444/order`, order)
             dispatch({type: 'SHOW_ALERT_SUCCESS'})
         } catch (e) {
             dispatch({
