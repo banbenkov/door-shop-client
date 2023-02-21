@@ -22698,6 +22698,14 @@ label-texture {
     margin: 5px;
 }
 
+.gallery-item:hover {
+    color: white;
+}
+
+.lg-sub-html a:hover{
+    color: white;
+}
+
 @media (min-width: 1200px) {
     .img-responsive{
         max-width: 270px;
