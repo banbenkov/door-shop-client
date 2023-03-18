@@ -1,24 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const AdditionCat2 = ({soldCheckbox}) => {
+const AdditionCat2 = ({soldCheckbox, door}) => {
+    const [priceBox, setPriceBox] = useState(0);
+    const [priceNalich, setPriceNalich] = useState(0);
+    const [priceDobor, setPriceDobor] = useState(0);
+    if (door.id === 59) {
+        setPriceBox(2800);
+        setPriceNalich(2300);
+        setPriceDobor(1000);
+    } else {
+        setPriceBox(2000);
+        setPriceNalich(2000);
+        setPriceDobor(700);
+    }
     return (
         <div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 2000, 'Коробка телескоп комплект(2,5шт)-2000₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceBox, 'Коробка телескоп комплект(2,5шт)-2000₽')} type="checkbox"
                        className="custom-control-input" id="customCheck1"/>
                 <label className="custom-control-label" htmlFor="customCheck1">
                     Коробка телескоп комплект(2,5шт)-2000₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 2000, 'Наличник телескоп комплект(5шт)-2000₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceNalich, 'Наличник телескоп комплект(5шт)-2000₽')} type="checkbox"
                        className="custom-control-input" id="customCheck2"/>
                 <label className="custom-control-label" htmlFor="customCheck2">
                     Наличник телескоп комплект(5шт)-2000₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 700, 'Добор телескоп-700Р')} type="checkbox" className="custom-control-input"
+                <input onChange={e => soldCheckbox(e, priceDobor, 'Добор телескоп-700Р')} type="checkbox" className="custom-control-input"
                        id="customCheck3"/>
                 <label className="custom-control-label" htmlFor="customCheck3">
                     Добор телескоп-700Р
