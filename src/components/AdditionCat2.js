@@ -1,44 +1,52 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const AdditionCat2 = ({soldCheckbox, door}) => {
     const [priceBox, setPriceBox] = useState(0);
     const [priceNalich, setPriceNalich] = useState(0);
     const [priceDobor, setPriceDobor] = useState(0);
-    if (door.id === 59) {
-        setPriceBox(2800);
-        setPriceNalich(2300);
-        setPriceDobor(1000);
-    } else {
-        setPriceBox(2000);
-        setPriceNalich(2000);
-        setPriceDobor(700);
-    }
+    useEffect(() => {
+        if (door.id === 59) {
+            setPriceBox(2800);
+            setPriceNalich(2300);
+            setPriceDobor(1000);
+        } else {
+            setPriceBox(2000);
+            setPriceNalich(2000);
+            setPriceDobor(700);
+        }
+    }, [])
+
     return (
         <div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceBox, 'Коробка телескоп комплект(2,5шт)-2000₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceBox, 'Коробка телескоп комплект(2,5шт)-2000₽')}
+                       type="checkbox"
                        className="custom-control-input" id="customCheck1"/>
                 <label className="custom-control-label" htmlFor="customCheck1">
-                    Коробка телескоп комплект(2,5шт)-2000₽
+                    Коробка телескоп комплект(2,5шт)-{priceBox}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceNalich, 'Наличник телескоп комплект(5шт)-2000₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceNalich, 'Наличник телескоп комплект(5шт)-2000₽')}
+                       type="checkbox"
                        className="custom-control-input" id="customCheck2"/>
                 <label className="custom-control-label" htmlFor="customCheck2">
-                    Наличник телескоп комплект(5шт)-2000₽
+                    Наличник телескоп комплект(5шт)-{priceNalich}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceDobor, 'Добор телескоп-700Р')} type="checkbox" className="custom-control-input"
+                <input onChange={e => soldCheckbox(e, priceDobor, 'Добор телескоп-700Р')} type="checkbox"
+                       className="custom-control-input"
                        id="customCheck3"/>
                 <label className="custom-control-label" htmlFor="customCheck3">
-                    Добор телескоп-700Р
+                    Добор телескоп-{priceDobor}Р
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 1000, 'Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1000₽')} type="checkbox"
-                       className="custom-control-input" id="customCheck4"/>
+                <input
+                    onChange={e => soldCheckbox(e, 1000, 'Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1000₽')}
+                    type="checkbox"
+                    className="custom-control-input" id="customCheck4"/>
                 <label className="custom-control-label" htmlFor="customCheck4">
                     Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1000₽
                 </label>
@@ -51,14 +59,17 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 700, 'Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы-900₽')} type="checkbox" className="custom-control-input"
-                       id="customCheck6"/>
+                <input
+                    onChange={e => soldCheckbox(e, 700, 'Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы-900₽')}
+                    type="checkbox" className="custom-control-input"
+                    id="customCheck6"/>
                 <label className="custom-control-label" htmlFor="customCheck6">
                     Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы-700₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 600, 'Завертка сантехника "Code Deco" (Испания) на стяжках-600₽')} type="checkbox" className="custom-control-input"
+                <input onChange={e => soldCheckbox(e, 600, 'Завертка сантехника "Code Deco" (Испания) на стяжках-600₽')}
+                       type="checkbox" className="custom-control-input"
                        id="customCheck7"/>
                 <label className="custom-control-label" htmlFor="customCheck7">
                     Завертка сантехника "Code Deco" (Испания) на стяжках-600₽
@@ -72,7 +83,8 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 500, 'Демонтаж-500Р')} type="checkbox" className="custom-control-input"
+                <input onChange={e => soldCheckbox(e, 500, 'Демонтаж-500Р')} type="checkbox"
+                       className="custom-control-input"
                        id="customCheck9"/>
                 <label className="custom-control-label" htmlFor="customCheck9">
                     Демонтаж-500Р
