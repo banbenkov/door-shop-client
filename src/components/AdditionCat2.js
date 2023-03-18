@@ -14,7 +14,7 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
             setPriceNalich(2000);
             setPriceDobor(700);
         }
-    }, [])
+    }, [door])
 
     return (
         <div>
