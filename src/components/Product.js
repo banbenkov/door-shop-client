@@ -10,6 +10,7 @@ import Modal from "./Modal";
 import AdditionCat1 from "./AdditionCat1";
 import AdditionCat2 from "./AdditionCat2";
 import {Helmet} from "react-helmet";
+import AdditionCat3 from "./AdditionCat3";
 
 
 const Product = () => {
@@ -294,8 +295,9 @@ const Product = () => {
                                 <span className="price fs-18">{generalPrice}₽</span>
                             </div>
                         </div>
-                        {door.category === '1' || door.category === '4' || door.category === '5' ? (<AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>)
-                            : (<AdditionCat2 door={door} soldCheckbox={soldCheckbox}/>)}
+                        {((door.category === '1' || door.category === '4' || door.category === '5') && (<AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>))
+                            || ((door.category === '2' || door.category === '3' || door.category === '6' ) && (<AdditionCat2 door={door} soldCheckbox={soldCheckbox}/>))
+                            || ((door.category === '7' && (<AdditionCat3 door={door} soldCheckbox={soldCheckbox}/>)))}
 
                         <div className="row gutter-2">
                             <div className="col-12">

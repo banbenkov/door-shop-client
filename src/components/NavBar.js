@@ -10,7 +10,7 @@ import {
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
-    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE, PORTFOLIO_ROUTE
@@ -50,8 +50,8 @@ const NavBar = () => {
                 </div>)}
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
-                    <a href="index.html" className="navbar-brand order-1 order-lg-2"><img src={logo}
-                                                                                          alt="Logo"/></a>
+                    <NavLink to={INDEX_ROUTE} className="navbar-brand order-1 order-lg-2"><img src={logo}
+                                                                                               alt="Logo"/></NavLink>
 
                     <div className={collapseMenu ? "collapse show navbar-collapse order-4 order-lg-1"
                         : "collapse navbar-collapse order-4 order-lg-1"} id="navbarMenu">
@@ -97,6 +97,9 @@ const NavBar = () => {
                                                     </li>
                                                     <li className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
                                                                                             className="menu-list-link">Эмалит</NavLink>
+                                                    </li>
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_SOSNA_ROUTE}
+                                                                                            className="menu-list-link">Массив сосны</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>

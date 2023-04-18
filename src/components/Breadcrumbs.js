@@ -7,7 +7,7 @@ import {
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
-    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
@@ -69,6 +69,11 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_EMALIT_ROUTE;
                     orderName = door.title;
                     break;
+                case '7':
+                    nameCategoryDoor = 'Массив сосны';
+                    linkCategoryDoor = CATEGORY_SOSNA_ROUTE;
+                    orderName = door.title;
+                    break;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'
@@ -112,6 +117,10 @@ const Breadcrumbs = () => {
         case CATEGORY_FURNITURE_LATCH_ROUTE:
             nameCategory = 'Замки';
             linkCategory = CATEGORY_FURNITURE_LATCH_ROUTE;
+            break;
+        case CATEGORY_SOSNA_ROUTE:
+            nameCategory = 'Массив сосны';
+            linkCategory = CATEGORY_SOSNA_ROUTE;
             break;
         default:
             nameCategory = 'Все двери';

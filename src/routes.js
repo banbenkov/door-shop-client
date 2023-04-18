@@ -11,7 +11,8 @@ import {
     CATEGORY_EMAL_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_EMALIT_ROUTE,
-    PORTFOLIO_ROUTE
+    PORTFOLIO_ROUTE,
+    CATEGORY_SOSNA_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -66,6 +67,10 @@ export const publicRoutes = [
     {
       path: CATEGORY_EMALIT_ROUTE,
       Component: <Catalog />
+    },
+    {
+        path: CATEGORY_SOSNA_ROUTE,
+        Component: <Catalog />
     },
      {
          path: CATEGORY_FURNITURE_DOORHANDLE_ROUTE,

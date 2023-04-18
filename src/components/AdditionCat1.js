@@ -46,7 +46,7 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                        className="custom-control-input"
                        id="customCheck3"/>
                 <label className="custom-control-label" htmlFor="customCheck3">
-                    Добор-300Р
+                    Добор-300₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">

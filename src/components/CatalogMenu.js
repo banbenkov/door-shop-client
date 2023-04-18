@@ -8,7 +8,7 @@ import {
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
-    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router";
@@ -53,6 +53,9 @@ const CatalogMenu = () => {
                                 </li>
                                 <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_EMALIT_ROUTE}>Эмалит</NavLink>
+                                </li>
+                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                    <NavLink className="nav-link" to={CATEGORY_SOSNA_ROUTE}>Массив сосны</NavLink>
                                 </li>
                             </ul>
                         </div>
