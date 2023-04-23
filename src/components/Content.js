@@ -179,8 +179,8 @@ const Content = () => {
                             <ul className="pagination">
                                 {currentPage > 1 ?
                                     (<li onClick={() => prevPaginate()} className="page-item"><a
-                                        className="page-link">Предыдущая</a></li>)
-                                    : (<li className="page-item"><a className="page-link none-active">Предыдущая</a>
+                                        className="page-link">←</a></li>)
+                                    : (<li className="page-item"><a className="page-link none-active">←</a>
                                     </li>)
                                 }
                                 {currentPage > 4 && (<li className="page-item"><a className="page-link none-active">...</a></li>)}
@@ -197,8 +197,8 @@ const Content = () => {
                                 {pageNumbers.length - currentPage > 4 && (<li className="page-item"><a className="page-link none-active">...</a></li>)}
                                 {currentPage < pageNumbers.length ?
                                     (<li onClick={() => nextPaginate()} className="page-item"><a
-                                        className="page-link">Следующая</a></li>)
-                                    : (<li className="page-item"><a className="page-link none-active">Следующая</a>
+                                        className="page-link">→</a></li>)
+                                    : (<li className="page-item"><a className="page-link none-active">→</a>
                                     </li>)
                                 }
 
