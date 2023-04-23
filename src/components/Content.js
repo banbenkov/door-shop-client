@@ -183,11 +183,18 @@ const Content = () => {
                                     : (<li className="page-item"><a className="page-link none-active">Предыдущая</a>
                                     </li>)
                                 }
-                                {pageNumbers.map((number) => (
-                                    <li onClick={() => paginate(number)} key={number}
-                                        className={`page-item ${currentPage === number && 'active'} `}><a
-                                        className="page-link">{number}</a></li>
-                                ))}
+                                {currentPage > 4 && (<li className="page-item"><a className="page-link none-active">...</a></li>)}
+                                {pageNumbers.map((number) => {
+                                    if(currentPage - number < 4 && currentPage - number > -4)
+                                    {
+                                        return (
+                                            <li onClick={() => paginate(number)} key={number}
+                                                className={`page-item ${currentPage === number && 'active'} `}><a
+                                                className="page-link">{number}</a></li>
+                                        )
+                                    }
+                                    })}
+                                {pageNumbers.length - currentPage > 4 && (<li className="page-item"><a className="page-link none-active">...</a></li>)}
                                 {currentPage < pageNumbers.length ?
                                     (<li onClick={() => nextPaginate()} className="page-item"><a
                                         className="page-link">Следующая</a></li>)
