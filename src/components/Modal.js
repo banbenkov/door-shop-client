@@ -11,13 +11,17 @@ const Modal = ({order, price}) => {
         dispatch({type: 'HIDE_MODAL'})
     }
     const createOrder = (order) => {
-        order.name = name;
-        order.phoneNumber = phone;
-        order.width = order.width.value;
-        order.height = order.height.value;
-        order.decor = order.decor.value;
-        order.price = price;
-        dispatch(sendOrder(order));
+        const fieldOrder = {};
+        fieldOrder.name = name;
+        fieldOrder.phoneNumber = phone;
+        fieldOrder.width = order.width.value;
+        fieldOrder.height = order.height.value;
+        fieldOrder.decor = order.decor.value;
+        fieldOrder.price = price;
+        fieldOrder.title = order.title;
+        fieldOrder.additions = order.additions;
+        fieldOrder.amount = order.amount;
+        dispatch(sendOrder(fieldOrder));
         window.scrollTo(0, 0);
         dispatch({type: 'HIDE_MODAL'});
     }
