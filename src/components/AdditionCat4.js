@@ -5,86 +5,59 @@ const AdditionCat3 = ({soldCheckbox, door}) => {
     const [priceNalich, setPriceNalich] = useState(0);
     const [priceDobor, setPriceDobor] = useState(0);
     useEffect(() => {
-        if (door.id === 63 || door.id === 64) {
-            setPriceBox(1500);
-            setPriceNalich(1500);
-            setPriceDobor(600);
-        }
-        else if (door.id === 65) {
-            setPriceBox(1300);
-            setPriceNalich(1400);
-            setPriceDobor(600);
-        }
-        else {
-            setPriceBox(1000);
-            setPriceNalich(1000);
-            setPriceDobor(200);
-        }
+        setPriceNalich(5000);
+        setPriceBox(4000);
+        setPriceDobor(1500);
     }, [door])
     return (
         <div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceBox, `Коробка комплект-${priceBox}₽`)}
+                <input onChange={e => soldCheckbox(e, priceBox, `Коробка ТЕЛЕСКОП с уплотнителем к/кт-${priceBox}₽`)}
                        type="checkbox"
                        className="custom-control-input" id="customCheck1"/>
                 <label className="custom-control-label" htmlFor="customCheck1">
-                    Коробка комплект-{priceBox}₽
+                    Коробка ТЕЛЕСКОП с уплотнителем к/кт-{priceBox}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceNalich, `Наличник комплект(5шт)-${priceNalich}₽`)}
+                <input onChange={e => soldCheckbox(e, priceNalich, `Наличник ТЕЛЕСКОП (Г образный) к/кт(5шт)-${priceNalich}₽`)}
                        type="checkbox"
                        className="custom-control-input" id="customCheck2"/>
                 <label className="custom-control-label" htmlFor="customCheck2">
-                    Наличник комплект(5шт)-{priceNalich}₽
+                    Наличник ТЕЛЕСКОП (Г образный) к/кт(5шт)-{priceNalich}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceDobor, `Добор-${priceDobor}₽`)} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceDobor, `Добор ТЕЛЕСКОП 150мм-${priceDobor}₽`)} type="checkbox"
                        className="custom-control-input"
                        id="customCheck3"/>
                 <label className="custom-control-label" htmlFor="customCheck3">
-                    Добор-{priceDobor}₽
+                    Добор ТЕЛЕСКОП 150мм-{priceDobor}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
                 <input
-                    onChange={e => soldCheckbox(e, 1000, 'Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1000₽')}
+                    onChange={e => soldCheckbox(e, 1000, 'Врезка фурнитуры (замок под ручку + петли + ответка)-1000₽')}
                     type="checkbox"
                     className="custom-control-input" id="customCheck4"/>
                 <label className="custom-control-label" htmlFor="customCheck4">
-                    Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1000₽
+                    Врезка фурнитуры (замок под ручку + петли + ответка)-1000₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 1000, 'Сборка в блок-1000₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, 800, 'Ручка-800₽')} type="checkbox"
                        className="custom-control-input" id="customCheck5"/>
                 <label className="custom-control-label" htmlFor="customCheck5">
-                    Сборка в блок-1000₽
+                    Ручка-800₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
                 <input
-                    onChange={e => soldCheckbox(e, 800, 'Ручка "PUNTO" (Испания) крепление на стяжках, не саморезы-800₽')}
+                    onChange={e => soldCheckbox(e, 3500, 'Установка (монтаж)-3500₽')}
                     type="checkbox" className="custom-control-input"
                     id="customCheck6"/>
                 <label className="custom-control-label" htmlFor="customCheck6">
-                    Ручка "PUNTO" (Испания) крепление на стяжках, не саморезы-800₽
-                </label>
-            </div>
-            <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 700, 'Завертка сантехника "PUNTO" (Испания) на стяжках-700₽')}
-                       type="checkbox" className="custom-control-input"
-                       id="customCheck7"/>
-                <label className="custom-control-label" htmlFor="customCheck7">
-                    Завертка сантехника "PUNTO" (Испания) на стяжках-700₽
-                </label>
-            </div>
-            <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 3500, 'Установка-3500₽')} type="checkbox"
-                       className="custom-control-input" id="customCheck8"/>
-                <label className="custom-control-label" htmlFor="customCheck8">
-                    Установка-3500₽
+                    Установка (монтаж)-3500₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">

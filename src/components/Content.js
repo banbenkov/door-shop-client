@@ -5,7 +5,7 @@ import {fetchDoors} from "../actions/door";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation, useParams} from "react-router-dom";
 import {
-    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
     CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE
@@ -86,6 +86,13 @@ const Content = () => {
                 break;
             case CATEGORY_SOSNA_ROUTE:
                 doors = doorsFetch.filter(door => door.category === '7'
+                    && door.price >= priceFilter.currMinPrice
+                    && door.price <= priceFilter.currMaxPrice
+                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
+                categoryName = 'Массив сосны';
+                break;
+            case CATEGORY_DUB_ROUTE:
+                doors = doorsFetch.filter(door => door.category === '8'
                     && door.price >= priceFilter.currMinPrice
                     && door.price <= priceFilter.currMaxPrice
                     && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );

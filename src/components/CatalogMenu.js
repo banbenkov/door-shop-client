@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
 import {
     CATALOG_ROUTE,
-    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE,
@@ -56,6 +56,9 @@ const CatalogMenu = () => {
                                 </li>
                                 <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_SOSNA_ROUTE}>Массив сосны</NavLink>
+                                </li>
+                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                    <NavLink className="nav-link" to={CATEGORY_DUB_ROUTE}>Массив дуба</NavLink>
                                 </li>
                             </ul>
                         </div>

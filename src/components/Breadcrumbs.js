@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
 import {
-    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE,
@@ -74,6 +74,11 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_SOSNA_ROUTE;
                     orderName = door.title;
                     break;
+                case '8':
+                    nameCategoryDoor = 'Массив дуба';
+                    linkCategoryDoor = CATEGORY_DUB_ROUTE;
+                    orderName = door.title;
+                    break;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'
@@ -121,6 +126,10 @@ const Breadcrumbs = () => {
         case CATEGORY_SOSNA_ROUTE:
             nameCategory = 'Массив сосны';
             linkCategory = CATEGORY_SOSNA_ROUTE;
+            break;
+        case CATEGORY_DUB_ROUTE:
+            nameCategory = 'Массив дуба';
+            linkCategory = CATEGORY_DUB_ROUTE;
             break;
         default:
             nameCategory = 'Все двери';

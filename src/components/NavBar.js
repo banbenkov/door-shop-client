@@ -5,7 +5,7 @@ import logo from '../img/logo.png'
 import {
     ABOUT_ROUTE,
     CATALOG_ROUTE,
-    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE,
@@ -100,6 +100,9 @@ const NavBar = () => {
                                                     </li>
                                                     <li className="menu-list-item"><NavLink to={CATEGORY_SOSNA_ROUTE}
                                                                                             className="menu-list-link">Массив сосны</NavLink>
+                                                    </li>
+                                                    <li className="menu-list-item"><NavLink to={CATEGORY_DUB_ROUTE}
+                                                                                            className="menu-list-link">Массив дуба</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>
