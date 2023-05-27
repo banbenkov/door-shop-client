@@ -96,7 +96,7 @@ const Content = () => {
                     && door.price >= priceFilter.currMinPrice
                     && door.price <= priceFilter.currMaxPrice
                     && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Массив сосны';
+                categoryName = 'Массив дуба';
                 break;
             default:
                 doors = doorsFetch.filter(door => door.price >= priceFilter.currMinPrice
