@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styles from '../css/style.css';
-import {CATEGORY_SOSNA_ROUTE} from "../utils/consts";
+import {CATEGORY_DUB_ROUTE, CATEGORY_SOSNA_ROUTE} from "../utils/consts";
 import {NavLink} from "react-router-dom";
 
 
@@ -18,7 +18,8 @@ const Swiper = () => {
                                 <div className="col-lg-8 text-black" data-swiper-parallax-x="-100%">
                                     <span className="eyebrow">Специальное предложение</span>
                                     <h1 className="mb-3 text-uppercase">для загородных домов</h1>
-                                    <NavLink to={CATEGORY_SOSNA_ROUTE} className="btn btn-outline-dark">Просмотреть</NavLink>
+                                    <NavLink to={CATEGORY_SOSNA_ROUTE} className="btn btn-outline-dark">Массив сосны</NavLink>
+                                    <NavLink to={CATEGORY_DUB_ROUTE} className="btn btn-outline-dark ml-1">Массив дуба</NavLink>
                                 </div>
                             </div>
                         </div>
