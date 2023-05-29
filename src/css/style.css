@@ -22635,6 +22635,19 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-rivera {
+    background-image: url("../../public/images/texture/rivera.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-rivera::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 
 
 .slick-prev:before,
