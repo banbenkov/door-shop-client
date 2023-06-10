@@ -22,15 +22,18 @@ const SideBar = () => {
 
     const setDgFilter = () => {
         dispatch({type: 'SET_VIEW_DG'})
+        dispatch({type: 'START_PAGE'})
     }
 
     const setDoFilter = () => {
         dispatch({type: 'SET_VIEW_DO'})
+        dispatch({type: 'START_PAGE'})
     }
 
     const clickClear = () => {
         dispatch({type: 'SET_DEFAULT_PRICE'})
         dispatch({type: 'SET_DEFAULT_VIEW'})
+        dispatch({type: 'START_PAGE'})
     }
 
 

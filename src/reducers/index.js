@@ -11,6 +11,7 @@ import viewFilterReducer from "./viewFilterReducer";
 import furnitureReducer from "./furnitureReducer";
 import furnitureDetailReducer from "./furnitureDetailReducer";
 import portfolioReducer from "./portfolioReducer";
+import paginateReducer from "./paginateReducer";
 
 
 const rootReducer = combineReducers({
@@ -23,7 +24,8 @@ const rootReducer = combineReducers({
     viewFilter: viewFilterReducer,
     furniture: furnitureReducer,
     furnitureDetail: furnitureDetailReducer,
-    portfolio: portfolioReducer
+    portfolio: portfolioReducer,
+    currentPage: paginateReducer,
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))

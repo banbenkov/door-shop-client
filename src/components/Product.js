@@ -12,6 +12,8 @@ import AdditionCat2 from "./AdditionCat2";
 import {Helmet} from "react-helmet";
 import AdditionCat3 from "./AdditionCat3";
 import AdditionCat4 from "./AdditionCat4";
+import DoorPhoto from "./DoorPhoto";
+import {fetchPicturesForDoor} from "../actions/portfolio";
 
 
 const Product = () => {
@@ -46,10 +48,14 @@ const Product = () => {
         amount: 1,
         name: ''
     });
+    const photoPortfolio = useSelector(state => state.portfolio.pictures);
+
+    //Экшены для двери и фото в портфолио
     useEffect(() => {
         dispatch(fetchDoor(id))
+        dispatch(fetchPicturesForDoor(id))
+    }, []);
 
-    }, [])
     useEffect(() => {
         setAdditionalPrice(door.price)
         setGeneralPrice(door.price)
@@ -70,7 +76,7 @@ const Product = () => {
 
     }, [door])
 
-
+    //разбиение размеров и текстур
     height = door.height !== undefined ? door.height.split(";") : [];
     width = door.width !== undefined ? door.width.split(";") : [];
     texture = door.decor !== undefined ? door.decor.split(";") : [];
@@ -433,9 +439,13 @@ const Product = () => {
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div className="row" hidden={photoPortfolio.length === 0}>
+                    <h2>Фото клиентов</h2>
+                    <DoorPhoto photo={photoPortfolio} />
                 </div>
             </div>
+
         </section>
     );
 };

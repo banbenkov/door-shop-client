@@ -14,6 +14,7 @@ const Gallery = () => {
         dispatch(fetchPicture())
     }, [])
 
+    pictures.sort((a,b) => b.doorId - a.doorId)
 
     return (
         <div className="container mb-2 mt-2">

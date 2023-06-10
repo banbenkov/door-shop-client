@@ -18,9 +18,10 @@ const Content = () => {
         const doorsFetch = useSelector(state => state.door.doors)
         const priceFilter = useSelector(state => state.priceFilter)
         const viewFilter = useSelector(state => state.viewFilter)
+        const currentPage = useSelector(state => state.currentPage)
         const [collapse, setCollapse] = useState(false);
         const [sort, setSort] = useState(false);
-        const [currentPage, setCurrentPage] = useState(1);
+        // const [currentPage, setCurrentPage] = useState(1);
         const [doorPerPage] = useState(6)
         let doors = [];
         let categoryName = '';
@@ -35,11 +36,11 @@ const Content = () => {
         useEffect(() => {
             window.scrollTo(0, 0);
         }, [currentPage]);
+        // useEffect(() => {
+        //     // dispatch({type: 'START_PAGE'})
+        // }, [viewFilter])
         useEffect(() => {
-            setCurrentPage(1)
-        }, [viewFilter])
-        useEffect(() => {
-            setCurrentPage(1)
+            dispatch({type: 'START_PAGE'})
         }, [location])
         switch (location.pathname) {
             case CATEGORY_EKOSHPON_LIGHT_ROUTE:
@@ -132,9 +133,9 @@ const Content = () => {
         }
 
 
-        const paginate = (pageNumber) => setCurrentPage(pageNumber);
-        const nextPaginate = () => setCurrentPage(currentPage + 1);
-        const prevPaginate = () => setCurrentPage(currentPage - 1);
+        const paginate = (pageNumber) => dispatch({type: 'SET_PAGE', payload: pageNumber});
+        const nextPaginate = () => dispatch({type: 'INCREMENT_PAGE', payload: currentPage});
+        const prevPaginate = () => dispatch({type: 'DECREMENT_PAGE', payload: currentPage});
 
         const clickDropDown = () => {
             setCollapse(!collapse);
