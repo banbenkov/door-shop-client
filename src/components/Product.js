@@ -441,7 +441,7 @@ const Product = () => {
                     </div>
                 </div>
                 <div className="row" hidden={photoPortfolio.length === 0}>
-                    <h2>Фото клиентов</h2>
+                    <h2>Фото двери</h2>
                     <DoorPhoto photo={photoPortfolio} />
                 </div>
             </div>
