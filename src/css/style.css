@@ -22758,40 +22758,37 @@ label-texture {
     color: white;
 }
 
-@media (min-width: 1200px) {
-    .img-responsive{
-        max-width: 270px;
-        margin-bottom: 5px;
-    }
-}
+@media (min-width: 360px) { .img-responsive {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 5px;
+} }
 
-@media (min-width: 768px) and (max-width: 1200px){
-    .img-responsive{
-        max-width: 203px;
-        margin-bottom: 5px;
-    }
-}
-
-@media (min-width: 540px) and (max-width: 768px){
-    .img-responsive{
-        max-width: 220px;
-        margin-bottom: 5px;
-    }
-}
-
-@media (min-width: 425px) and (max-width: 540px){
-    .img-responsive{
-        max-width: 215px;
-        margin-bottom: 5px;
-    }
-}
-
-@media (max-width: 425px) {
-    .img-responsive{
-        max-width: 215px;
-        margin-bottom: 5px;
-    }
-}
+@media (min-width: 576px) { .img-responsive {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 5px;
+} }
+@media (min-width: 768px) {  .img-responsive {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 5px;
+} }
+@media (min-width: 992px) { .img-responsive {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 5px;
+} }
+@media (min-width: 1200px) {  .img-responsive {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 5px;
+} }
 
 /*Swiper door photo*/
 .swiper {
