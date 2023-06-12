@@ -42,69 +42,75 @@ const Content = () => {
         useEffect(() => {
             dispatch({type: 'START_PAGE'})
         }, [location])
-        switch (location.pathname) {
-            case CATEGORY_EKOSHPON_LIGHT_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '1'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Экошпон ЛАЙТ'
-                break;
-            case CATEGORY_EKOSHPON_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '2'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Экошпон'
-                break;
-            case CATEGORY_WHITE_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '3'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Белые двери'
-                break;
-            case CATEGORY_CLASSIC_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '4'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Классика';
-                break;
-            case CATEGORY_EMAL_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '5'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Эмаль';
-                break;
-            case CATEGORY_EMALIT_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '6'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Эмалит';
-                break;
-            case CATEGORY_SOSNA_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '7'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Массив сосны';
-                break;
-            case CATEGORY_DUB_ROUTE:
-                doors = doorsFetch.filter(door => door.category === '8'
-                    && door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Массив дуба';
-                break;
-            default:
-                doors = doorsFetch.filter(door => door.price >= priceFilter.currMinPrice
-                    && door.price <= priceFilter.currMaxPrice
-                    && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)) );
-                categoryName = 'Все двери'
 
+        if (location.state === null) {
+            switch (location.pathname) {
+                case CATEGORY_EKOSHPON_LIGHT_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '1'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Экошпон ЛАЙТ'
+                    break;
+                case CATEGORY_EKOSHPON_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '2'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Экошпон'
+                    break;
+                case CATEGORY_WHITE_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '3'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Белые двери'
+                    break;
+                case CATEGORY_CLASSIC_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '4'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Классика';
+                    break;
+                case CATEGORY_EMAL_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '5'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Эмаль';
+                    break;
+                case CATEGORY_EMALIT_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '6'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Эмалит';
+                    break;
+                case CATEGORY_SOSNA_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '7'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Массив сосны';
+                    break;
+                case CATEGORY_DUB_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '8'
+                        && door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Массив дуба';
+                    break;
+                default:
+                    doors = doorsFetch.filter(door => door.price >= priceFilter.currMinPrice
+                        && door.price <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Все двери'
+
+            }
+        } else {
+            doors = doorsFetch.filter(door => door.title.toLowerCase().trim().includes(location.state.from.toLowerCase().trim()));
+            categoryName = 'Результаты поиска';
         }
 
         if (sort === false) {
@@ -120,8 +126,6 @@ const Content = () => {
                 doors.sort((a, b) => a.price - b.price);
             }
         }, [sort]);
-
-
 
 
         lastDoorIndex = currentPage * doorPerPage;
@@ -140,7 +144,7 @@ const Content = () => {
         const clickDropDown = () => {
             setCollapse(!collapse);
         }
-        const  clickSort = () => {
+        const clickSort = () => {
             setCollapse(!collapse);
             setSort(!sort);
         }
@@ -158,13 +162,17 @@ const Content = () => {
                             <li>
                       <span>Сортировать по
                       <span className={collapse === true ? 'dropdown show' : 'dropdown'}>
-                        <a onClick={() => {clickDropDown()}} className="dropdown-toggle underline" role="button" id="dropdownMenuLink"
+                        <a onClick={() => {
+                            clickDropDown()
+                        }} className="dropdown-toggle underline" role="button" id="dropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {sort ? ' Цене' : ' Популярности'}
                         </a>
                         <span className={collapse === true ? 'dropdown-menu show' : 'dropdown-menu'}
                               aria-labelledby="dropdownMenuLink">
-                          <a onClick={() => {clickSort()}} className="dropdown-item">{sort ? ' Популярности' : ' Цене'}</a>
+                          <a onClick={() => {
+                              clickSort()
+                          }} className="dropdown-item">{sort ? ' Популярности' : ' Цене'}</a>
                         </span>
                       </span>
                     </span>
@@ -191,18 +199,19 @@ const Content = () => {
                                     : (<li className="page-item"><a className="page-link none-active">←</a>
                                     </li>)
                                 }
-                                {currentPage > 4 && (<li className="page-item"><a className="page-link none-active">...</a></li>)}
+                                {currentPage > 4 && (
+                                    <li className="page-item"><a className="page-link none-active">...</a></li>)}
                                 {pageNumbers.map((number) => {
-                                    if(currentPage - number < 4 && currentPage - number > -4)
-                                    {
+                                    if (currentPage - number < 4 && currentPage - number > -4) {
                                         return (
                                             <li onClick={() => paginate(number)} key={number}
                                                 className={`page-item ${currentPage === number && 'active'} `}><a
                                                 className="page-link">{number}</a></li>
                                         )
                                     }
-                                    })}
-                                {pageNumbers.length - currentPage > 4 && (<li className="page-item"><a className="page-link none-active">...</a></li>)}
+                                })}
+                                {pageNumbers.length - currentPage > 4 && (
+                                    <li className="page-item"><a className="page-link none-active">...</a></li>)}
                                 {currentPage < pageNumbers.length ?
                                     (<li onClick={() => nextPaginate()} className="page-item"><a
                                         className="page-link">→</a></li>)

@@ -12,7 +12,7 @@ import {
     CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     PORTFOLIO_ROUTE,
-    CATEGORY_SOSNA_ROUTE, CATEGORY_DUB_ROUTE
+    CATEGORY_SOSNA_ROUTE, CATEGORY_DUB_ROUTE, SEARCH
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -30,7 +30,8 @@ export const publicRoutes = [
     },
     {
         path: CATALOG_ROUTE,
-        Component: <Catalog/>
+        Component: <Catalog/>,
+
     },
     {
         path: CATALOG_ROUTE + '/:id',
@@ -95,5 +96,9 @@ export const publicRoutes = [
     {
         path: PORTFOLIO_ROUTE,
         Component: <Portfolio />
+    },
+    {
+        path: SEARCH,
+        Component: <Catalog />
     },
 ]

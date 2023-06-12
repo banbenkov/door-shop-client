@@ -13,7 +13,7 @@ import {
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
-    INDEX_ROUTE, PORTFOLIO_ROUTE
+    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH
 } from "../utils/consts";
 import {useState} from "react";
 import {useSelector} from "react-redux";
@@ -21,6 +21,8 @@ import {useSelector} from "react-redux";
 
 const NavBar = () => {
     const [collapseMenu, setCollapseMenu] = useState(false);
+    const [searchText, setSearchText] = useState('');
+    const [collapseMenuMob, setCollapseMenuMob] = useState(false)
     const location = useLocation();
     const showModal = useSelector(state => state.modal.show);
     return (
@@ -150,17 +152,19 @@ const NavBar = () => {
                         <ul className="navbar-nav ml-auto position-relative">
 
                             {/*search*/}
-                            <li className="nav-item dropdown dropdown-md dropdown-hover">
+                            <li className={`nav-item dropdown dropdown-md dropdown-hover ${collapseMenuMob && 'show'}`}>
                                 <a className="nav-icon dropdown-toggle" id="navbarDropdown-4" role="button"
                                    data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
+                                   aria-haspopup="true" aria-expanded={collapseMenuMob}
+                                   onClick={() => setCollapseMenuMob(!collapseMenuMob)}>
                                     <i className="icon-search d-none d-lg-inline-block"></i>
                                     <span className="d-inline-block d-lg-none">Поиск</span>
                                 </a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown-4">
-                                    <div className="form-group">
+                                <div className={`dropdown-menu ${collapseMenuMob && 'show'}`} aria-labelledby="navbarDropdown-4">
+                                    <div className="input-group">
                                         <input type="text" className="form-control" id="searchForm"
-                                               placeholder="Поиск"/>
+                                               placeholder="Поиск" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+                                        <NavLink to={SEARCH} state={{from: searchText}}><button className="btn btn-secondary">Искать</button></NavLink>
                                     </div>
                                 </div>
                             </li>
@@ -214,30 +218,30 @@ const NavBar = () => {
                             {/*</li>*/}
 
                             {/*favourites*/}
-                            <li className="d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover">
-                                <a className="nav-icon" id="navbarDropdown-7" role="button" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false"><i className="icon-heart"></i></a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown-7">
-                                    <div className="row gutter-3">
-                                        <div className="col-12">
-                                            <h3 className="eyebrow text-dark fs-16 mb-1">Избранные товары</h3>
-                                            {/*<p class="text-muted fs-14"><a href="" class="underline">Sign in</a> to keep your*/}
-                                            {/*   saves for up to 60 days.</p>*/}
-                                        </div>
-                                        <div className="col-12">
-                                            <div className="cart-item">
-                                                Избранных товаров нет
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            {/*<a href="" className="btn btn-primary btn-block">Добавить всё в корзину</a>*/}
-                                            <a href="" className="btn btn-outline-secondary btn-block">Просмотреть
-                                                избранные
-                                                товары</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            {/*<li className="d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover">*/}
+                            {/*    <a className="nav-icon" id="navbarDropdown-7" role="button" data-toggle="dropdown"*/}
+                            {/*       aria-haspopup="true" aria-expanded="false"><i className="icon-heart"></i></a>*/}
+                            {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdown-7">*/}
+                            {/*        <div className="row gutter-3">*/}
+                            {/*            <div className="col-12">*/}
+                            {/*                <h3 className="eyebrow text-dark fs-16 mb-1">Избранные товары</h3>*/}
+                            {/*                /!*<p class="text-muted fs-14"><a href="" class="underline">Sign in</a> to keep your*!/*/}
+                            {/*                /!*   saves for up to 60 days.</p>*!/*/}
+                            {/*            </div>*/}
+                            {/*            <div className="col-12">*/}
+                            {/*                <div className="cart-item">*/}
+                            {/*                    Избранных товаров нет*/}
+                            {/*                </div>*/}
+                            {/*            </div>*/}
+                            {/*            <div className="col-12">*/}
+                            {/*                /!*<a href="" className="btn btn-primary btn-block">Добавить всё в корзину</a>*!/*/}
+                            {/*                <a href="" className="btn btn-outline-secondary btn-block">Просмотреть*/}
+                            {/*                    избранные*/}
+                            {/*                    товары</a>*/}
+                            {/*            </div>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*</li>*/}
 
                             {/*cart*/}
                             {/*<li className="nav-item dropdown dropdown-md dropdown-hover">*/}
@@ -298,9 +302,9 @@ const NavBar = () => {
                         <ul className="navbar-nav navbar-nav--icons ml-auto position-relative">
 
                             {/*search*/}
-                            <li className="nav-item">
-                                <a href="" className="nav-icon"><i className="icon-search"></i></a>
-                            </li>
+                            {/*<li className="nav-item dropdown dropdown-md dropdown-hover show">*/}
+                            {/*    <a href="" className="nav-icon"><i className="icon-search"></i></a>*/}
+                            {/*</li>*/}
 
                             {/*menu*/}
                             <li className="nav-item dropdown dropdown-md dropdown-hover">
