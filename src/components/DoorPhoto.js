@@ -25,31 +25,19 @@ const DoorPhoto = ({photo}) => {
             modules={[Navigation, Pagination]}
             className="mySwiper"
         >
-
             {photo.length !== 0 && photo.map((elem, index) => {
                 return (
                     <SwiperSlide>
                         <LightGallery plugins={[lgZoom, lgVideo]} mode="lg-fade">
-                            <a
-                                data-lg-size="960-960"
-                                data-pinterest-text='Text'
-                                data-tweet-text='Title'
-                                className="gallery-item"
-                                data-src={`../${elem.src}`}
-                            >
-
+                            <a data-src={`../${elem.src}`}>
                                 <img
                                     src={`../${elem.src}`}
                                 />
-
                             </a>
-
                         </LightGallery>
                     </SwiperSlide>
                 )
             })}
-
-
         </Swiper>
 
     );
