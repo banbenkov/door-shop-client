@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2020-11-22T14:37:38+03:00">
+    <shop>
+        <name>Двери Арсенал</name>
+        <company>ООО "АрсеналСтрой"</company>
+        <url>https://dveri-arsenal.ru/</url>
+        <platform></platform>
+        <categories>
+            <category id="1">Межкомнатные двери</category>
+            <category id="2" parentId="1">Экошпон лайт</category>
+            <category id="3" parentId="1">Экошпон</category>
+            <category id="4" parentId="1">Белые двери</category>
+            <category id="5" parentId="1">Классика</category>
+            <category id="6" parentId="1">Эмаль</category>
+            <category id="7" parentId="1">Эмалит</category>
+            <category id="8" parentId="1">Массив сосны</category>
+            <category id="9" parentId="1">Массив дуба</category>
+            <category id="10">Фурнитура</category>
+            <category id="11" parentId="10">Дверные ручки</category>
+            <category id="12" parentId="10">Замки</category>
+        </categories>
+        <delivery-options>
+            <option cost="1400" days="1"/>
+        </delivery-options>
+        <offers>
+            <offer id="1">
+                <name>Межкомнатная дверь Орион Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/1</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product1-5.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ, особого сотового заполнения,
+                    облицованы фактурными плитами МДФ, прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="2">
+                <name>Межкомнатная дверь Орион Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/2</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product2-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ, особого сотового заполнения,
+                    облицованы фактурными плитами МДФ, прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="10">
+                <name>Межкомнатная дверь Сафари</name>
+                <url>https://dveri-arsenal.ru/doors/10</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product10-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="4">
+                <name>Межкомнатная дверь Сатурн Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/4</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product4-3.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="3">
+                <name>Межкомнатная дверь Сатурн Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/3</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product3-3.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="6">
+                <name>Межкомнатная дверь Весна Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/6</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product6-3.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="5">
+                <name>Межкомнатная дверь Весна Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/5</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product5-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="8">
+                <name>Межкомнатная дверь Арабеска Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/8</url>
+                <price>3600</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product8-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="7">
+                <name>Межкомнатная дверь Арабеска Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/7</url>
+                <price>3600</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product7-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="9">
+                <name>Межкомнатная дверь Рейн</name>
+                <url>https://dveri-arsenal.ru/doors/9</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product9-3.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы фактурными плитами МДФ,
+                    прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="56">
+                <name>Межкомнатная дверь Горизонталь Стекло Лакобель черный</name>
+                <url>https://dveri-arsenal.ru/doors/56</url>
+                <price>5000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product57-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="57">
+                <name>Межкомнатная дверь Горизонталь ДО Стекло Матовое</name>
+                <url>https://dveri-arsenal.ru/doors/57</url>
+                <price>5000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product56-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="58">
+                <name>Межкомнатная дверь Горизонталь Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/58</url>
+                <price>5000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product58-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="22">
+                <name>Межкомнатная дверь Урбан Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/22</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product21-6.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="59">
+                <name>Межкомнатная дверь Горизонталь в глянце</name>
+                <url>https://dveri-arsenal.ru/doors/59</url>
+                <price>6800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product59-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="21">
+                <name>Межкомнатная дверь Торсо</name>
+                <url>https://dveri-arsenal.ru/doors/21</url>
+                <price>5000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product20-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="15">
+                <name>Межкомнатная дверь Горизонт</name>
+                <url>https://dveri-arsenal.ru/doors/15</url>
+                <price>5000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product14-5.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="16">
+                <name>Межкомнатная дверь Меркурий</name>
+                <url>https://dveri-arsenal.ru/doors/16</url>
+                <price>5300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product15-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="18">
+                <name>Межкомнатная дверь Гранд Люкс</name>
+                <url>https://dveri-arsenal.ru/doors/18</url>
+                <price>5300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product17-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="24">
+                <name>Межкомнатная дверь Гранд</name>
+                <url>https://dveri-arsenal.ru/doors/24</url>
+                <price>6000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product22-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="17">
+                <name>Межкомнатная дверь Поло</name>
+                <url>https://dveri-arsenal.ru/doors/17</url>
+                <price>5700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product16-5.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="23">
+                <name>Межкомнатная дверь Урбан Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/23</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product30-4.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="20">
+                <name>Межкомнатная дверь Эмма Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/20</url>
+                <price>5700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product19-5.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="19">
+                <name>Межкомнатная дверь Эмма Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/19</url>
+                <price>5300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product18-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» и «экошпон».
+                    Декоративные покрытия и конструкция дверных полотен обладают:
+                    - эффектом натурального шпона (с имитацией структуры древесины);
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием); - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="60">
+                <name>Межкомнатная дверь Скандинавия</name>
+                <url>https://dveri-arsenal.ru/doors/60</url>
+                <price>3500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product60-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в эмалите!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="32">
+                <name>Межкомнатная дверь Аляска Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/32</url>
+                <price>3500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product32-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в эмалите!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="33">
+                <name>Межкомнатная дверь Норд Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/33</url>
+                <price>3500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product33-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в эмалите!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="34">
+                <name>Межкомнатная дверь Норд Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/34</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product34-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в эмалите!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="13">
+                <name>Межкомнатная дверь Классик Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/13</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product12-3.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ, особого сотового заполнения,
+                    облицованы фактурными плитами МДФ, прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="14">
+                <name>Межкомнатная дверь Классик Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/14</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product13-4.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ, особого сотового заполнения,
+                    облицованы фактурными плитами МДФ, прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="31">
+                <name>Межкомнатная дверь Версаль</name>
+                <url>https://dveri-arsenal.ru/doors/31</url>
+                <price>2500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>5</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product31-3.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в экошпоне высокого качества!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из МДФ, особого сотового заполнения,
+                    облицованы фактурными плитами МДФ, прессованные методом горячего формования, имитирующие ценные породы дерева.
+                </description>
+            </offer>
+            <offer id="55">
+                <name>Межкомнатная дверь Рэкс 3</name>
+                <url>https://dveri-arsenal.ru/doors/55</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product55-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="71">
+                <name>Межкомнатная дверь Честер 3 филенки</name>
+                <url>https://dveri-arsenal.ru/doors/71</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product71-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="50">
+                <name>Межкомнатная дверь Эрмитаж 2</name>
+                <url>https://dveri-arsenal.ru/doors/50</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product50-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="51">
+                <name>Межкомнатная дверь Эрмитаж 3</name>
+                <url>https://dveri-arsenal.ru/doors/51</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product51-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="52">
+                <name>Межкомнатная дверь Рэкс 0</name>
+                <url>https://dveri-arsenal.ru/doors/52</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product52-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="35">
+                <name>Межкомнатная дверь Классика Эмаль</name>
+                <url>https://dveri-arsenal.ru/doors/35</url>
+                <price>6500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product35-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="53">
+                <name>Межкомнатная дверь Рэкс 1</name>
+                <url>https://dveri-arsenal.ru/doors/53</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product53-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="54">
+                <name>Межкомнатная дверь Рэкс 2</name>
+                <url>https://dveri-arsenal.ru/doors/54</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product54-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="70">
+                <name>Межкомнатная дверь Честер 2 филенки</name>
+                <url>https://dveri-arsenal.ru/doors/70</url>
+                <price>9000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product70-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="36">
+                <name>Межкомнатная дверь Классика 2 Глухая Эмаль</name>
+                <url>https://dveri-arsenal.ru/doors/36</url>
+                <price>7000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product36-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="37">
+                <name>Межкомнатная дверь Классика 2 Остекленная Эмаль</name>
+                <url>https://dveri-arsenal.ru/doors/37</url>
+                <price>8500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product37-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="39">
+                <name>Межкомнатная дверь Классика 3 Остекленная Эмаль</name>
+                <url>https://dveri-arsenal.ru/doors/39</url>
+                <price>8500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product39-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="40">
+                <name>Межкомнатная дверь Граффити Эмаль</name>
+                <url>https://dveri-arsenal.ru/doors/40</url>
+                <price>7500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>6</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product40-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой в двухкомпонентной полиуритановой эмали по RAL9016!
+                    Это оптимальное сочетание современных технологий-несущего каркаса из хвойных пород, МДФ,
+                    особого сотового заполнения, облицованы гладкими плитами МДФ, прессованные методом горячего формования.
+                </description>
+            </offer>
+            <offer id="41">
+                <name>Межкомнатная дверь Горизонт Стекло Матовое</name>
+                <url>https://dveri-arsenal.ru/doors/41</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product42-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="46">
+                <name>Межкомнатная дверь Прима 3 Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/46</url>
+                <price>5500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product46-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="42">
+                <name>Межкомнатная дверь Горизонт Стекло Лакобель черный</name>
+                <url>https://dveri-arsenal.ru/doors/42</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product41-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="43">
+                <name>Межкомнатная дверь Горизонт Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/43</url>
+                <price>4500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product43-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="44">
+                <name>Межкомнатная дверь Прима 1 Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/44</url>
+                <price>6700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product44-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="45">
+                <name>Межкомнатная дверь Прима 2 Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/45</url>
+                <price>6700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product45-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="47">
+                <name>Межкомнатная дверь Прима 1 Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/47</url>
+                <price>7700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product47-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="48">
+                <name>Межкомнатная дверь Прима 2 Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/48</url>
+                <price>7700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product48-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="49">
+                <name>Межкомнатная дверь Прима 3 Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/49</url>
+                <price>6500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>7</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product49-3.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой царговые в эмалите высокого качества,
+                    выполнены на основе МДФ и представляют собой сборную конструкцию из элементов,
+                    целиком облицованных декоративными покрытиями «полипропилен» с полиуретановым защитным лаком.
+                    Декоративные покрытия и конструкция дверных полотен обладают: - эффектом эмали (гладкое/шагрень );
+                    - отсутствием кромочных стыков (элементы полностью «укутаны» финиш-покрытием);
+                    - с повышенной степенью звукоизоляции.
+                </description>
+            </offer>
+            <offer id="61">
+                <name>Межкомнатная дверь Классика 3Т щитовая</name>
+                <url>https://dveri-arsenal.ru/doors/61</url>
+                <price>4900</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product61-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой Классика 3Т (щитовые),
+                    в массиве бессучковой сосны высокого качества! Это оптимальное сочетание современных технологий из клееной древесины.
+                    Щитовое исполнение двери из экологически чистого материала не наносит вреда здоровью имеет прочность к механическим нагрузкам.
+                </description>
+            </offer>
+            <offer id="63">
+                <name>Межкомнатная дверь Классика 3Б срощенная</name>
+                <url>https://dveri-arsenal.ru/doors/63</url>
+                <price>7000</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product63-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой Классика 3Б (срощенная), в массиве бессучковой сосны высокого качества!
+                    Это оптимальное сочетание современных технологий из клееной древесины.
+                    Разное направление волокон составных элементов из экологически чистого материала не наносит вреда здоровью
+                    имеет прочность к механическим нагрузкам и повышают устойчивость изделия к повышенной влажности.
+                </description>
+            </offer>
+            <offer id="64">
+                <name>Межкомнатная дверь Классика 2Б срощенная</name>
+                <url>https://dveri-arsenal.ru/doors/64</url>
+                <price>6500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product64-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой Классика 2Б (срощенная), в массиве бессучковой сосны высокого качества!
+                    Это оптимальное сочетание современных технологий из клееной древесины.
+                    Разное направление волокон составных элементов из экологически чистого материала не наносит вреда здоровью
+                    имеет прочность к механическим нагрузкам и повышают устойчивость изделия к повышенной влажности.
+                </description>
+            </offer>
+            <offer id="62">
+                <name>Межкомнатная дверь Классика 2Т щитовая</name>
+                <url>https://dveri-arsenal.ru/doors/62</url>
+                <price>4900</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product62-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой  Классика 2Т (щитовые), в массиве бессучковой сосны высокого качества!
+                    Это оптимальное сочетание современных технологий из клееной древесины.
+                    Разное направление волокон составных элементов из экологически чистого материала не наносит вреда здоровью
+                    имеет прочность к механическим нагрузкам и повышают устойчивость изделия к повышенной влажности.
+                </description>
+            </offer>
+            <offer id="65">
+                <name>Межкомнатная дверь Классика 2С стройка</name>
+                <url>https://dveri-arsenal.ru/doors/65</url>
+                <price>5300</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>8</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product65-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой Классика 2С (стройка), в массиве сосны с сучками!
+                    Это оптимальное сочетание современных технологий из клееной древесины.
+                </description>
+            </offer>
+            <offer id="66">
+                <name>Межкомнатная дверь Сандра Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/66</url>
+                <price>14500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product66-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой массив в шпоне дуба высокого качества,
+                    выполнены на основе массива ценных пород дерева облицованы натуральным шпоном дуба
+                    и покрыты тремя слоями полиуретанового защитного лака, что позволяет сохранить прочность и экологичность двери.
+                </description>
+            </offer>
+            <offer id="67">
+                <name>Межкомнатная дверь Сандра Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/67</url>
+                <price>15500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product67-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой массив в шпоне дуба высокого качества,
+                    выполнены на основе массива ценных пород дерева облицованы натуральным шпоном дуба
+                    и покрыты тремя слоями полиуретанового защитного лака, что позволяет сохранить прочность и экологичность двери.
+                </description>
+            </offer>
+            <offer id="68">
+                <name>Межкомнатная дверь Мадрид Глухая</name>
+                <url>https://dveri-arsenal.ru/doors/68</url>
+                <price>14500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product68-2.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой массив в шпоне дуба высокого качества,
+                    выполнены на основе массива ценных пород дерева облицованы натуральным шпоном дуба
+                    и покрыты тремя слоями полиуретанового защитного лака, что позволяет сохранить прочность и экологичность двери.
+                </description>
+            </offer>
+            <offer id="69">
+                <name>Межкомнатная дверь Мадрид Остекленная</name>
+                <url>https://dveri-arsenal.ru/doors/69</url>
+                <price>15500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>9</categoryId>
+                <picture>https://dveri-arsenal.ru/images/doors/product69-1.jpg</picture>
+                <description>
+                    Двери межкомнатные АрсеналСтрой массив в шпоне дуба высокого качества,
+                    выполнены на основе массива ценных пород дерева облицованы натуральным шпоном дуба
+                    и покрыты тремя слоями полиуретанового защитного лака, что позволяет сохранить прочность и экологичность двери.
+                </description>
+            </offer>
+            <offer id="1003">
+                <name>Дверная Ручка Punto (Пунто) раздельная</name>
+                <url>https://dveri-arsenal.ru/doorhandle/3</url>
+                <price>700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product1-1.jpg</picture>
+                <description>
+                    Дверные ручки Punto REX серии TL из коллекции SIMPLE LIVING предназначены для установки
+                    в межкомнатные и внутренние входные двери. Гальваническое покрытие прошло тест на устойчивость
+                    к коррозии в соляном тумане и соответствует 1 классу ГОСТ.
+                    Ресурс работы дверных ручек более 150 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="1004">
+                <name>Дверная Ручка Ajax (Аякс) раздельная K.JK51.POLO</name>
+                <url>https://dveri-arsenal.ru/doorhandle/4</url>
+                <price>700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product2-1.jpg</picture>
+                <description>
+                    Дверная ручка Ajax POLO серии JK предназначена для установки в межкомнатные и внутренние входные двери.
+                    Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане и соответствует 1 классу ГОСТ.
+                    Ресурс работы дверных ручек более 100 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="1005">
+                <name>Дверная Ручка Ajax (Аякс) раздельная R.JR54.POLO</name>
+                <url>https://dveri-arsenal.ru/doorhandle/5</url>
+                <price>700</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product3-1.jpg</picture>
+                <description>
+                    Дверная ручка Ajax POLO серии JR предназначена для установки в межкомнатные и внутренние входные двери.
+                    Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане и соответствует 1 классу ГОСТ.
+                    Ресурс работы дверных ручек более 100 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="1006">
+                <name>Дверная Ручка Punto (Пунто) раздельная R.TL54.BLADE</name>
+                <url>https://dveri-arsenal.ru/doorhandle/6</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product4-1.jpg</picture>
+                <description>
+                    Дверные ручки Punto BLADE серии TL из коллекции SIMPLE LIVING предназначены для установки в межкомнатные и внутренние входные двери.
+                    Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане.
+                    Ресурс работы дверных ручек более 150 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="1001">
+                <name>Дверная Ручка Punto (Пунто) раздельная R.ZR54.AXIS</name>
+                <url>https://dveri-arsenal.ru/doorhandle/1</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product5-1.jpg</picture>
+                <description>
+                    Ручки PUNTO серии ZR и ZQ коллекции SIMPLE LIVING выполненные из цинкового сплава.
+                    Все модели серии являются воплощением наилучшего дизайна и современного стиля.
+                    Эстетика ручек прекрасно впишется в интерьер квартиры человека, идущего в ногу со временем.
+                    Сочетая красоту и качество, серия всецело раскрывает миссию бренда PUNTO - “Лёгкая жизнь”.
+                    Дверная ручка Punto AXIS серии ZR предназначена для установки в межкомнатные и внутренние входные двери.
+                    Ресурс работы дверных ручек более 150 000 циклов открывания/закрывания.
+                    Материал - ZAMAK. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм. Цвет: черный.
+                </description>
+            </offer>
+            <offer id="1007">
+                <name>Дверная Ручка Punto (Пунто) раздельная K.ZQ51.DROID</name>
+                <url>https://dveri-arsenal.ru/doorhandle/7</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product8-1.jpg</picture>
+                <description>
+                    Ручки PUNTO серии ZR и ZQ коллекции SIMPLE LIVING выполненные из цинкового сплава.
+                    Все модели серии являются воплощением наилучшего дизайна и современного стиля.
+                    Эстетика ручек прекрасно впишется в интерьер квартиры человека, идущего в ногу со временем.
+                    Сочетая красоту и качество, серия всецело раскрывает миссию бренда PUNTO - “Лёгкая жизнь”.
+                    Дверная ручка Punto AXIS серии ZR предназначена для установки в межкомнатные и внутренние входные двери.
+                    Ресурс работы дверных ручек более 150 000 циклов открывания/закрывания.
+                    Материал - ZAMAK. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм. Цвет: черный.
+                </description>
+            </offer>
+            <offer id="1002">
+                <name>Дверная Ручка Ajax (Аякс) раздельная K.JK51.POLO</name>
+                <url>https://dveri-arsenal.ru/doorhandle/2</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product6-1.jpg</picture>
+                <description>
+                    Дверная ручка Ajax POLO серии JK предназначена для установки в межкомнатные и внутренние входные двери.
+                    Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане и соответствует 1 классу ГОСТ.
+                    Ресурс работы дверных ручек более 100 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="1008">
+                <name>Дверная Ручка Punto (Пунто) раздельная K.QL52.VECTOR</name>
+                <url>https://dveri-arsenal.ru/doorhandle/8</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product9-1.jpg</picture>
+                <description>
+                    Дверные ручки Punto VECTOR серии QL из коллекции SIMPLE LIVING предназначены для установки в межкомнатные и внутренние входные двери.
+                    Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане - более 72 часов.
+                    Ресурс работы дверных ручек более 150 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="1009">
+                <name>Дверная Ручка Fuaro (Фуаро) раздельная K.KM52.SAMPLE</name>
+                <url>https://dveri-arsenal.ru/doorhandle/9</url>
+                <price>1500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product10-1.jpg</picture>
+                <description>
+                    Прямые линии, безупречная эргономика и лаконичный дизайн в стиле hi-tech свойственны дверным ручкам серии KM.
+                    Дверная ручка на раздельном основании Fuaro SAMPLE KM на квадратном основании подходит для установки на внутренние входные и межкомнатные двери.
+                    Максимальная масса двери 60 кг. Посадочные размеры оснований совместимы со всеми типами межкомнатных механизмов.
+                    Материал изготовления: ZAMAK (сплав цинка, алюминия, магния и меди). Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане - более 72 часов.
+                    Ресурс работы дверных ручек более 150 000 циклов открывания/закрывания, что гарантирует безотказную работу двери более чем на 10 лет.
+                    Стяжные винты в комплекте обеспечивают более прочное крепление на полотне двери, подходят для установки на двери толщиной 35-55 мм. Цвет: графит.
+                    В комплект входят: стяжные винты, соединительный квадрат 8x105 мм, саморезы, фиксирующие винты, шестигранник.
+                </description>
+            </offer>
+            <offer id="1010">
+                <name>Дверная Ручка Ajax (Аякс) раздельная K.JK51.LEVEL</name>
+                <url>https://dveri-arsenal.ru/doorhandle/10</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product11-1.jpg</picture>
+                <description>
+                    Дверная ручка Ajax LEVEL серии JK предназначена для установки в межкомнатные и внутренние входные двери.
+                    Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане и соответствует 1 классу ГОСТ.
+                    Ресурс работы дверных ручек более 100 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="1011">
+                <name>Дверная Ручка Ajax (Аякс) раздельная K.JK51.SPLINE</name>
+                <url>https://dveri-arsenal.ru/doorhandle/11</url>
+                <price>800</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>11</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product12-1.jpg</picture>
+                <description>
+                    Дверная ручка Ajax SPLINE серии JK предназначена для установки в межкомнатные и внутренние входные двери.
+                    Гальваническое покрытие прошло тест на устойчивость к коррозии в соляном тумане и соответствует 1 классу ГОСТ.
+                    Ресурс работы дверных ручек более 100 000 циклов открывания/закрывания.
+                    Материал - алюминий. Комплектация: комплект крепежной фурнитуры, соединительный квадрат 8x105 мм.
+                </description>
+            </offer>
+            <offer id="2001">
+                <name>Замок Защелка Punto (Пунто) врезная METL72-50</name>
+                <url>https://dveri-arsenal.ru/latch/1</url>
+                <price>400</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>12</categoryId>
+                <picture>https://dveri-arsenal.ru/images/furnitura/product7-1.jpg</picture>
+                <description>
+                    Дверные защелки Punto соответствуют высшему 4 классу надежности (250 000 циклов открывания/закрывания).
+                    Корпус изготовлен из высокопрочной стали. Лицевые элементы имеют надежное гальваническое покрытие.
+                    Комплектация: ответная планка, декоративная заглушка и крепежная фурнитура в цвет изделия.
+                </description>
+            </offer>
+        </offers>
+    </shop>
+</yml_catalog>
