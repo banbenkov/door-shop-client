@@ -138,7 +138,7 @@ const Content = () => {
 
 
         useEffect(() => {
-            if (currentDoors.length = 0) {
+            if (currentDoors.length === 0) {
                 dispatch({type: 'START_PAGE'})
                 lastDoorIndex = currentPage * doorPerPage;
                 firstDoorIndex = lastDoorIndex - doorPerPage;
