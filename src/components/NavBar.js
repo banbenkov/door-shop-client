@@ -165,7 +165,7 @@ const NavBar = () => {
                                     <div className="input-group">
                                         <input type="text" className="form-control" id="searchForm"
                                                placeholder="Поиск" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-                                        <NavLink to={SEARCH} state={{from: searchText}}><button className="btn btn-secondary">Искать</button></NavLink>
+                                        <NavLink to={SEARCH} state={{from: searchText}}><button onClick={() => {dispatch({type: 'START_PAGE'})}} className="btn btn-secondary">Искать</button></NavLink>
                                     </div>
                                 </div>
                             </li>
