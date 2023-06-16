@@ -22764,26 +22764,26 @@ label-texture {
 
 @media (min-width: 360px) { .img-responsive {
     width: 100px;
-    height: 100px;
+    height: 200px;
     object-fit: cover;
     margin-bottom: 5px;
 } }
 
 @media (min-width: 576px) { .img-responsive {
     width: 100px;
-    height: 100px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 5px;
 } }
 @media (min-width: 768px) {  .img-responsive {
     width: 100px;
-    height: 100px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 5px;
 } }
 @media (min-width: 992px) { .img-responsive {
     width: 100px;
-    height: 100px;
+    height: 200px;
     object-fit: cover;
     margin-bottom: 5px;
 } }
