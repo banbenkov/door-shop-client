@@ -12,9 +12,11 @@ import {
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router";
+import {useDispatch} from "react-redux";
 
 const CatalogMenu = () => {
     const location = useLocation();
+    const dispatch = useDispatch();
     const [collapse1, setCollapse1] = useState(true);
     const [collapse2, setCollapse2] = useState(false);
     useEffect(() => {
@@ -36,28 +38,28 @@ const CatalogMenu = () => {
                     <div className={collapse1 ? 'collapse show' : 'collapse'} id="menu-1" data-parent="#page-nav">
                         <div>
                             <ul className="nav flex-column">
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                    <NavLink className="nav-link" to={CATEGORY_EKOSHPON_LIGHT_ROUTE}>Экошпон лайт</NavLink>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                    <NavLink  className="nav-link" to={CATEGORY_EKOSHPON_LIGHT_ROUTE}>Экошпон лайт</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_EKOSHPON_ROUTE}>Экошпон</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_WHITE_ROUTE}>Белые двери</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_CLASSIC_ROUTE}>Классика</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_EMAL_ROUTE}>Эмаль</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_EMALIT_ROUTE}>Эмалит</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_SOSNA_ROUTE}>Массив сосны</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_DUB_ROUTE}>Массив дуба</NavLink>
                                 </li>
                             </ul>
@@ -73,10 +75,10 @@ const CatalogMenu = () => {
                     <div className={collapse2 ? 'collapse show' : 'collapse'} id="menu-2" data-parent="#page-nav">
                         <div>
                             <ul className="nav flex-column">
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE} className="nav-link">Дверные ручки</NavLink>
                                 </li>
-                                <li className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink to={CATEGORY_FURNITURE_LATCH_ROUTE} className="nav-link">Замки</NavLink>
                                 </li>
                             </ul>

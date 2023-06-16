@@ -16,10 +16,11 @@ import {
     INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH
 } from "../utils/consts";
 import {useState} from "react";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 
 const NavBar = () => {
+    const dispatch = useDispatch();
     const [collapseMenu, setCollapseMenu] = useState(false);
     const [searchText, setSearchText] = useState('');
     const [collapseMenuMob, setCollapseMenuMob] = useState(false)
@@ -77,33 +78,33 @@ const NavBar = () => {
                                     <div className="container">
                                         <div className="row gutter-2">
                                             <div className="col-lg-2">
-                                                <span className="eyebrow text-muted mb-1">Межкомнатные двери</span>
+                                                <span onClick={() => {dispatch({type: 'START_PAGE'})}} className="eyebrow text-muted mb-1">Межкомнатные двери</span>
                                                 <ul className="menu-list">
-                                                    <li className="menu-list-item"><NavLink
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink
                                                         to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
                                                         className="menu-list-link">Экошпон
                                                         Лайт</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
                                                                                             className="menu-list-link">Экошпон</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
                                                                                             className="menu-list-link">Белые
                                                         двери</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
                                                                                             className="menu-list-link">Классика</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
                                                                                             className="menu-list-link">Эмаль</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
                                                                                             className="menu-list-link">Эмалит</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_SOSNA_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_SOSNA_ROUTE}
                                                                                             className="menu-list-link">Массив сосны</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_DUB_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_DUB_ROUTE}
                                                                                             className="menu-list-link">Массив дуба</NavLink>
                                                     </li>
                                                 </ul>
@@ -111,11 +112,11 @@ const NavBar = () => {
                                             <div className="col-lg-2">
                                                 <span className="eyebrow text-muted mb-1">Фурнитура</span>
                                                 <ul className="menu-list">
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE}
                                                                                       className="menu-list-link">Дверные
                                                         ручки</NavLink>
                                                     </li>
-                                                    <li className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_LATCH_ROUTE}
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_LATCH_ROUTE}
                                                                                       className="menu-list-link">Замки</NavLink>
                                                     </li>
                                                 </ul>

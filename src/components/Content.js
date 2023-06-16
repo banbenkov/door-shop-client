@@ -3,7 +3,7 @@ import Card from "./Card";
 import styles from '../css/style.css'
 import {fetchDoors} from "../actions/door";
 import {useDispatch, useSelector} from "react-redux";
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation, useParams, useHistory} from "react-router-dom";
 import {
     CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
@@ -14,7 +14,7 @@ import {
 
 const Content = () => {
         const location = useLocation();
-        const dispatch = useDispatch()
+        const dispatch = useDispatch();
         const doorsFetch = useSelector(state => state.door.doors)
         const priceFilter = useSelector(state => state.priceFilter)
         const viewFilter = useSelector(state => state.viewFilter)
@@ -39,9 +39,9 @@ const Content = () => {
         // useEffect(() => {
         //     // dispatch({type: 'START_PAGE'})
         // }, [viewFilter])
-        useEffect(() => {
-            dispatch({type: 'START_PAGE'})
-        }, [location])
+        // useEffect(() => {
+        //     dispatch({type: 'START_PAGE'})
+        // }, [location])
 
         if (location.state === null) {
             switch (location.pathname) {
@@ -135,6 +135,20 @@ const Content = () => {
         for (let i = 1; i <= Math.ceil(doors.length / doorPerPage); i++) {
             pageNumbers.push(i)
         }
+
+
+        useEffect(() => {
+            if (currentDoors.length = 0) {
+                dispatch({type: 'START_PAGE'})
+                lastDoorIndex = currentPage * doorPerPage;
+                firstDoorIndex = lastDoorIndex - doorPerPage;
+                currentDoors = doors.slice(firstDoorIndex, lastDoorIndex);
+                pageNumbers = [];
+                for (let i = 1; i <= Math.ceil(doors.length / doorPerPage); i++) {
+                    pageNumbers.push(i)
+                }
+            }
+        }, [currentDoors])
 
 
         const paginate = (pageNumber) => dispatch({type: 'SET_PAGE', payload: pageNumber});
