@@ -47,7 +47,7 @@ const Footer = () => {
                         </div>
                         <ul className="list list--horizontal">
                             <li><a href="#!" className="text-hover-instagram">
-                                <i className="bi bi-instagram"></i>
+                                <i className="bi bi-telegram"></i>
                             </a>
                             </li>
                         </ul>
