@@ -22657,23 +22657,23 @@ div.code-toolbar > .toolbar span:focus {
 
 }
 
-@media (min-width: 576px) {
-    .img-card {
-        height: 200px;
-    }
-}
 
-@media (min-width: 768px) {
-    .img-card {
-        height: 200px;
-    }
-}
+@media (min-width: 360px) { .img-card {
+    height: 470px;
+} }
 
-@media (min-width: 1200px) {
-    .img-card {
-        height: 590px;
-    }
-}
+@media (min-width: 576px) { .img-card {
+    height: 500px;
+} }
+@media (min-width: 768px) {  .img-card {
+    height: 500px;
+}}
+@media (min-width: 992px) { .img-card {
+    height: 500px;
+} }
+@media (min-width: 1200px) {  .img-card {
+    height: 590px;
+} }
 
 @media (min-width: 576px) {
     .img-carousel {
