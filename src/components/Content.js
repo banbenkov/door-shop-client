@@ -10,6 +10,7 @@ import {
     CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE
 } from "../utils/consts";
+import Loading from "./Loading";
 
 
 const Content = () => {
@@ -196,7 +197,7 @@ const Content = () => {
                 </div>
 
                 <div className="row gutter-1">
-                    {doors.length === 0 ? 'Товаров нет' : currentDoors.map((door, index) => (
+                    {doors.length === 0 ? <Loading /> : currentDoors.map((door, index) => (
                         <Card door={door}/>
                     ))}
 
