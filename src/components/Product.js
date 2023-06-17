@@ -277,7 +277,7 @@ const Product = () => {
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div className="row gutter-2 gutter-md-4 justify-content-between">
+                <div itemscope itemtype="http://schema.org/Product" className="row gutter-2 gutter-md-4 justify-content-between">
                     {/*carousel*/}
                     <div className="col-lg-4 ml-4">
                         <Carousel infiniteLoop={true} showStatus={false} selectedItem={activeTexture}>
@@ -285,7 +285,7 @@ const Product = () => {
                                 <div className="card card-product">
                                     <figure className="card-image">
                                         <a href="" className="action"><i className="icon-heart"></i></a>
-                                        <img src={`../images/doors/${elem}`}/>
+                                        <img itemprop="image" src={`../images/doors/${elem}`}/>
                                     </figure>
                                 </div>
                             ))}
@@ -298,8 +298,12 @@ const Product = () => {
                         <div className="row">
                             <div className="col-12">
                                 <span className="eyebrow text-muted">Межкомнатные двери</span>
-                                <h1>{door.title}</h1>
-                                <span className="price fs-18">{generalPrice}₽</span>
+                                <h1 itemprop="name">{door.title}</h1>
+                                <span itemProp="offers" itemScope itemType="http://schema.org/Offer">
+                                    <meta itemProp="priceCurrency" content="RUB"/>
+                                    <span itemprop="price" className="price fs-18">{generalPrice}₽</span>
+                                    <link itemProp="availability" href="http://schema.org/InStock"/>
+                                </span>
                             </div>
                         </div>
                         {((door.category === '1' || door.category === '4' || door.category === '5') && (<AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>))
@@ -403,7 +407,7 @@ const Product = () => {
                                         <div id="collapse-1-1" className={`collapse ${collapse1 ? 'show' : ''}`}
                                              aria-labelledby="heading-1-1"
                                              data-parent="#accordion-1">
-                                            <div className="card-body">
+                                            <div itemprop="description" className="card-body">
                                                 <ul className="list list--unordered">
                                                     <li>Коробка МДФ: {door.kmdf} мм</li>
                                                     <li>Наличник МДФ: {door.nmdf} мм</li>
@@ -431,7 +435,7 @@ const Product = () => {
                                              aria-labelledby="heading-1-2"
                                              data-parent="#accordion-1">
                                             <div className="card-body">
-                                                <p>{`${door.description}`}</p>
+                                                <p itemprop="description">{`${door.description}`}</p>
                                             </div>
                                         </div>
                                     </div>

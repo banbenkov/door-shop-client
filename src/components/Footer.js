@@ -56,20 +56,20 @@ const Footer = () => {
                     {/*settings*/}
                     <div className="order-3 order-md-2 order-lg-3 col-md-4 col-lg-3">
 
-                        <div className="select-frame">
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" className="select-frame">
                             <h6 className="fs-14 text-white m-0"><i
                                 className="bi bi-map mr-1 text-opaque"></i>
-                                Санкт-Петербург,
-                                Петергофское шоссе, 73</h6>
+                                <span itemprop="addressLocality">Санкт-Петербург</span>,
+                                <span itemprop="streetAddress">Петергофское шоссе, 73</span></h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="bi bi-telephone mr-1 text-opaque"></i>
-                                +7 (812) 985-94-58</h6>
+                                <span itemProp="telephone">+7 (812) 985-94-58</span></h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="mr-3 text-opaque"></i>
-                                +7 (812) 332-45-40 </h6>
+                                <span itemProp="telephone">+7 (812) 332-45-40</span></h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="mr-3 text-opaque"></i>
-                                +7 (905) 223-39-39</h6>
+                                <span itemProp="telephone">+7 (905) 223-39-39</span></h6>
                         </div>
                         <ul className="list list--horizontal mt-2">
                             <li><img src={visa} className="payment" alt="Image" /></li>
