@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {useLocation} from "react-router-dom";
 import Error from "../components/Error";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const ErrorPage = () => {
     const {pathname} = useLocation();
@@ -9,11 +10,11 @@ const ErrorPage = () => {
         window.scrollTo(0, 0);
     }, [pathname]);
     return (
-        <section className="hero bg-white mb-2">
-            <div>
+        <div className="container mb-1 mt-1">
+            <div className="bg-white p-1">
                 <Error/>
             </div>
-        </section>
+        </div>
     );
 };
 

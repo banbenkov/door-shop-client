@@ -5,9 +5,9 @@ import {INDEX_ROUTE} from "../utils/consts";
 const Error = () => {
     return (
         <div className="container">
-            <div className="row gutter-1">
-                <div className="col-8 col-lg-6">
-                    <div className="card card-tile">
+            <div className="row gutter-1 ml-10">
+                <div className="col-6 col-lg-6">
+                    <div className="card card-tile mt-2">
                         <div className="equal bg-white">
                             <div className="card-body text-left">
                                 <h3 className="mb-1">Ошибка 404</h3>
