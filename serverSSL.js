@@ -17,6 +17,10 @@ app.get('/sitemap', (req,res) => {
     res.sendFile(path.join(__dirname, 'sitemap.xml'))
 })
 
+app.get('/catalog', (req,res) => {
+    res.sendFile(path.join(__dirname, 'catalog.xml'))
+})
+
 app.get('*', (req,res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
