@@ -5,14 +5,14 @@ import {INDEX_ROUTE} from "../utils/consts";
 const Error = () => {
     return (
         <div className="container">
-            <div className="row gutter-1 ml-10">
-                <div className="col-6 col-lg-6">
+            <div className="row gutter-1 ml-lg-4">
+                <div className="col-sm-10 col-lg-6 col-12 col-md-10">
                     <div className="card card-tile mt-2">
                         <div className="equal bg-white">
                             <div className="card-body text-left">
                                 <h3 className="mb-1">Ошибка 404</h3>
                                 <p className="mt-1">Кажется что-то пошло не так! Страница, которую вы запрашивает, не
-                                    существует. Возможно он была удалено, или вы набрали неверный адрес.
+                                    существует. Возможно она была удалена, или вы набрали неверный адрес.
                                     Перейдите на нашу <NavLink to={INDEX_ROUTE}><span className="fs-18 underlined">главную страницу</span></NavLink> и попробуйте найти необходимую вам
                                     информацию там.</p>
                             </div>
