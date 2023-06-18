@@ -2,6 +2,7 @@ import React from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom'
 import {publicRoutes} from "../routes";
 import NotFound from "../pages/NotFound";
+import ErrorPage from "../pages/ErrorPage";
 
 
 
@@ -11,7 +12,7 @@ const AppRouter = () => {
             {publicRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} element={Component}/>
             )}
-            <Route path="*" element={<Navigate to="/" replace />}/>
+            <Route path="*" element={<ErrorPage />}/>
         </Routes>
     );
 };
