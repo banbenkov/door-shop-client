@@ -22944,6 +22944,7 @@ label-texture {
     cursor: pointer;
     width: 44px;
     height: 44px;
+    z-index: 1050;
 }
 
 .btn-up::before {
