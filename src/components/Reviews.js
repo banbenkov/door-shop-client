@@ -16,7 +16,7 @@ const Reviews = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-lg-4">
                         <div className="card-review-big"><i className="fa fa-quote-left u-color"></i>
                             <p>Приехали в офис выбрали понравившуюся модель. Обговорили условия и комплектующие.
                                 Оставил 10% предоплаты. Через 2 дня двери уже привезли. На третий день уже установили.
@@ -37,7 +37,7 @@ const Reviews = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-lg-4">
                         <div className="card-review-big"><i className="fa fa-quote-left u-color"></i>
                             <p>Спасибо за дверь. Купила дверь экошпон горизонт для ванной комнаты.
                                 В компании все четко, это приятно порадовало, не подвели ни с чем, доставка в срок, установка в срок.
@@ -59,12 +59,12 @@ const Reviews = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-lg-4">
                         <div className="card-review-big"><i className="fa fa-quote-left u-color"></i>
                             <p>Хочу выразить особую благодарность Владимиру. Он очень ответственный человек.
                                 Профессиональный подход, прекрасная консультация. Купил красивую дверь Версаль, цвет
                                 Венге.</p>
-                            <div className="d-flex justify-content-between align-items-center">
+                            <div className="d-flex justify-content-between align-items-end">
                                 <div className="user-about"><span
                                     className="font-weight-bold d-block">Юсибов Анар</span>
                                     <div className="d-flex flex-row mt-1"><i className="fa fa-star u-color"></i> <i
@@ -78,7 +78,7 @@ const Reviews = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-lg-4">
                         <div className="card-review-small"><i className="fa fa-quote-left u-color"></i>
                             <p>Хочу присоединиться к большому количеству положительных отзывов и поблагодарить Владимира
                                 и всю его команду!
@@ -99,7 +99,7 @@ const Reviews = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-lg-4">
                         <div className="card-review-small"><i className="fa fa-quote-left u-color"></i>
                             <p>Спасибо большое вашей компании!!! Владимир- настоящий профессионал своего дела!
                                 Грамотно подобрал двери, быстро в срок привезли и идеально установили! Рекомендую данную
@@ -118,7 +118,7 @@ const Reviews = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 col-lg-4">
                         <div className="card-review-small"><i className="fa fa-quote-left u-color"></i>
                             <p>Огромкое спасибо за качественную, квалифицированную и оперативную работу.
                                 отдельное спасибо установщику Матвею, он большой молодец.

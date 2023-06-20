@@ -22722,6 +22722,23 @@ label-texture {
     margin-top: 10px
 }
 
+@media (min-width: 576px) {
+    .card-review-big{
+        height: 390px;
+    }
+}
+
+@media (min-width: 768px){
+    .card-review-big {
+        height: 500px;
+    }
+}
+@media (min-width: 1200px) {
+    .card-review-big {
+        height: 470px;
+    }
+}
+
 .card-review-small {
     background-color: #fff;
     border-radius: 12px;
@@ -22960,4 +22977,27 @@ label-texture {
 
 .btn-up_hide {
     display: none;
+}
+
+@media (min-width: 360px) {
+    .align-items-mm-center {
+        align-items: center !important;
+    }
+
+   .justify-content-sm-center{
+       justify-content: center !important;
+   }
+
+    .vh-mm-100 {
+        height: 110vh;
+        min-height: 110vh; }
+
+    .gutter-mm-1 {
+        margin: -5px;
+    }
+
+    .gutter-mm-1 > * {
+        margin-bottom: 0 !important;
+        padding: 5px;
+    }
 }
