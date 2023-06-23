@@ -29,8 +29,6 @@ app.use((req, res) => {
     res.status(404).redirect("https://dveri-arsenal.ru/404")
 })
 
-
-
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(httpsOptions, app);
 
