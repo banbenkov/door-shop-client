@@ -21,8 +21,12 @@ app.get('/catalog', (req,res) => {
     res.sendFile(path.join(__dirname, 'catalog.xml'))
 })
 
-app.get('*', (req,res) => {
+app.get('/doors', (req,res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
+
+app.use((req, res) => {
+    res.status(404).redirect("https://dveri-arsenal.ru/404")
 })
 
 
