@@ -21,12 +21,12 @@ app.get('/catalog', (req,res) => {
     res.sendFile(path.join(__dirname, 'catalog.xml'))
 })
 
-app.get('/doors', (req,res) => {
+app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 
 app.use((req, res) => {
-    res.status(404).redirect("https://dveri-arsenal.ru/404")
+    res.sendFile(path.join(__dirname, '404page.html'));
 })
 
 const httpServer = http.createServer(app);
