@@ -11,6 +11,7 @@ import Loading from "./Loading";
 const Gallery = () => {
     const dispatch = useDispatch()
     const pictures = useSelector(state => state.portfolio.pictures)
+    const picturesLoading = useSelector(state => state.portfolio.loading)
     useEffect(() => {
         dispatch(fetchPicture())
     }, [])
@@ -21,7 +22,7 @@ const Gallery = () => {
         <div className="container mb-2 mt-2">
             <div className="bg-white p-1">
                 <h2 className="text-uppercase pl-2 pt-1">Портфолио</h2>
-                {pictures.length === 0 ? <Loading /> :
+                {picturesLoading === true ? <Loading /> :
                     <LightGallery plugins={[lgZoom, lgVideo]} mode="lg-fade">
                         {pictures.map((item) => (
                             <a

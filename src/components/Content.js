@@ -16,14 +16,15 @@ import Loading from "./Loading";
 const Content = () => {
         const location = useLocation();
         const dispatch = useDispatch();
-        const doorsFetch = useSelector(state => state.door.doors)
-        const priceFilter = useSelector(state => state.priceFilter)
-        const viewFilter = useSelector(state => state.viewFilter)
-        const currentPage = useSelector(state => state.currentPage)
+        const doorsFetch = useSelector(state => state.door.doors);
+        const doorsLoading = useSelector(state => state.door.loading);
+        const priceFilter = useSelector(state => state.priceFilter);
+        const viewFilter = useSelector(state => state.viewFilter);
+        const currentPage = useSelector(state => state.currentPage);
         const [collapse, setCollapse] = useState(false);
         const [sort, setSort] = useState(false);
         // const [currentPage, setCurrentPage] = useState(1);
-        const [doorPerPage] = useState(6)
+        const [doorPerPage] = useState(6);
         let doors = [];
         let categoryName = '';
         let lastDoorIndex = 0;
@@ -32,7 +33,7 @@ const Content = () => {
         let pageNumbers = [];
 
         useEffect(() => {
-            dispatch(fetchDoors())
+            dispatch(fetchDoors());
         }, [])
         useEffect(() => {
             window.scrollTo(0, 0);
@@ -197,7 +198,7 @@ const Content = () => {
                 </div>
 
                 <div className="row gutter-1">
-                    {doors.length === 0 ? <Loading /> : currentDoors.map((door, index) => (
+                    {( doorsLoading === true && <Loading /> ) || ( doors.length === 0 && 'Товары по заданным фильтрам отсутствуют' ) || currentDoors.map((door, index) => (
                         <Card door={door}/>
                     ))}
 
