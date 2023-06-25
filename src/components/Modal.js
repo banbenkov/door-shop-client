@@ -6,6 +6,7 @@ import {sendOrder} from "../actions/order";
 const Modal = ({order, price}) => {
     const [phone, setPhone] = useState('');
     const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const dispatch = useDispatch();
     const closeModal = () => {
         dispatch({type: 'HIDE_MODAL'})
@@ -21,6 +22,9 @@ const Modal = ({order, price}) => {
         fieldOrder.title = order.title;
         fieldOrder.additions = order.additions;
         fieldOrder.amount = order.amount;
+        fieldOrder.email = email
+        fieldOrder.img = order.img
+        fieldOrder.idDoor = order.idDoor
         dispatch(sendOrder(fieldOrder));
         window.scrollTo(0, 0);
         dispatch({type: 'HIDE_MODAL'});
@@ -50,6 +54,11 @@ const Modal = ({order, price}) => {
                         <div className="form-group mb-2">
                             <label htmlFor="exampleInput-1">Ваш номер</label>
                             <input value={phone} onChange={e => setPhone(e.target.value)} id="exampleInput-1" className="form-control form-control-sm"
+                                   type="text" />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label htmlFor="exampleInput-1">Ваш email</label>
+                            <input value={email} onChange={e => setEmail(e.target.value)} id="exampleInput-1" className="form-control form-control-sm"
                                    type="text" />
                         </div>
                     </div>

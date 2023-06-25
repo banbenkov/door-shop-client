@@ -47,7 +47,9 @@ const Product = () => {
         additions: '',
         phoneNumber: '',
         amount: 1,
-        name: ''
+        name: '',
+        img: '',
+        id: ''
     });
     const photoPortfolio = useSelector(state => state.portfolio.pictures);
 
@@ -71,7 +73,9 @@ const Product = () => {
             additions: '',
             amount: 1,
             phoneNumber: order.phoneNumber,
-            name: order.name
+            name: order.name,
+            img: img[activeTexture],
+            idDoor: door.id
         })
 
 
@@ -135,7 +139,9 @@ const Product = () => {
                 additions: order.additions + addition + '\n',
                 amount: order.amount,
                 phoneNumber: order.phoneNumber,
-                name: order.name
+                name: order.name,
+                img: order.img,
+                idDoor: door.id
             })
         } else {
             if (addition !== 'Доставка по городу до парадной-1400₽') {
@@ -154,7 +160,9 @@ const Product = () => {
                 additions: order.additions.replace(addition + '\n', ''),
                 order: order.amount,
                 phoneNumber: order.phoneNumber,
-                name: order.name
+                name: order.name,
+                img: order.img,
+                idDoor: door.id
             })
         }
         if (addition === 'Доставка по городу до парадной-1400₽' && checked === true) {
@@ -180,7 +188,9 @@ const Product = () => {
             additions: order.additions,
             amount: order.amount,
             phoneNumber: order.phoneNumber,
-            name: order.name
+            name: order.name,
+            img: order.img,
+            idDoor: door.id
         })
     }
 
@@ -195,7 +205,9 @@ const Product = () => {
             additions: order.additions,
             amount: order.amount,
             phoneNumber: order.phoneNumber,
-            name: order.name
+            name: order.name,
+            img: order.img,
+            idDoor: door.id
         })
     }
 
@@ -210,7 +222,9 @@ const Product = () => {
             additions: order.additions,
             amount: order.amount,
             phoneNumber: order.phoneNumber,
-            name: order.name
+            name: order.name,
+            img: img[index],
+            idDoor: door.id
         })
     }
 
@@ -235,7 +249,9 @@ const Product = () => {
             additions: order.additions,
             amount: order.amount + 1,
             phoneNumber: order.phoneNumber,
-            name: order.name
+            name: order.name,
+            img: order.img,
+            idDoor: door.id
         })
 
     }
@@ -259,7 +275,9 @@ const Product = () => {
                 additions: order.additions,
                 amount: order.amount - 1,
                 phoneNumber: order.phoneNumber,
-                name: order.name
+                name: order.name,
+                img: order.img,
+                idDoor: door.id
             })
         }
     }
