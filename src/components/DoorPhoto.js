@@ -29,9 +29,9 @@ const DoorPhoto = ({photo}) => {
                 return (
                     <SwiperSlide>
                         <LightGallery plugins={[lgZoom, lgVideo]} mode="lg-fade">
-                            <a data-src={`../${elem.src}`}>
+                            <a data-src={'https://dveri-arsenal.ru:444/' + 'static/' + `${elem.src}`}>
                                 <img
-                                    src={`../${elem.src}`}
+                                    src={'https://dveri-arsenal.ru:444/' + 'static/' + `${elem.src}`}
                                 />
                             </a>
                         </LightGallery>

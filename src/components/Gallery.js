@@ -30,12 +30,12 @@ const Gallery = () => {
                                 data-pinterest-text={item.title}
                                 data-tweet-text={item.title}
                                 className="gallery-item"
-                                data-src={'https://dveri-arsenal.ru:444/' + '/static/' + item.src}
+                                data-src={'https://dveri-arsenal.ru:444/' + 'static/' + item.src}
                                 data-sub-html={item.html}
                             >
                                 <img
                                     className="img-responsive"
-                                    src={'https://dveri-arsenal.ru:444/' + '/static/' + item.src}
+                                    src={'https://dveri-arsenal.ru:444/' + 'static/' + item.src}
                                 />
                             </a>
                         ))}
