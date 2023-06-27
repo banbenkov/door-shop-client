@@ -30,7 +30,7 @@ const Gallery = () => {
                                 data-pinterest-text={item.title}
                                 data-tweet-text={item.title}
                                 className="gallery-item"
-                                data-src={item.src}
+                                data-src={'https://dveri-arsenal.ru:444/' + '/static/' + item.src}
                                 data-sub-html={item.html}
                             >
                                 <img
