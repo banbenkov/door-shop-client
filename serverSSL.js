@@ -21,6 +21,14 @@ app.get('/catalog', (req,res) => {
     res.sendFile(path.join(__dirname, 'catalog.xml'))
 })
 
+app.get('/', (req,res) => {
+    if (req.secure) {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    } else {
+        res.redirect('https://' + req.headers.host + req.url);
+    }
+})
+
 app.get('*', (req,res) => {
     if (req.secure) {
         res.sendFile(path.join(__dirname, 'build', 'index.html'))
