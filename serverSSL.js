@@ -33,7 +33,7 @@ app.get('*', (req,res) => {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(httpsOptions, app);
 
-httpServer.listen(3000, () => {
+httpServer.listen(80, () => {
     console.log('HTTP server running on port 80')
 })
 
