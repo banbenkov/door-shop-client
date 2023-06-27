@@ -22,17 +22,18 @@ app.get('/catalog', (req,res) => {
 })
 
 app.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    if (req.secure) {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    } else {
+        res.redirect('https://' + req.headers.host + req.url);
+    }
 })
 
-app.use((req, res) => {
-    res.sendFile(path.join(__dirname, '404page.html'));
-})
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(httpsOptions, app);
 
-httpServer.listen(80, () => {
+httpServer.listen(3000, () => {
     console.log('HTTP server running on port 80')
 })
 
