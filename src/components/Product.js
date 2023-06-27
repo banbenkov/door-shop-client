@@ -35,7 +35,6 @@ const Product = () => {
     const [activeWidth, setActiveWidth] = useState(0);
     const [activeHeight, setActiveHeight] = useState(0);
     const [activeTexture, setActiveTexture] = useState(0);
-    const [activeTextureRu, setActiveTextureRu] = useState(0);
     const [countProduct, setCountProduct] = useState(1);
     const [delivery, setDelivery] = useState(false)
     const [order, setOrder] = useState({
@@ -46,7 +45,7 @@ const Product = () => {
         price: 0,
         additions: '',
         phoneNumber: '',
-        amount: 1,
+        amount: countProduct,
         name: '',
         img: '',
         id: ''
@@ -71,7 +70,7 @@ const Product = () => {
             height: height[activeHeight],
             price: door.price,
             additions: '',
-            amount: 1,
+            amount: countProduct,
             phoneNumber: order.phoneNumber,
             name: order.name,
             img: img[activeTexture],
@@ -137,7 +136,7 @@ const Product = () => {
                 height: order.height,
                 price: additionalPrice + value,
                 additions: order.additions + addition + '\n',
-                amount: order.amount,
+                amount: countProduct,
                 phoneNumber: order.phoneNumber,
                 name: order.name,
                 img: order.img,
@@ -158,7 +157,7 @@ const Product = () => {
                 height: order.height,
                 price: additionalPrice - value,
                 additions: order.additions.replace(addition + '\n', ''),
-                order: order.amount,
+                amount: countProduct,
                 phoneNumber: order.phoneNumber,
                 name: order.name,
                 img: order.img,
@@ -186,7 +185,7 @@ const Product = () => {
             height: height[index],
             price: order.price,
             additions: order.additions,
-            amount: order.amount,
+            amount: countProduct,
             phoneNumber: order.phoneNumber,
             name: order.name,
             img: order.img,
@@ -195,6 +194,7 @@ const Product = () => {
     }
 
     const setWidth = (index) => {
+        debugger
         setActiveWidth(index);
         setOrder({
             title: order.title,
@@ -203,7 +203,7 @@ const Product = () => {
             height: order.height,
             price: order.price,
             additions: order.additions,
-            amount: order.amount,
+            amount: countProduct,
             phoneNumber: order.phoneNumber,
             name: order.name,
             img: order.img,
@@ -220,7 +220,7 @@ const Product = () => {
             height: order.height,
             price: order.price,
             additions: order.additions,
-            amount: order.amount,
+            amount: countProduct,
             phoneNumber: order.phoneNumber,
             name: order.name,
             img: img[index],
@@ -233,13 +233,10 @@ const Product = () => {
     }
 
     const upCount = () => {
-        if (delivery === true) {
-            setCountProduct(countProduct + 1);
-            setGeneralPrice(generalPrice + additionalPrice);
-        } else {
-            setCountProduct(countProduct + 1);
-            setGeneralPrice(generalPrice + additionalPrice);
-        }
+
+        setCountProduct(countProduct + 1);
+        setGeneralPrice(generalPrice + additionalPrice);
+
         setOrder({
             title: order.title,
             decor: order.decor,
@@ -258,13 +255,9 @@ const Product = () => {
 
     const downCount = () => {
         if (countProduct > 1) {
-            if (delivery === true) {
-                setCountProduct(countProduct - 1);
-                setGeneralPrice(generalPrice - additionalPrice);
-            } else {
-                setCountProduct(countProduct - 1);
-                setGeneralPrice(generalPrice - additionalPrice);
-            }
+
+            setCountProduct(countProduct - 1);
+            setGeneralPrice(generalPrice - additionalPrice);
 
             setOrder({
                 title: order.title,
@@ -479,11 +472,11 @@ const Product = () => {
                             <DoorPhoto photo={photoPortfolio}/>
                         </div>
                     </div>)
-                : <Loading />
-                    }
+                : <Loading/>
+            }
 
-                </section>
-                );
-            };
+        </section>
+    );
+};
 
-            export default Product;
+export default Product;
