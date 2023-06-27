@@ -35,7 +35,7 @@ const Gallery = () => {
                             >
                                 <img
                                     className="img-responsive"
-                                    src={item.src}
+                                    src={'https://dveri-arsenal.ru:444/' + '/static/' + item.src}
                                 />
                             </a>
                         ))}
