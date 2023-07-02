@@ -12,7 +12,7 @@ import {
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
-    CONTACTS_ROUTE,
+    CONTACTS_ROUTE, FAVORITES,
     INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH
 } from "../utils/consts";
 import {useEffect, useState} from "react";
@@ -279,7 +279,9 @@ const NavBar = () => {
                                     </div>
                                 </div>
                             </li>
-
+                            <NavLink to={FAVORITES}>
+                                <span className="d-inline-block d-lg-none">Избранное</span>
+                            </NavLink>
                             {/*cart*/}
                             {/*<li className="nav-item dropdown dropdown-md dropdown-hover">*/}
                             {/*    <a className="nav-icon dropdown-toggle" id="navbarDropdown-8" role="button"*/}
