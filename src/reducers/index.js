@@ -12,6 +12,7 @@ import furnitureReducer from "./furnitureReducer";
 import furnitureDetailReducer from "./furnitureDetailReducer";
 import portfolioReducer from "./portfolioReducer";
 import paginateReducer from "./paginateReducer";
+import favorReducer from "./favorReducer";
 
 
 const rootReducer = combineReducers({
@@ -26,6 +27,7 @@ const rootReducer = combineReducers({
     furnitureDetail: furnitureDetailReducer,
     portfolio: portfolioReducer,
     currentPage: paginateReducer,
+    favorDoors: favorReducer,
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))

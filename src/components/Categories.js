@@ -22,7 +22,7 @@ const Categories = () => {
                         <NavLink to='/ekoshpon-light'>
                             <figure className="category category--alt">
                                 <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(images/doors/product8-3.jpg)`}}></span>
+                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product8-3.jpg)`}}></span>
                                 </div>
                                 <figcaption>Экошпон лайт</figcaption>
                             </figure>
@@ -32,7 +32,7 @@ const Categories = () => {
                         <NavLink to='/ekoshpon'>
                             <figure className="category category--alt">
                                 <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(images/doors/product22-4.jpg)`}}></span>
+                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product22-4.jpg)`}}></span>
                                 </div>
                                 <figcaption>Экошпон</figcaption>
                             </figure>
@@ -42,7 +42,7 @@ const Categories = () => {
                         <NavLink to='/white'>
                             <figure className="category category--alt">
                                 <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(images/doors/product24-1.jpg)`}}></span>
+                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product24-1.jpg)`}}></span>
                                 </div>
                                 <figcaption>Белые двери</figcaption>
                             </figure>
@@ -52,7 +52,7 @@ const Categories = () => {
                         <NavLink to={CATEGORY_CLASSIC_ROUTE}>
                             <figure className="category category--alt">
                                 <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(images/doors/product31-2.jpg)`}}></span>
+                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product31-2.jpg)`}}></span>
                                 </div>
                                 <figcaption>Классика</figcaption>
                             </figure>

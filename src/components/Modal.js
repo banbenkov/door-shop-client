@@ -2,11 +2,15 @@ import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
 import {fetchDoor} from "../actions/door";
 import {sendOrder} from "../actions/order";
+import {useCookies} from "react-cookie";
 
 const Modal = ({order, price}) => {
     const [phone, setPhone] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+
+    const [cookies, setCookie] = useCookies(['userId']);
+
     const dispatch = useDispatch();
     const closeModal = () => {
         dispatch({type: 'HIDE_MODAL'})
@@ -25,6 +29,7 @@ const Modal = ({order, price}) => {
         fieldOrder.email = email
         fieldOrder.img = order.img
         fieldOrder.idDoor = order.idDoor
+        fieldOrder.guestId = cookies.userId
         dispatch(sendOrder(fieldOrder));
         window.scrollTo(0, 0);
         dispatch({type: 'HIDE_MODAL'});

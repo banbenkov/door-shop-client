@@ -4,14 +4,15 @@ import App from './App';
 import {store} from "./reducers";
 import {Provider} from "react-redux";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import {CookiesProvider} from "react-cookie";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-        <React.StrictMode>
+        <CookiesProvider>
             <App/>
-        </React.StrictMode>
+        </CookiesProvider>
     </Provider>
 );
 

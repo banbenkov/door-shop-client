@@ -15,11 +15,16 @@ import DoorPhoto from "./DoorPhoto";
 import {fetchPicturesForDoor} from "../actions/portfolio";
 import Error from "./Error";
 import Loading from "./Loading";
+import {useCookies} from "react-cookie";
+import {fetchFavor, sendFavor} from "../actions/favor";
+import {toast, ToastContainer} from 'react-toastify';
+
 
 
 const Product = () => {
     const {id} = useParams();
     const dispatch = useDispatch();
+    const [cookies, setCookie] = useCookies(['userId']);
     const door = useSelector(state => state.doorDetail.door);
     const img = useSelector(state => state.doorImg.image);
     const alert = useSelector(state => state.alert);
@@ -275,6 +280,11 @@ const Product = () => {
         }
     }
 
+    //Добавление в избранное
+    const addFavor = () => {
+        dispatch(sendFavor(door.id, cookies.userId));
+    }
+
     return (
         <section className="hero bg-white mb-2">
             {door.id === parseInt(id) ? (
@@ -296,8 +306,8 @@ const Product = () => {
                                     {img.map((elem) => (
                                         <div className="card card-product">
                                             <figure className="card-image">
-                                                <a href="" className="action"><i className="icon-heart"></i></a>
-                                                <img itemprop="image" src={`../images/doors/${elem}`}/>
+                                                <div onClick={() => {addFavor()}} className="action"><i className="icon-heart"></i></div>
+                                                <img itemprop="image" src={`https://dveri-arsenal.ru:444/static/images/doors/${elem}`}/>
                                             </figure>
                                         </div>
                                     ))}

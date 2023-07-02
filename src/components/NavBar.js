@@ -15,17 +15,34 @@ import {
     CONTACTS_ROUTE,
     INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH
 } from "../utils/consts";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {fetchDoor} from "../actions/door";
+import {useCookies} from "react-cookie";
+import {deleteFavor, fetchFavor} from "../actions/favor";
 
 
 const NavBar = () => {
     const dispatch = useDispatch();
+
+    const [cookies, setCookie] = useCookies(['userId']);
+
     const [collapseMenu, setCollapseMenu] = useState(false);
     const [searchText, setSearchText] = useState('');
     const [collapseMenuMob, setCollapseMenuMob] = useState(false)
     const location = useLocation();
     const showModal = useSelector(state => state.modal.show);
+    const favorDoors = useSelector(state => state.favorDoors.doors);
+
+    useEffect(() => {
+        dispatch(fetchFavor(cookies.userId));
+    }, [])
+
+
+    const delFavor = (doorId) => {
+        dispatch(deleteFavor(doorId, cookies.userId));
+    }
+
     return (
         <header className="header">
             {location.pathname === '/' && (
@@ -219,30 +236,49 @@ const NavBar = () => {
                             {/*</li>*/}
 
                             {/*favourites*/}
-                            {/*<li className="d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover">*/}
-                            {/*    <a className="nav-icon" id="navbarDropdown-7" role="button" data-toggle="dropdown"*/}
-                            {/*       aria-haspopup="true" aria-expanded="false"><i className="icon-heart"></i></a>*/}
-                            {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdown-7">*/}
-                            {/*        <div className="row gutter-3">*/}
-                            {/*            <div className="col-12">*/}
-                            {/*                <h3 className="eyebrow text-dark fs-16 mb-1">Избранные товары</h3>*/}
-                            {/*                /!*<p class="text-muted fs-14"><a href="" class="underline">Sign in</a> to keep your*!/*/}
-                            {/*                /!*   saves for up to 60 days.</p>*!/*/}
-                            {/*            </div>*/}
-                            {/*            <div className="col-12">*/}
-                            {/*                <div className="cart-item">*/}
-                            {/*                    Избранных товаров нет*/}
-                            {/*                </div>*/}
-                            {/*            </div>*/}
-                            {/*            <div className="col-12">*/}
-                            {/*                /!*<a href="" className="btn btn-primary btn-block">Добавить всё в корзину</a>*!/*/}
-                            {/*                <a href="" className="btn btn-outline-secondary btn-block">Просмотреть*/}
-                            {/*                    избранные*/}
-                            {/*                    товары</a>*/}
-                            {/*            </div>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</li>*/}
+                            <li className="d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover">
+                                <a className="nav-icon" id="navbarDropdown-7" role="button" data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false"><i className="icon-heart"></i></a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown-7">
+                                    <div className="row gutter-3">
+                                        <div className="col-12">
+                                            <h3 className="eyebrow text-dark fs-16 mb-1">Избранные товары</h3>
+                                            {/*<p class="text-muted fs-14"><a href="" class="underline">Sign in</a> to keep your*/}
+                                            {/*   saves for up to 60 days.</p>*/}
+                                        </div>
+                                        <div className="col-12">
+                                            {favorDoors.length === 0 ? 'Нет избранных товаров' : favorDoors.map((elem, index) =>
+                                                   index < 2 && (<div className="cart-item" key={index}>
+                                                        <NavLink to={`../doors/${elem.id}`} className="cart-item-image"><img
+                                                            src={`https://dveri-arsenal.ru:444/static/images/doors/${elem.img.split(';')[0]}`} alt="Image" /></NavLink>
+                                                        <div className="cart-item-body">
+                                                            <div className="row">
+                                                                <div className="col-9">
+                                                                    <h5 className="cart-item-title">{elem.title}</h5>
+                                                                    {/*<small>Межкомнатная дверь</small>*/}
+                                                                    <ul className="list list--horizontal fs-14">
+                                                                        <li>{elem.price}</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div className="col-3 text-right">
+                                                                    <ul className="cart-item-options">
+                                                                        <a onClick={() => {delFavor(elem.id)}} className="action"><i className="icon-x"></i></a>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>)
+                                            )}
+                                        </div>
+                                        <div className="col-12">
+                                            {/*<a href="" className="btn btn-primary btn-block">Добавить всё в корзину</a>*/}
+                                            <NavLink to={'/favorites'} className="btn btn-outline-secondary btn-block">Просмотреть
+                                                все избранные
+                                                товары</NavLink>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
                             {/*cart*/}
                             {/*<li className="nav-item dropdown dropdown-md dropdown-hover">*/}

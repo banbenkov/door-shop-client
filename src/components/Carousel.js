@@ -28,8 +28,8 @@ const Carousel = () => {
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/1">
-                                    <img className="img-carousel" src="images/doors/product1-4.jpg" alt="Image" />
-                                        <img className="img-carousel" src="images/doors/product2-4.jpg" alt="Image" />
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product1-4.jpg" alt="Image" />
+                                        <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product2-4.jpg" alt="Image" />
                                 </NavLink>
 
                             </figure>
@@ -43,7 +43,7 @@ const Carousel = () => {
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/22">
-                                    <img className="img-carousel" src="images/doors/product21-1-main.jpg" alt="Image" />
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product21-1-main.jpg" alt="Image" />
                                 </NavLink>
                             </figure>
                             <NavLink to="/doors/22" className="card-body">
@@ -55,7 +55,7 @@ const Carousel = () => {
                             <figure className="card-image">
                                 <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/13">
-                                    <img className="img-carousel" src="images/doors/product12-1.jpg" alt="Image" />
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product12-1.jpg" alt="Image" />
 
                                 </NavLink>
                             </figure>
@@ -68,7 +68,7 @@ const Carousel = () => {
                         <figure className="card-image">
                             <a href="#!" className="action"><i className="icon-heart"></i></a>
                             <NavLink to="/doors/16">
-                                <img className="img-carousel" src="images/doors/product15-1.jpg" alt="Image" />
+                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product15-1.jpg" alt="Image" />
 
                             </NavLink>
                         </figure>

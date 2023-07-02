@@ -22659,20 +22659,25 @@ div.code-toolbar > .toolbar span:focus {
 
 
 @media (min-width: 360px) { .img-card {
+    width: 100%;
     height: 470px;
 } }
 
 @media (min-width: 576px) { .img-card {
+    width: 97%;
     height: 500px;
 } }
 @media (min-width: 768px) {  .img-card {
-    height: 500px;
+    width: 97%;
+    height: 450px;
 }}
 @media (min-width: 992px) { .img-card {
-    height: 500px;
+    width: 97%;
+    height: 450px;
 } }
 @media (min-width: 1200px) {  .img-card {
-    height: 590px;
+    width: 97%;
+    height: 600px;
 } }
 
 @media (min-width: 576px) {
@@ -23001,3 +23006,26 @@ label-texture {
         padding: 5px;
     }
 }
+
+/*img favorites*/
+@media (min-width: 360px) { .img-card-favor {
+    width: 98%;
+    height: 750px;
+} }
+
+@media (min-width: 576px) { .img-card-favor {
+    width: 98%;
+    height: 750px;
+} }
+@media (min-width: 768px) {  .img-card-favor {
+    width: 98%;
+    height: 380px;
+}}
+@media (min-width: 992px) { .img-card-favor {
+    width: 98%;
+    height: 400px;
+} }
+@media (min-width: 1200px) {  .img-card-favor {
+    width: 100%;
+    height: 800px;
+} }

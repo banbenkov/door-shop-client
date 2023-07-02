@@ -1,21 +1,33 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import {sendOrder} from "../actions/order";
+import {useDispatch} from "react-redux";
+import {useCookies} from "react-cookie";
+import {fetchFavor, sendFavor} from "../actions/favor";
+import {toast} from "react-toastify";
 
 const Card = ({door}) => {
+    const dispatch = useDispatch();
+    const [cookies, setCookie] = useCookies(['userId']);
     const pictures = door.img.split(';');
     let doorImg2 = '';
     const doorImg1 = pictures[0];
     if (pictures.length > 1) {
         doorImg2 = pictures[1].trim();
     }
+
+    const addFavor = () => {
+        dispatch(sendFavor(door.id, cookies.userId));
+    }
+
     return (
         <div className="col-6 col-md-4">
             <div className="card card-product" itemscope itemtype="http://schema.org/Product">
                 <figure className="card-image">
-                    <a href="" className="action"><i className="icon-heart"></i></a>
+                    <div onClick={() => {addFavor()}} className="action"><i className="icon-heart"></i></div>
                     <NavLink to={`../doors/${door.id}`}>
-                        <img itemprop="image" class="img-card" src={`images/doors/${doorImg1}`} alt="Image"/>
-                        {doorImg2 !== '' && (<img class="img-card" src={`images/doors/${doorImg2}`} alt="Image"/>)}
+                        <img itemprop="image" class="img-card" src={`https://dveri-arsenal.ru:444/static/images/doors/${doorImg1}`} alt="Image"/>
+                        {doorImg2 !== '' && (<img class="img-card" src={`https://dveri-arsenal.ru:444/static/images/doors/${doorImg2}`} alt="Image"/>)}
                     </NavLink>
                     {door.isNew && (<span className="badge badge-success">Новое</span>)}
 

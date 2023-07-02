@@ -12,7 +12,10 @@ import {
     CATEGORY_FURNITURE_LATCH_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     PORTFOLIO_ROUTE,
-    CATEGORY_SOSNA_ROUTE, CATEGORY_DUB_ROUTE, SEARCH
+    CATEGORY_SOSNA_ROUTE,
+    CATEGORY_DUB_ROUTE,
+    SEARCH,
+    FAVORITES
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -22,6 +25,7 @@ import Contacts from "./pages/Contacts";
 import CatalogFurniture from "./pages/CatalogFurniture";
 import FurniturePage from "./pages/FurniturePage";
 import Portfolio from "./pages/Portfolio";
+import FavoritesPage from "./pages/FavoritesPage";
 
 export const publicRoutes = [
     {
@@ -101,4 +105,8 @@ export const publicRoutes = [
         path: SEARCH,
         Component: <Catalog />
     },
+    {
+        path: FAVORITES,
+        Component: <FavoritesPage />
+    }
 ]
