@@ -15,7 +15,7 @@ const Favorites = () => {
 
     return (
         <section>
-            <div className="container">
+            <div className="container mb-2 mt-2">
                 <div className="row gutter-1 gutter-md-2">
                     <div className="col-12">
                         <div className="bg-white p-2 p-md-3">
