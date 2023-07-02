@@ -26,7 +26,6 @@ const Carousel = () => {
                 <Slider {...settings}>
                         <div className="card card-product col-lg-10 ml-3">
                             <figure className="card-image">
-                                <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/1">
                                     <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product1-4.jpg" alt="Image" />
                                         <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product2-4.jpg" alt="Image" />
@@ -41,7 +40,6 @@ const Carousel = () => {
                         </div>
                         <div className="card card-product col-lg-10 ml-3">
                             <figure className="card-image">
-                                <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/22">
                                     <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product21-1-main.jpg" alt="Image" />
                                 </NavLink>
@@ -53,7 +51,6 @@ const Carousel = () => {
                         </div>
                         <div className="card card-product col-lg-10 ml-3">
                             <figure className="card-image">
-                                <a href="#!" className="action"><i className="icon-heart"></i></a>
                                 <NavLink to="/doors/13">
                                     <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product12-1.jpg" alt="Image" />
 
@@ -66,7 +63,6 @@ const Carousel = () => {
                         </div>
                     <div className="card card-product col-lg-10 ml-3">
                         <figure className="card-image">
-                            <a href="#!" className="action"><i className="icon-heart"></i></a>
                             <NavLink to="/doors/16">
                                 <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product15-1.jpg" alt="Image" />
 
