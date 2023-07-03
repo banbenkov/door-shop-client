@@ -23029,3 +23029,8 @@ label-texture {
     width: 100%;
     height: 800px;
 } }
+
+/*img product*/
+@media (min-width: 1200px) {  .img-product {
+    height: 750px;
+} }

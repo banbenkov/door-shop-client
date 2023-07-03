@@ -307,7 +307,7 @@ const Product = () => {
                                         <div className="card card-product">
                                             <figure className="card-image">
                                                 <div onClick={() => {addFavor()}} className="action"><i className="icon-heart"></i></div>
-                                                <img itemprop="image" src={`https://dveri-arsenal.ru:444/static/images/doors/${elem}`}/>
+                                                <img className="img-product" itemprop="image" src={`https://dveri-arsenal.ru:444/static/images/doors/${elem}`}/>
                                             </figure>
                                         </div>
                                     ))}
