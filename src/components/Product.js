@@ -290,13 +290,13 @@ const Product = () => {
             {door.id === parseInt(id) ? (
                     <div className="container">
                         <div
-                            className={alert.show ? "alert alert-success alert-dismissible fade show" : "alert alert-success alert-dismissible fade"}
+                            className="alert alert-success alert-dismissible fade"
                             role="alert">
-                            <strong>Заказ получен!</strong> Оператор перезвонит в ближайшее время.
-                            <button onClick={() => hideAlert()} type="button" className="close" data-dismiss="alert"
-                                    aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
+                            {/*<strong>Заказ получен!</strong> Оператор перезвонит в ближайшее время.*/}
+                            {/*<button onClick={() => hideAlert()} type="button" className="close" data-dismiss="alert"*/}
+                            {/*        aria-label="Close">*/}
+                            {/*    <span aria-hidden="true">×</span>*/}
+                            {/*</button>*/}
                         </div>
                         <div itemscope itemtype="http://schema.org/Product"
                              className="row gutter-2 gutter-md-4 justify-content-between">
