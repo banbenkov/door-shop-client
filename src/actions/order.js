@@ -13,9 +13,10 @@ export const sendOrder = (order) => {
                 autoClose: false
             });
         } catch (e) {
-            dispatch({
-                type: 'SHOW_ALERT_ERROR'
-            })
+            toast.error('При создание заказа возникли ошибки.', {
+                position: toast.POSITION.BOTTOM_RIGHT,
+                autoClose: false
+            });
         }
     }
 }
