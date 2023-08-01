@@ -19,7 +19,7 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
     return (
         <div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceBox, 'Коробка телескоп комплект(2,5шт)-2000₽')}
+                <input onChange={e => soldCheckbox(e, priceBox, `Коробка телескоп комплект(2,5шт)-${priceBox}₽`)}
                        type="checkbox"
                        className="custom-control-input" id="customCheck1"/>
                 <label className="custom-control-label" htmlFor="customCheck1">
@@ -27,7 +27,7 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceNalich, 'Наличник телескоп комплект(5шт)-2000₽')}
+                <input onChange={e => soldCheckbox(e, priceNalich, `Наличник телескоп комплект(5шт)-${priceNalich}₽`)}
                        type="checkbox"
                        className="custom-control-input" id="customCheck2"/>
                 <label className="custom-control-label" htmlFor="customCheck2">
@@ -35,11 +35,11 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, priceDobor, 'Добор телескоп-700₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceDobor, `Добор телескоп-${priceDobor}₽`)} type="checkbox"
                        className="custom-control-input"
                        id="customCheck3"/>
                 <label className="custom-control-label" htmlFor="customCheck3">
-                    Добор телескоп-{priceDobor}₽s
+                    Добор телескоп-{priceDobor}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">

@@ -22648,6 +22648,57 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-bianko {
+    background-image: url("../../public/images/texture/bianko.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-bianko::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-gray-sonoma {
+    background-image: url("../../public/images/texture/gray-sonoma.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-gray-sonoma::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-dub-sonoma {
+    background-image: url("../../public/images/texture/dub-sonoma.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-dub-sonoma::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-lite-sonoma {
+    background-image: url("../../public/images/texture/lite-sonoma.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-lite-sonoma::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
 
 
 .slick-prev:before,
