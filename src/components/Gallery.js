@@ -26,9 +26,6 @@ const Gallery = () => {
                     <LightGallery plugins={[lgZoom, lgVideo]} mode="lg-fade">
                         {pictures.map((item) => (
                             <a
-                                data-lg-size="960-960"
-                                data-pinterest-text={item.title}
-                                data-tweet-text={item.title}
                                 className="gallery-item"
                                 data-src={'https://dveri-arsenal.ru:444/' + 'static/' + item.src}
                                 data-sub-html={item.html}

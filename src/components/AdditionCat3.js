@@ -8,17 +8,17 @@ const AdditionCat3 = ({soldCheckbox, door}) => {
         if (door.id === 63 || door.id === 64) {
             setPriceBox(1500);
             setPriceNalich(1500);
-            setPriceDobor(600);
+            setPriceDobor(700);
         }
         else if (door.id === 65) {
             setPriceBox(1300);
             setPriceNalich(1400);
-            setPriceDobor(600);
+            setPriceDobor(700);
         }
         else {
             setPriceBox(1000);
             setPriceNalich(1000);
-            setPriceDobor(200);
+            setPriceDobor(700);
         }
     }, [door])
     return (
@@ -73,11 +73,11 @@ const AdditionCat3 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 700, 'Завертка сантехника "PUNTO" (Испания) на стяжках-700₽')}
+                <input onChange={e => soldCheckbox(e, 800, 'Завертка сантехника "PUNTO" (Испания) на стяжках-800₽')}
                        type="checkbox" className="custom-control-input"
                        id="customCheck7"/>
                 <label className="custom-control-label" htmlFor="customCheck7">
-                    Завертка сантехника "PUNTO" (Испания) на стяжках-700₽
+                    Завертка сантехника "PUNTO" (Испания) на стяжках-800₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
