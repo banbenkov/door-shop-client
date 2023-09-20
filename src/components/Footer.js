@@ -62,6 +62,10 @@ const Footer = () => {
                                 <span itemprop="addressLocality">Санкт-Петербург</span>,
                                 <span itemprop="streetAddress">Петергофское шоссе, 73</span></h6>
                             <h6 className="fs-14 text-white m-0"><i
+                                className="bi bi-clock mr-1 text-opaque"></i>
+                                <span>Пн-Пт с 08:00 до 18:00, Сб-Вс выходной</span>
+                            </h6>
+                            <h6 className="fs-14 text-white m-0"><i
                                 className="bi bi-telephone mr-1 text-opaque"></i>
                                 <span itemProp="telephone">+7 (812) 985-94-58</span></h6>
                             <h6 className="fs-14 text-white m-0"><i
@@ -70,6 +74,10 @@ const Footer = () => {
                             <h6 className="fs-14 text-white m-0"><i
                                 className="mr-3 text-opaque"></i>
                                 <span itemProp="telephone">+7 (905) 223-39-39</span></h6>
+                            <h6 className="fs-14 text-white m-0"><i
+                                className="bi bi-mailbox mr-1 text-opaque"></i>
+                                <span>arsenalstroy_08@mail.ru</span>
+                            </h6>
                         </div>
                         <ul className="list list--horizontal mt-2">
                             <li><img src={visa} className="payment" alt="Image" /></li>

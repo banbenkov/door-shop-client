@@ -57,7 +57,7 @@ const NavBar = () => {
                             </div>
                             <div className="col-md-4">
                                 <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
-                                    className="bi bi-watch mr-1 text-opaque"></i>с 08:00 до 21:00 </h6>
+                                    className="bi bi-watch mr-1 text-opaque"></i>Пн-Пт с 08:00 до 18:00</h6>
                             </div>
                             <div className="col-md-4">
                                 <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
