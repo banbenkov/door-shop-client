@@ -6,14 +6,14 @@ import {
     ABOUT_ROUTE,
     CATALOG_ROUTE,
     CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
-    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE, FAVORITES,
-    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH
+    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH, CATEGORY_EKOSHPON_LIGHT_ROUTE
 } from "../utils/consts";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
@@ -98,12 +98,14 @@ const NavBar = () => {
                                                 <span onClick={() => {dispatch({type: 'START_PAGE'})}} className="eyebrow text-muted mb-1">Межкомнатные двери</span>
                                                 <ul className="menu-list">
                                                     <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink
-                                                        to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
-                                                        className="menu-list-link">Экошпон
-                                                        Лайт</NavLink>
+                                                        to={CATEGORY_3D_ROUTE}
+                                                        className="menu-list-link">3D покрытие</NavLink>
                                                     </li>
                                                     <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
                                                                                             className="menu-list-link">Экошпон</NavLink>
+                                                    </li>
+                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
+                                                                                                                                             className="menu-list-link">Экошпон лайт</NavLink>
                                                     </li>
                                                     <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
                                                                                             className="menu-list-link">Белые

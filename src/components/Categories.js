@@ -24,7 +24,7 @@ const Categories = () => {
                                 <div className="equal"><span className="image"
                                                              style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product8-3.jpg)`}}></span>
                                 </div>
-                                <figcaption>Экошпон лайт</figcaption>
+                                <figcaption>3D покрытие</figcaption>
                             </figure>
                         </NavLink>
                     </div>

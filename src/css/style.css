@@ -22700,6 +22700,18 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-dub-dimchat{
+    background-image: url("../../public/images/texture/dub-dimchat.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-dub-dimchat::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
 
 .slick-prev:before,
 .slick-next:before {

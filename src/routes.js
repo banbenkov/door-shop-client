@@ -1,7 +1,7 @@
 import {
     ABOUT_ROUTE,
     CATALOG_ROUTE,
-    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CATEGORY_CLASSIC_ROUTE,
@@ -15,7 +15,7 @@ import {
     CATEGORY_SOSNA_ROUTE,
     CATEGORY_DUB_ROUTE,
     SEARCH,
-    FAVORITES
+    FAVORITES, CATEGORY_EKOSHPON_LIGHT_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -50,11 +50,15 @@ export const publicRoutes = [
         Component: <Contacts/>
     },
     {
-        path: CATEGORY_EKOSHPON_LIGHT_ROUTE,
+        path: CATEGORY_3D_ROUTE,
         Component: <Catalog/>
     },
     {
         path: CATEGORY_EKOSHPON_ROUTE,
+        Component: <Catalog/>
+    },
+    {
+        path: CATEGORY_EKOSHPON_LIGHT_ROUTE,
         Component: <Catalog/>
     },
     {

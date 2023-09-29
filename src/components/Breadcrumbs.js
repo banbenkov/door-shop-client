@@ -2,13 +2,13 @@ import React, {useEffect} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
 import {
     CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
-    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE
+    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
@@ -40,8 +40,8 @@ const Breadcrumbs = () => {
         else {
             switch (door.category) {
                 case '1':
-                    nameCategoryDoor = 'Экошпон Лайт';
-                    linkCategoryDoor = CATEGORY_EKOSHPON_LIGHT_ROUTE;
+                    nameCategoryDoor = '3D покрытие';
+                    linkCategoryDoor = CATEGORY_3D_ROUTE;
                     orderName = door.title;
                     break;
                 case '2':
@@ -79,6 +79,11 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_DUB_ROUTE;
                     orderName = door.title;
                     break;
+                case '9':
+                    nameCategoryDoor = 'Экошпон лайт';
+                    linkCategoryDoor = CATEGORY_EKOSHPON_LIGHT_ROUTE;
+                    orderName = door.title;
+                    break;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'
@@ -91,9 +96,9 @@ const Breadcrumbs = () => {
 
 
     switch (location.pathname) {
-        case CATEGORY_EKOSHPON_LIGHT_ROUTE:
-            nameCategory = 'Экошпон Лайт';
-            linkCategory = CATEGORY_EKOSHPON_LIGHT_ROUTE;
+        case CATEGORY_3D_ROUTE:
+            nameCategory = '3D покрытие';
+            linkCategory = CATEGORY_3D_ROUTE;
             break;
         case CATEGORY_EKOSHPON_ROUTE:
             nameCategory = 'Экошпон';
@@ -130,6 +135,10 @@ const Breadcrumbs = () => {
         case CATEGORY_DUB_ROUTE:
             nameCategory = 'Массив дуба';
             linkCategory = CATEGORY_DUB_ROUTE;
+            break;
+        case CATEGORY_EKOSHPON_LIGHT_ROUTE:
+            nameCategory = 'Экошпон лайт';
+            linkCategory = CATEGORY_EKOSHPON_LIGHT_ROUTE;
             break;
         default:
             nameCategory = 'Все двери';

@@ -3,13 +3,13 @@ import {NavLink, useLocation} from "react-router-dom";
 import {
     CATALOG_ROUTE,
     CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
-    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE
+    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router";
 import {useDispatch} from "react-redux";
@@ -39,10 +39,13 @@ const CatalogMenu = () => {
                         <div>
                             <ul className="nav flex-column">
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                    <NavLink  className="nav-link" to={CATEGORY_EKOSHPON_LIGHT_ROUTE}>Экошпон лайт</NavLink>
+                                    <NavLink  className="nav-link" to={CATEGORY_3D_ROUTE}>3D покрытие</NavLink>
                                 </li>
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_EKOSHPON_ROUTE}>Экошпон</NavLink>
+                                </li>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                    <NavLink className="nav-link" to={CATEGORY_EKOSHPON_LIGHT_ROUTE}>Экошпон лайт</NavLink>
                                 </li>
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_WHITE_ROUTE}>Белые двери</NavLink>

@@ -7,7 +7,7 @@
         <platform></platform>
         <categories>
             <category id="1">Межкомнатные двери</category>
-            <category id="2" parentId="1">Экошпон лайт</category>
+            <category id="2" parentId="1">3D покрытие</category>
             <category id="3" parentId="1">Экошпон</category>
             <category id="4" parentId="1">Белые двери</category>
             <category id="5" parentId="1">Классика</category>

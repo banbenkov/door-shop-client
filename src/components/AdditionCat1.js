@@ -3,11 +3,13 @@ import React, {useEffect, useState} from 'react';
 const AdditionCat1 = ({soldCheckbox, door}) => {
     const [priceBox, setPriceBox] = useState(0);
     const [priceNalich, setPriceNalich] = useState(0);
+    const [priceDobor, setPriceDobor] = useState(0);
     useEffect(() => {
         switch (door.category) {
             case '1' || '4':
                 setPriceBox(1000);
                 setPriceNalich(1000);
+                setPriceDobor(700);
                 break
             case '5':
                 setPriceBox(2300);
@@ -16,10 +18,17 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                     setPriceBox(2500);
                     setPriceNalich(2500);
                 }
+                setPriceDobor(700);
+                break
+            case '9':
+                setPriceBox(1200);
+                setPriceNalich(1200);
+                setPriceDobor(500);
                 break
             default:
                 setPriceBox(1000);
                 setPriceNalich(1000);
+                setPriceDobor(700);
         }
     }, [])
 
@@ -42,11 +51,11 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 700, 'Добор-700₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceDobor, `Добор-${priceDobor}₽`)} type="checkbox"
                        className="custom-control-input"
                        id="customCheck3"/>
                 <label className="custom-control-label" htmlFor="customCheck3">
-                    Добор-700₽
+                    Добор-{priceDobor}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
