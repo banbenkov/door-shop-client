@@ -15216,7 +15216,7 @@ dt {
 
 .eyebrow {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -18442,6 +18442,7 @@ img {
 .swiper-container .swiper-slide {
     height: auto;
     overflow: hidden;
+    height: 600px;
 }
 
 .swiper-container .container,
@@ -18450,7 +18451,7 @@ img {
 .swiper-container .container-md,
 .swiper-container .container-lg,
 .swiper-container .container-xl {
-    height: 100%;
+    height: 210%;
 }
 
 .swiper-container .container > .row,
