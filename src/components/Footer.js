@@ -1,7 +1,23 @@
 import * as React from 'react';
 import styles from '../css/style.css';
 import {NavLink} from "react-router-dom";
-import {ABOUT_ROUTE, CATALOG_ROUTE, CONTACTS_ROUTE, INDEX_ROUTE, PORTFOLIO_ROUTE} from "../utils/consts";
+import {
+    ABOUT_ROUTE,
+    CATALOG_ROUTE,
+    CATEGORY_3D_ROUTE,
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_DUB_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_EMAL_ROUTE,
+    CATEGORY_EMALIT_ROUTE,
+    CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_SOSNA_ROUTE,
+    CATEGORY_WHITE_ROUTE,
+    CONTACTS_ROUTE,
+    INDEX_ROUTE,
+    PORTFOLIO_ROUTE
+} from "../utils/consts";
 import masterCard from "../img/master-card-1.svg";
 import mir from "../img/mir.svg";
 import visa from "../img/visa-1.svg";
@@ -37,20 +53,64 @@ const Footer = () => {
                     </div>
 
                     {/*subscribe*/}
-                    <div className="order-2 order-md-3 order-lg-2 col-md-8 col-lg-4">
-                        <h4 className="eyebrow mb-1">Подписаться на новости</h4>
-                        <div className="input-combined mb-2">
-                            <input type="text" className="form-control" placeholder="Ваш email" aria-label="Ваш email"
-                                   aria-describedby="button-addon2" />
-                                <button className="btn btn-white" type="button" id="button-addon2">Подписаться</button>
-                                <span className="input-combined_indicator"></span>
+                    {/*<div className="order-2 order-md-3 order-lg-2 col-md-8 col-lg-4">*/}
+                    {/*    <h4 className="eyebrow mb-1">Подписаться на новости</h4>*/}
+                    {/*    <div className="input-combined mb-2">*/}
+                    {/*        <input type="text" className="form-control" placeholder="Ваш email" aria-label="Ваш email"*/}
+                    {/*               aria-describedby="button-addon2" />*/}
+                    {/*            <button className="btn btn-white" type="button" id="button-addon2">Подписаться</button>*/}
+                    {/*            <span className="input-combined_indicator"></span>*/}
+                    {/*    </div>*/}
+                    {/*    <ul className="list list--horizontal">*/}
+                    {/*        <li><a href="#!" className="text-hover-instagram">*/}
+                    {/*            <i className="bi bi-telegram"></i>*/}
+                    {/*        </a>*/}
+                    {/*        </li>*/}
+                    {/*    </ul>*/}
+                    {/*</div>*/}
+
+                    {/*Двери*/}
+                    <div className="order-1 col-md-8 col-lg-2">
+                        <div className="row">
+                            <div className="col">
+                                <h4 className="eyebrow mb-1">МЕЖКОМНАТНЫЕ ДВЕРИ</h4>
+                                <ul className="menu-list">
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_3D_ROUTE}
+                                                                            className="menu-list-link">3D покрытие</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
+                                                                            className="menu-list-link">Экошпон</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
+                                                                            className="menu-list-link">Экошпон лайт</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
+                                                                            className="menu-list-link">Белые двери</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
+                                                                            className="menu-list-link">Классика</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
+                                                                            className="menu-list-link">Эмаль</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
+                                                                            className="menu-list-link">Эмалит</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_SOSNA_ROUTE}
+                                                                            className="menu-list-link">Массив сосны</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_DUB_ROUTE}
+                                                                            className="menu-list-link">Массив дуба</NavLink></li>
+                                </ul>
+                            </div>
                         </div>
-                        <ul className="list list--horizontal">
-                            <li><a href="#!" className="text-hover-instagram">
-                                <i className="bi bi-telegram"></i>
-                            </a>
-                            </li>
-                        </ul>
+                    </div>
+
+                    {/*Фурнитура*/}
+                    <div className="order-1 col-md-8 col-lg-2">
+                        <div className="row">
+                            <div className="col">
+                                <h4 className="eyebrow mb-1">Фурнитура</h4>
+                                <ul className="menu-list">
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE}
+                                                                            className="menu-list-link">Дверные ручки</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_LATCH_ROUTE}
+                                                                            className="menu-list-link">Замки</NavLink></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     {/*settings*/}
