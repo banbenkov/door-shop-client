@@ -32,7 +32,9 @@ export const sendFavor = (doorId, guestId) => {
                 });
             }
         } catch (e) {
-
+            toast.error('Ошибка при добавление товара', {
+                position: toast.POSITION.BOTTOM_RIGHT
+            });
         }
     }
 }

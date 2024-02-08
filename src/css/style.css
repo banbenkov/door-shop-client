@@ -22713,6 +22713,19 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-arktik{
+    background-image: url("../../public/images/texture/arktik.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-arktik::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 .slick-prev:before,
 .slick-next:before {
 
