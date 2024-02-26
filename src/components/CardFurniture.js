@@ -11,7 +11,7 @@ const CardFurniture = ({furniture}) => {
                 <figure className="card-image">
                     <a href="" className="action"><i className="icon-heart"></i></a>
                     <NavLink to={`${furniture.id}`}>
-                        <img src={`images/furnitura/${furnitureImg1}`} alt="Image" />
+                        <img src={`https://dveri-arsenal.ru:444/static/images/furnitura/${furnitureImg1}`} alt="Image" />
                     </NavLink>
                 </figure>
                 <div className="card-footer">

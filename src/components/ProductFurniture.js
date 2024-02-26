@@ -200,7 +200,6 @@ const ProductFurniture = () => {
                             {Array.isArray(furniture.image) === true && furniture.image.map((elem) => (
                                 <div className="card card-product">
                                     <figure className="card-image">
-                                        <a href="" className="action"><i className="icon-heart"></i></a>
                                         <img src={`https://dveri-arsenal.ru:444/static/images/furnitura/${elem.trim()}`}/>
                                     </figure>
                                 </div>
