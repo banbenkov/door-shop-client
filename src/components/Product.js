@@ -301,7 +301,7 @@ const Product = () => {
                         <div itemscope itemtype="http://schema.org/Product"
                              className="row gutter-2 gutter-md-4 justify-content-between">
                             {/*carousel*/}
-                            <div className="col-lg-4 ml-4">
+                            <div className="col-lg-3 ml-3">
                                 <Carousel infiniteLoop={true} showStatus={false} selectedItem={activeTexture}>
                                     {img.map((elem) => (
                                         <div className="card card-product">

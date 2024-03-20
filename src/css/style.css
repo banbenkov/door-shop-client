@@ -22728,32 +22728,29 @@ div.code-toolbar > .toolbar span:focus {
 
 .slick-prev:before,
 .slick-next:before {
-
     color: #4d4646;
-
 }
 
-
 @media (min-width: 360px) { .img-card {
-    width: 100%;
-    height: 470px;
+    width: 85%;
+    height: 400px;
 } }
 
 @media (min-width: 576px) { .img-card {
-    width: 97%;
-    height: 500px;
+    width: 87%;
+    height: 450px;
 } }
 @media (min-width: 768px) {  .img-card {
-    width: 97%;
+    width: 94%;
     height: 450px;
 }}
 @media (min-width: 992px) { .img-card {
-    width: 97%;
+    width: 93%;
     height: 450px;
 } }
 @media (min-width: 1200px) {  .img-card {
-    width: 97%;
-    height: 600px;
+    width: 89%;
+    height: 590px;
 } }
 
 @media (min-width: 576px) {
@@ -23108,5 +23105,6 @@ label-texture {
 
 /*img product*/
 @media (min-width: 1200px) {  .img-product {
-    height: 750px;
+    height: 650px;
 } }
+
