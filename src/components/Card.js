@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {useCookies} from "react-cookie";
 import {sendFavor} from "../actions/favor";
+import {priceFormatter} from "../utils/formatter";
 const Card = ({door}) => {
     const dispatch = useDispatch();
     const [cookies, setCookie] = useCookies(['userId']);
@@ -34,7 +35,7 @@ const Card = ({door}) => {
                         to={`../doors/${door.id}`}>{door.title}</NavLink></h3>
                     <span itemProp="offers" itemScope itemType="http://schema.org/Offer">
                     <meta itemProp="priceCurrency" content="RUB"/>
-                    <span className="price" itemprop="price">{door.price}₽</span>
+                    <span className="price" itemprop="price">{priceFormatter(door.price, 0)}₽</span>
                         <link itemProp="availability" href="http://schema.org/InStock"/>
                     </span>
                 </div>

@@ -1,6 +1,5 @@
 import axios from "axios";
-import {Dispatch} from "redux";
-
+import {priceFormatter} from "../utils/formatter";
 
 export const fetchDoors = () => {
     let min = 0;
@@ -9,25 +8,22 @@ export const fetchDoors = () => {
         try {
             dispatch({type: 'FETCH_DOORS'})
             const response = await axios.get(`https://dveri-arsenal.ru:444/door`)
-            response.data.map((elem, i) => {
-
-                if (min > elem.price || min === 0) {
-                    min = elem.price
+            response.data.forEach(elem => {
+                if (min > priceFormatter(elem.price,0)|| min === 0) {
+                    min = priceFormatter(elem.price,0);
                 }
-                if (max < elem.price) {
-                    max = elem.price
+                if (max < priceFormatter(elem.price, 0)) {
+                    max = priceFormatter(elem.price, 0);
                 }
-
-
             })
-            const priceFilter = {min, max}
-            dispatch({type: 'FETCH_DOORS_SUCCESS', payload: response.data})
-            dispatch({type: 'SET_PRICE', payload: priceFilter})
+            const priceFilter = {min, max};
+            dispatch({type: 'FETCH_DOORS_SUCCESS', payload: response.data});
+            dispatch({type: 'SET_PRICE', payload: priceFilter});
         } catch (e) {
             dispatch({
                 type: 'FETCH_DOORS_ERROR',
                 payload: 'Произошла ошибка при загрузки'
-            })
+            });
         }
     }
 }

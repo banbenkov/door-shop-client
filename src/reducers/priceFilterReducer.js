@@ -3,8 +3,6 @@ const SET_CURR_PRICE = "SET_CURR_PRICE";
 const SET_DEFAULT_PRICE = "SET_DEFAULT_PRICE";
 
 
-
-
 const defaultState = {
     minPrice: 0,
     maxPrice: 0,

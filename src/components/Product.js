@@ -2,24 +2,19 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchDoor} from "../actions/door";
-import InfiniteCarousel from "react-leaf-carousel";
 import {Carousel} from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Modal from "./Modal";
 import AdditionCat1 from "./AdditionCat1";
 import AdditionCat2 from "./AdditionCat2";
-import {Helmet} from "react-helmet";
 import AdditionCat3 from "./AdditionCat3";
 import AdditionCat4 from "./AdditionCat4";
 import DoorPhoto from "./DoorPhoto";
 import {fetchPicturesForDoor} from "../actions/portfolio";
-import Error from "./Error";
 import Loading from "./Loading";
 import {useCookies} from "react-cookie";
-import {fetchFavor, sendFavor} from "../actions/favor";
-import {toast, ToastContainer} from 'react-toastify';
-
-
+import {sendFavor} from "../actions/favor";
+import {priceFormatter} from "../utils/formatter";
 
 const Product = () => {
     const {id} = useParams();
@@ -41,7 +36,7 @@ const Product = () => {
     const [activeHeight, setActiveHeight] = useState(0);
     const [activeTexture, setActiveTexture] = useState(0);
     const [countProduct, setCountProduct] = useState(1);
-    const [delivery, setDelivery] = useState(false)
+    const [delivery, setDelivery] = useState(false);
     const [order, setOrder] = useState({
         title: '',
         decor: '',
@@ -64,8 +59,10 @@ const Product = () => {
     }, []);
 
     useEffect(() => {
-        setAdditionalPrice(door.price)
-        setGeneralPrice(door.price)
+        //Цена для одного товара.
+        setAdditionalPrice(priceFormatter(door.price, 0))
+        //Цена для нескольких товаров.
+        setGeneralPrice(priceFormatter(door.price, 0))
     }, [door.price])
     useEffect(() => {
         setOrder({
@@ -73,7 +70,7 @@ const Product = () => {
             decor: textureRu[activeTexture],
             width: width[activeWidth],
             height: height[activeHeight],
-            price: door.price,
+            price: priceFormatter(door.price, 0),
             additions: '',
             amount: countProduct,
             phoneNumber: order.phoneNumber,
@@ -81,8 +78,6 @@ const Product = () => {
             img: img[activeTexture],
             idDoor: door.id
         })
-
-
     }, [door])
 
     //разбиение размеров и текстур
@@ -114,7 +109,6 @@ const Product = () => {
             isActive: index === activeTexture
         }
     })
-
 
     const openTab1 = (e) => {
         setCollapse1(!collapse1);
@@ -199,14 +193,17 @@ const Product = () => {
     }
 
     const setWidth = (index) => {
-        debugger
         setActiveWidth(index);
+        setAdditionalPrice(additionalPrice - priceFormatter(door.price, activeWidth)
+                                                    + priceFormatter(door.price, index));
+        setGeneralPrice(generalPrice - (priceFormatter(door.price, activeWidth) * countProduct )
+                                            + ( priceFormatter(door.price, index) * countProduct ));
         setOrder({
             title: order.title,
             decor: order.decor,
             width: width[index],
             height: order.height,
-            price: order.price,
+            price: order.price - priceFormatter(door.price, activeWidth) + priceFormatter(door.price, index),
             additions: order.additions,
             amount: countProduct,
             phoneNumber: order.phoneNumber,

@@ -11,6 +11,7 @@ import {
     CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE
 } from "../utils/consts";
 import Loading from "./Loading";
+import {priceFormatter} from "../utils/formatter";
 
 
 const Content = () => {
@@ -49,70 +50,70 @@ const Content = () => {
             switch (location.pathname) {
                 case CATEGORY_3D_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '1'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = '3D покрытие'
                     break;
                 case CATEGORY_EKOSHPON_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '2'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Экошпон'
                     break;
                 case CATEGORY_WHITE_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '3'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Белые двери'
                     break;
                 case CATEGORY_CLASSIC_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '4'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Классика';
                     break;
                 case CATEGORY_EMAL_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '5'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Эмаль';
                     break;
                 case CATEGORY_EMALIT_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '6'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Эмалит';
                     break;
                 case CATEGORY_SOSNA_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '7'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Массив сосны';
                     break;
                 case CATEGORY_DUB_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '8'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Массив дуба';
                     break;
                 case CATEGORY_EKOSHPON_LIGHT_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '9'
-                        && door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Экошпон лайт';
                     break;
                 default:
-                    doors = doorsFetch.filter(door => door.price >= priceFilter.currMinPrice
-                        && door.price <= priceFilter.currMaxPrice
+                    doors = doorsFetch.filter(door => priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Все двери'
 
