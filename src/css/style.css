@@ -22752,6 +22752,32 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-svetli-lak{
+    background-image: url("../../public/images/texture/svetli-lak.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-svetli-lak::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-temni-lak{
+    background-image: url("../../public/images/texture/temni-lak.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-temni-lak::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 .slick-prev:before,
 .slick-next:before {
     color: #4d4646;
