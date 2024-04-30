@@ -1,11 +1,8 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {sendOrder} from "../actions/order";
 import {useDispatch} from "react-redux";
 import {useCookies} from "react-cookie";
-import {fetchFavor, sendFavor} from "../actions/favor";
-import {toast} from "react-toastify";
-
+import {sendFavor} from "../actions/favor";
 const Card = ({door}) => {
     const dispatch = useDispatch();
     const [cookies, setCookie] = useCookies(['userId']);
