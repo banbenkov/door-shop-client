@@ -194,40 +194,74 @@ const Product = () => {
 
     const setWidth = (index) => {
         setActiveWidth(index);
-        setAdditionalPrice(additionalPrice - priceFormatter(door.price, activeWidth)
-                                                    + priceFormatter(door.price, index));
-        setGeneralPrice(generalPrice - (priceFormatter(door.price, activeWidth) * countProduct )
-                                            + ( priceFormatter(door.price, index) * countProduct ));
-        setOrder({
-            title: order.title,
-            decor: order.decor,
-            width: width[index],
-            height: order.height,
-            price: order.price - priceFormatter(door.price, activeWidth) + priceFormatter(door.price, index),
-            additions: order.additions,
-            amount: countProduct,
-            phoneNumber: order.phoneNumber,
-            name: order.name,
-            img: order.img,
-            idDoor: door.id
-        })
+        //Если в товаре есть текстура "Белый эмалит", то цены две и при изменения ширины цена не меняется.
+        if (!door.decor.split(';').includes(' belie-emalit')) {
+            //Если несолько цен и нет текстуры "Белый эмалит",
+            // тогда при изменение ширы подставляется соответствующая цена.
+            setAdditionalPrice(additionalPrice - priceFormatter(door.price, activeWidth)
+                + priceFormatter(door.price, index));
+            setGeneralPrice(generalPrice - (priceFormatter(door.price, activeWidth) * countProduct)
+                + (priceFormatter(door.price, index) * countProduct));
+            setOrder({
+                ...order,
+                width: width[index],
+                price: order.price - priceFormatter(door.price, activeWidth) + priceFormatter(door.price, index),
+                amount: countProduct,
+                idDoor: door.id
+            })
+        } else {
+            setOrder({
+                ...order,
+                width: width[index],
+                price: order.price,
+                amount: countProduct,
+                idDoor: door.id
+            })
+        }
     }
 
     const setTexture = (index) => {
         setActiveTexture(index);
-        setOrder({
-            title: order.title,
-            decor: textureRu[index],
-            width: order.width,
-            height: order.height,
-            price: order.price,
-            additions: order.additions,
-            amount: countProduct,
-            phoneNumber: order.phoneNumber,
-            name: order.name,
-            img: img[index],
-            idDoor: door.id
-        })
+        //Если выбирается первая текстура то цена берется первая,
+        //для всех остльных цена вторая (для цены на текстуру эмалит).
+        if (door.decor.split(';').includes(' belie-emalit')) {
+            const activeIndexPriceFromTexture = texture[activeTexture].value.trim() === 'belie-emalit' ? 1 : 0;
+            const indexPriceFromTexture = texture[index].value.trim() === 'belie-emalit' ? 1 : 0;
+            if (activeIndexPriceFromTexture === 1 && indexPriceFromTexture === 0
+                || activeIndexPriceFromTexture === 0 && indexPriceFromTexture === 1) {
+                setAdditionalPrice(additionalPrice
+                    - priceFormatter(door.price, activeIndexPriceFromTexture)
+                    + priceFormatter(door.price, indexPriceFromTexture));
+                setGeneralPrice(generalPrice
+                    - (priceFormatter(door.price, activeIndexPriceFromTexture) * countProduct)
+                    + (priceFormatter(door.price, indexPriceFromTexture) * countProduct));
+                setOrder({
+                    ...order,
+                    decor: textureRu[index],
+                    price: order.price - priceFormatter(door.price, activeIndexPriceFromTexture)
+                        + priceFormatter(door.price, indexPriceFromTexture),
+                    img: img[index],
+                    amount: countProduct,
+                    idDoor: door.id
+                })
+            } else {
+                setOrder({
+                    ...order,
+                    decor: textureRu[index],
+                    amount: countProduct,
+                    img: img[index],
+                    idDoor: door.id
+                })
+            }
+        } else {
+            setOrder({
+                ...order,
+                decor: textureRu[index],
+                amount: countProduct,
+                img: img[index],
+                idDoor: door.id
+            })
+        }
     }
 
     const hideAlert = () => {
@@ -303,8 +337,11 @@ const Product = () => {
                                     {img.map((elem) => (
                                         <div className="card card-product">
                                             <figure className="card-image">
-                                                <div onClick={() => {addFavor()}} className="action"><i className="icon-heart"></i></div>
-                                                <img className="img-product" itemprop="image" src={`https://dveri-arsenal.ru:444/static/images/doors/${elem}`}/>
+                                                <div onClick={() => {
+                                                    addFavor()
+                                                }} className="action"><i className="icon-heart"></i></div>
+                                                <img className="img-product" itemprop="image"
+                                                     src={`https://dveri-arsenal.ru:444/static/images/doors/${elem}`}/>
                                             </figure>
                                         </div>
                                     ))}
@@ -326,11 +363,13 @@ const Product = () => {
                                     </div>
                                 </div>
                                 {((door.category === '1' || door.category === '4' || door.category === '5' || door.category === '9') && (
-                                    <AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>))
-                                || ((door.category === '2' || door.category === '3' || door.category === '6') && (
-                                    <AdditionCat2 door={door} soldCheckbox={soldCheckbox}/>))
-                                || ((door.category === '7' && (<AdditionCat3 door={door} soldCheckbox={soldCheckbox}/>)))
-                                || ((door.category === '8' && (<AdditionCat4 door={door} soldCheckbox={soldCheckbox}/>)))}
+                                        <AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>))
+                                    || ((door.category === '2' || door.category === '3' || door.category === '6') && (
+                                        <AdditionCat2 door={door} soldCheckbox={soldCheckbox}/>))
+                                    || ((door.category === '7' && (
+                                        <AdditionCat3 door={door} soldCheckbox={soldCheckbox}/>)))
+                                    || ((door.category === '8' && (
+                                        <AdditionCat4 door={door} soldCheckbox={soldCheckbox}/>)))}
 
                                 <div className="row gutter-2">
                                     <div className="col-12">
