@@ -5,21 +5,9 @@ const AdditionCat3 = ({soldCheckbox, door}) => {
     const [priceNalich, setPriceNalich] = useState(0);
     const [priceDobor, setPriceDobor] = useState(0);
     useEffect(() => {
-        if (door.id === 63 || door.id === 64) {
-            setPriceBox(1500);
-            setPriceNalich(1500);
-            setPriceDobor(700);
-        }
-        else if (door.id === 65) {
-            setPriceBox(1300);
-            setPriceNalich(1400);
-            setPriceDobor(700);
-        }
-        else {
-            setPriceBox(1000);
-            setPriceNalich(1000);
-            setPriceDobor(700);
-        }
+        setPriceBox(1500);
+        setPriceNalich(1500);
+        setPriceDobor(700);
     }, [door])
     return (
         <div>
