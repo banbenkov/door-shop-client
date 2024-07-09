@@ -9,6 +9,10 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
             setPriceBox(2800);
             setPriceNalich(2300);
             setPriceDobor(1000);
+        } else if (door.id === 103 || door.id === 104){
+            setPriceBox(2200);
+            setPriceNalich(2200);
+            setPriceDobor(700);
         } else {
             setPriceBox(2000);
             setPriceNalich(2000);
