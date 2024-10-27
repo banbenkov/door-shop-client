@@ -22293,7 +22293,7 @@ div.code-toolbar > .toolbar span:focus {
 /*    border-radius: 100%;*/
 /*}*/
 
-
+/*texture*/
 .texture-beton {
     background-image: url("../../public/images/texture/beton.jpg") !important;
     border-radius: 100%;
@@ -22771,6 +22771,45 @@ div.code-toolbar > .toolbar span:focus {
 }
 
 .texture-temni-lak::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-muar-svetli{
+    background-image: url("../../public/images/texture/muar-svetli.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-muar-svetli::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-muar-svetli{
+    background-image: url("../../public/images/texture/muar-svetli.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-muar-svetli::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-vanil{
+    background-image: url("../../public/images/texture/vanil.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-vanil::after {
     content: '\e937' !important;
     font-family: 'icomoon';
     font-size: 1.45rem;
