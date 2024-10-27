@@ -36,7 +36,7 @@ const SideBar = () => {
             <CatalogMenu />
 
             <div className="widget">
-                <span className="widget-title">Фтльтры <a onClick={() => clickClear()} className="small text-red">очистить</a></span>
+                <span className="widget-title">Фильтры<a onClick={() => clickClear()} className="small text-red">очистить</a></span>
                 <div className="accordion" id="accordion-1">
 
                     <div className="card">
