@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from '../css/style.css'
+import {Swiper, SwiperSlide} from "swiper/react";
+import LightGallery from "lightgallery/react";
+
 
 const Post = () => {
     return (
@@ -42,25 +45,49 @@ const Post = () => {
                             округе, так и в средней полосе России.</p>
                     </div>
                 </div>
-
                 <div className="col-lg-8">
                     <div className="bg-white">
                         <div className="row">
-                            <div className="col-4">
-                                <div className="card-image">
-                                    <img src="images/demo/ser1.jpg" alt="Image" />
-                                </div>
-                            </div>
-                            <div className="col-4">
-                                <div className="card-image">
-                                    <img src="images/demo/ser2.jpg" alt="Image" />
-                                </div>
-                            </div>
+                            <Swiper
+                                slidesPerView={3}
+                                spaceBetween={10}
+                                freeMode={true}
+                                pagination={{
+                                    clickable: false,
+                                }}
+                                className="mySwiper"
+                            >
+                                <SwiperSlide>
+                                    <LightGallery mode="lg-fade">
+                                        <a data-src="images/demo/ser3.jpg">
+                                            <img
+                                                src="images/demo/ser3.jpg" alt="Сертификат соответствия"
+                                            />
+                                        </a>
+                                    </LightGallery>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <LightGallery mode="lg-fade">
+                                        <a data-src="images/demo/ser1.jpg">
+                                            <img
+                                                src="images/demo/ser1.jpg" alt="Сертификат соответствия"
+                                            />
+                                        </a>
+                                    </LightGallery>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <LightGallery mode="lg-fade">
+                                        <a data-src="images/demo/ser2.jpg">
+                                            <img
+                                                src="images/demo/ser2.jpg" alt="Сертификат соответствия"
+                                            />
+                                        </a>
+                                    </LightGallery>
+                                </SwiperSlide>
+                            </Swiper>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     );
