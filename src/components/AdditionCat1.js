@@ -5,6 +5,7 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
     const [priceNalich, setPriceNalich] = useState(0);
     const [priceDobor, setPriceDobor] = useState(0);
     const [priceAssemBlock, setAssemBlock] = useState(0);
+    const [priceInset, setInset] = useState(0);
     useEffect(() => {
         switch (door.category) {
             case '1' || '4':
@@ -12,24 +13,28 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                 setPriceNalich(1000);
                 setPriceDobor(700);
                 setAssemBlock(1000);
+                setInset(1000);
                 break
             case '5':
                 setPriceBox(2500);
                 setPriceNalich(2500);
                 setPriceDobor(700);
-                setAssemBlock(1500);
+                setAssemBlock(1000);
+                setInset(1500);
                 break
             case '9':
                 setPriceBox(1200);
                 setPriceNalich(1200);
                 setPriceDobor(500);
-                setAssemBlock(1000)
+                setAssemBlock(1000);
+                setInset(1000);
                 break
             default:
                 setPriceBox(1000);
                 setPriceNalich(1000);
                 setPriceDobor(700);
                 setAssemBlock(1000);
+                setInset(1000);
         }
     }, [])
 
@@ -61,11 +66,11 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
             </div>
             <div className="custom-control custom-checkbox mb-1">
                 <input
-                    onChange={e => soldCheckbox(e, 1000, 'Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1000₽')}
+                    onChange={e => soldCheckbox(e, priceInset, `Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-${priceInset}₽`)}
                     type="checkbox"
                     className="custom-control-input" id="customCheck4"/>
                 <label className="custom-control-label" htmlFor="customCheck4">
-                    Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-1000₽
+                    Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт)-{priceInset}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
