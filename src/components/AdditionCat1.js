@@ -8,7 +8,14 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
     const [priceInset, setInset] = useState(0);
     useEffect(() => {
         switch (door.category) {
-            case '1' || '4':
+            case '1':
+                setPriceBox(1500);
+                setPriceNalich(1500);
+                setPriceDobor(700);
+                setAssemBlock(1000);
+                setInset(1500);
+                break
+            case '4':
                 setPriceBox(1000);
                 setPriceNalich(1000);
                 setPriceDobor(700);
@@ -23,11 +30,11 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                 setInset(1500);
                 break
             case '9':
-                setPriceBox(1200);
-                setPriceNalich(1200);
+                setPriceBox(1500);
+                setPriceNalich(1500);
                 setPriceDobor(500);
                 setAssemBlock(1000);
-                setInset(1000);
+                setInset(1500);
                 break
             default:
                 setPriceBox(1000);
