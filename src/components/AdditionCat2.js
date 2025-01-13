@@ -4,19 +4,31 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
     const [priceBox, setPriceBox] = useState(0);
     const [priceNalich, setPriceNalich] = useState(0);
     const [priceDobor, setPriceDobor] = useState(0);
+    const [priceAssemBlock, setAssemBlock] = useState(0);
     useEffect(() => {
         if (door.id === 59) {
             setPriceBox(2800);
             setPriceNalich(2300);
             setPriceDobor(1000);
-        } else if (door.id === 103 || door.id === 104){
+            setAssemBlock(1000)
+        } else if (door.id === 103 || door.id === 104) {
             setPriceBox(2200);
             setPriceNalich(2200);
             setPriceDobor(700);
-        } else {
+            setAssemBlock(1000)
+        }
+        else {
             setPriceBox(2000);
             setPriceNalich(2000);
             setPriceDobor(700);
+            setAssemBlock(1000)
+        }
+
+        if (door.category === '2' || door.category === '6') {
+            setPriceBox(2500);
+            setPriceNalich(2500);
+            setPriceDobor(700);
+            setAssemBlock(1500)
         }
     }, [door])
 
@@ -56,10 +68,10 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 1000, 'Сборка в блок-1000₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, priceAssemBlock, `Сборка в блок-${priceAssemBlock}₽`)} type="checkbox"
                        className="custom-control-input" id="customCheck5"/>
                 <label className="custom-control-label" htmlFor="customCheck5">
-                    Сборка в блок-1000₽
+                    Сборка в блок-{priceAssemBlock}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
