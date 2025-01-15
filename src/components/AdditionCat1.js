@@ -120,10 +120,10 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 1400, 'Доставка по городу до парадной-1400₽')} type="checkbox"
+                <input onChange={e => soldCheckbox(e, 1500, 'Доставка по городу до парадной-1500₽')} type="checkbox"
                        className="custom-control-input" id="customCheck10"/>
                 <label className="custom-control-label" htmlFor="customCheck10">
-                    Доставка по городу до парадной-1400₽
+                    Доставка по городу до парадной-1500₽
                 </label>
             </div>
         </div>
