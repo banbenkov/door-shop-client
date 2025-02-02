@@ -7,7 +7,7 @@ const PolicyText = () => {
         <div className="container mt-5 mb-5">
             <div className="row justify-content-center gutter-1">
                 <div className="col-lg-8">
-                    <div className="bg-white p-4">
+                    <div className="bg-white p-2">
                         <h2>Политика конфиденциальности</h2>
                         <p><b>1. Общие положения</b>
                             <br/>
