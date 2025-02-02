@@ -16,7 +16,7 @@ import {
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
     INDEX_ROUTE,
-    PORTFOLIO_ROUTE
+    PORTFOLIO_ROUTE, PRIVACY_POLICY
 } from "../utils/consts";
 import masterCard from "../img/master-card-1.svg";
 import mir from "../img/mir.svg";
@@ -137,6 +137,10 @@ const Footer = () => {
                             <h6 className="fs-14 text-white m-0"><i
                                 className="bi bi-mailbox mr-1 text-opaque"></i>
                                 <span>arsenalstroy_08@mail.ru</span>
+                            </h6>
+                            <h6 className="fs-14 text-white m-0"><i
+                                className="bi bi-card-list mr-1 text-opaque"></i>
+                                <span><NavLink to={PRIVACY_POLICY}><u>Политика конфиденциальности</u></NavLink></span>
                             </h6>
                         </div>
                         <ul className="list list--horizontal mt-2">

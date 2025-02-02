@@ -23148,6 +23148,11 @@ label-texture {
     display: none;
 }
 
+.ulDot {
+    list-style: inside;
+    padding: 3px;
+}
+
 @media (min-width: 360px) {
     .align-items-mm-center {
         align-items: center !important;

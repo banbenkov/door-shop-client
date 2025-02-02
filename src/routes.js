@@ -15,7 +15,7 @@ import {
     CATEGORY_SOSNA_ROUTE,
     CATEGORY_DUB_ROUTE,
     SEARCH,
-    FAVORITES, CATEGORY_EKOSHPON_LIGHT_ROUTE
+    FAVORITES, CATEGORY_EKOSHPON_LIGHT_ROUTE, PRIVACY_POLICY
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -26,6 +26,7 @@ import CatalogFurniture from "./pages/CatalogFurniture";
 import FurniturePage from "./pages/FurniturePage";
 import Portfolio from "./pages/Portfolio";
 import FavoritesPage from "./pages/FavoritesPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export const publicRoutes = [
     {
@@ -44,6 +45,10 @@ export const publicRoutes = [
     {
         path: ABOUT_ROUTE,
         Component: <About/>
+    },
+    {
+        path: PRIVACY_POLICY,
+        Component: <PrivacyPolicy/>
     },
     {
         path: CONTACTS_ROUTE,
