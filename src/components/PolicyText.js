@@ -8,7 +8,7 @@ const PolicyText = () => {
             <div className="row justify-content-center gutter-1">
                 <div className="col-lg-8">
                     <div className="bg-white p-4">
-                        <h2 className="text-uppercase">Политика конфиденциальности</h2>
+                        <h2>Политика конфиденциальности</h2>
                         <p><b>1. Общие положения</b>
                             <br/>
                             Настоящая Политика конфиденциальности (далее — "Политика") определяет порядок обработки и защиты персональных данных пользователей сайта https://dveri-arsenal.ru/ (далее — "Сайт").
