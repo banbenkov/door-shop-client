@@ -22,7 +22,14 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                 setAssemBlock(1000);
                 setInset(1000);
                 break
-            case '5' || '10':
+            case '5':
+                setPriceBox(2500);
+                setPriceNalich(2500);
+                setPriceDobor(700);
+                setAssemBlock(1000);
+                setInset(1500);
+                break
+            case '10':
                 setPriceBox(2500);
                 setPriceNalich(2500);
                 setPriceDobor(700);
