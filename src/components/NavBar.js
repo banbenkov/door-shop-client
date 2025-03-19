@@ -13,7 +13,7 @@ import {
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE, FAVORITES,
-    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH, CATEGORY_EKOSHPON_LIGHT_ROUTE
+    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI
 } from "../utils/consts";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
@@ -95,48 +95,80 @@ const NavBar = () => {
                                     <div className="container">
                                         <div className="row gutter-2">
                                             <div className="col-lg-2">
-                                                <span onClick={() => {dispatch({type: 'START_PAGE'})}} className="eyebrow text-muted mb-1">Межкомнатные двери</span>
+                                                <span onClick={() => {
+                                                    dispatch({type: 'START_PAGE'})
+                                                }} className="eyebrow text-muted mb-1">Межкомнатные двери</span>
                                                 <ul className="menu-list">
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink
                                                         to={CATEGORY_3D_ROUTE}
                                                         className="menu-list-link">3D покрытие</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
-                                                                                            className="menu-list-link">Экошпон</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_ROUTE}
+                                                                                           className="menu-list-link">Экошпон</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
-                                                                                                                                             className="menu-list-link">Экошпон лайт</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink
+                                                        to={CATEGORY_EKOSHPON_LIGHT_ROUTE}
+                                                        className="menu-list-link">Экошпон лайт</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
-                                                                                            className="menu-list-link">Белые
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
+                                                                                           className="menu-list-link">Белые
                                                         двери</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
-                                                                                            className="menu-list-link">Классика</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
+                                                                                           className="menu-list-link">Классика</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
-                                                                                            className="menu-list-link">Эмаль</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
+                                                                                           className="menu-list-link">Эмаль</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
-                                                                                            className="menu-list-link">Эмалит</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
+                                                                                           className="menu-list-link">Эмалит</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_SOSNA_ROUTE}
-                                                                                            className="menu-list-link">Массив сосны</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_SOSNA_ROUTE}
+                                                                                           className="menu-list-link">Массив сосны</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_DUB_ROUTE}
-                                                                                            className="menu-list-link">Массив дуба</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_DUB_ROUTE}
+                                                                                           className="menu-list-link">Массив дуба</NavLink>
+                                                    </li>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_GRAFFITI}
+                                                                                           className="menu-list-link">Граффити</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="col-lg-2">
                                                 <span className="eyebrow text-muted mb-1">Фурнитура</span>
                                                 <ul className="menu-list">
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE}
-                                                                                      className="menu-list-link">Дверные
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink
+                                                        to={CATEGORY_FURNITURE_DOORHANDLE_ROUTE}
+                                                        className="menu-list-link">Дверные
                                                         ручки</NavLink>
                                                     </li>
-                                                    <li onClick={() => {dispatch({type: 'START_PAGE'})}} className="menu-list-item"><NavLink to={CATEGORY_FURNITURE_LATCH_ROUTE}
-                                                                                      className="menu-list-link">Замки</NavLink>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink
+                                                        to={CATEGORY_FURNITURE_LATCH_ROUTE}
+                                                        className="menu-list-link">Замки</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -180,11 +212,18 @@ const NavBar = () => {
                                     <i className="icon-search d-none d-lg-inline-block"></i>
                                     <span className="d-inline-block d-lg-none">Поиск</span>
                                 </a>
-                                <div className={`dropdown-menu ${collapseMenuMob && 'show'}`} aria-labelledby="navbarDropdown-4">
+                                <div className={`dropdown-menu ${collapseMenuMob && 'show'}`}
+                                     aria-labelledby="navbarDropdown-4">
                                     <div className="input-group">
                                         <input type="text" className="form-control" id="searchForm"
-                                               placeholder="Поиск" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-                                        <NavLink to={SEARCH} state={{from: searchText}}><button onClick={() => {dispatch({type: 'START_PAGE'})}} className="btn btn-secondary">Искать</button></NavLink>
+                                               placeholder="Поиск" value={searchText}
+                                               onChange={(e) => setSearchText(e.target.value)}/>
+                                        <NavLink to={SEARCH} state={{from: searchText}}>
+                                            <button onClick={() => {
+                                                dispatch({type: 'START_PAGE'})
+                                            }} className="btn btn-secondary">Искать
+                                            </button>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </li>
@@ -250,9 +289,10 @@ const NavBar = () => {
                                         </div>
                                         <div className="col-12">
                                             {favorDoors.length === 0 ? 'Нет избранных товаров' : favorDoors.map((elem, index) =>
-                                                   index < 2 && (<div className="cart-item" key={index}>
+                                                    index < 2 && (<div className="cart-item" key={index}>
                                                         <NavLink to={`../doors/${elem.id}`} className="cart-item-image"><img
-                                                            src={`https://dveri-arsenal.ru:444/static/images/doors/${elem.img.split(';')[0]}`} alt="Image" /></NavLink>
+                                                            src={`https://dveri-arsenal.ru:444/static/images/doors/${elem.img.split(';')[0]}`}
+                                                            alt="Image"/></NavLink>
                                                         <div className="cart-item-body">
                                                             <div className="row">
                                                                 <div className="col-9">
@@ -264,7 +304,9 @@ const NavBar = () => {
                                                                 </div>
                                                                 <div className="col-3 text-right">
                                                                     <ul className="cart-item-options">
-                                                                        <a onClick={() => {delFavor(elem.id)}} className="action"><i className="icon-x"></i></a>
+                                                                        <a onClick={() => {
+                                                                            delFavor(elem.id)
+                                                                        }} className="action"><i className="icon-x"></i></a>
                                                                     </ul>
                                                                 </div>
                                                             </div>

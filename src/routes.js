@@ -15,7 +15,7 @@ import {
     CATEGORY_SOSNA_ROUTE,
     CATEGORY_DUB_ROUTE,
     SEARCH,
-    FAVORITES, CATEGORY_EKOSHPON_LIGHT_ROUTE, PRIVACY_POLICY
+    FAVORITES, CATEGORY_EKOSHPON_LIGHT_ROUTE, PRIVACY_POLICY, CATEGORY_GRAFFITI
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -79,8 +79,8 @@ export const publicRoutes = [
         Component: <Catalog />
     },
     {
-      path: CATEGORY_EMALIT_ROUTE,
-      Component: <Catalog />
+        path: CATEGORY_EMALIT_ROUTE,
+        Component: <Catalog />
     },
     {
         path: CATEGORY_SOSNA_ROUTE,
@@ -90,10 +90,14 @@ export const publicRoutes = [
         path: CATEGORY_DUB_ROUTE,
         Component: <Catalog />
     },
-     {
+    {
+        path: CATEGORY_GRAFFITI,
+        Component: <Catalog />
+    },
+    {
          path: CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
          Component: <CatalogFurniture />
-     },
+    },
     {
         path: CATEGORY_FURNITURE_DOORHANDLE_ROUTE + '/:id',
         Component: <FurniturePage />
