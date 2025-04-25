@@ -120,7 +120,7 @@ const Product = () => {
 
     const soldCheckbox = ({target: {checked}}, value, addition) => {
         if (checked === true) {
-            if (addition !== 'Доставка по городу до парадной-1400₽') {
+            if (addition !== 'Доставка по городу до парадной-1500₽') {
                 setAdditionalPrice(additionalPrice + value);
                 setGeneralPrice(generalPrice + value * countProduct);
             } else {

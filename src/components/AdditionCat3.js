@@ -5,10 +5,17 @@ const AdditionCat3 = ({soldCheckbox, door}) => {
     const [priceNalich, setPriceNalich] = useState(0);
     const [priceDobor, setPriceDobor] = useState(0);
     useEffect(() => {
-        setPriceBox(1500);
-        setPriceNalich(1500);
-        setPriceDobor(700);
-    }, [door])
+        if (door.id === 95 || door.id === 102
+            || door.id === 93 || door.id === 94) {
+            setPriceBox(2500);
+            setPriceNalich(2500);
+            setPriceDobor(700);
+        } else {
+            setPriceBox(1500);
+            setPriceNalich(1500);
+            setPriceDobor(700);
+        }
+    }, [door]);
     return (
         <div>
             <div className="custom-control custom-checkbox mb-1">
