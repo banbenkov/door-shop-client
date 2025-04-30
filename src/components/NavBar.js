@@ -122,11 +122,11 @@ const NavBar = () => {
                                                                                            className="menu-list-link">Белые
                                                         двери</NavLink>
                                                     </li>
-                                                    <li onClick={() => {
-                                                        dispatch({type: 'START_PAGE'})
-                                                    }} className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
-                                                                                           className="menu-list-link">Классика</NavLink>
-                                                    </li>
+                                                    {/*<li onClick={() => {*/}
+                                                    {/*    dispatch({type: 'START_PAGE'})*/}
+                                                    {/*}} className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}*/}
+                                                    {/*                                       className="menu-list-link">Классика</NavLink>*/}
+                                                    {/*</li>*/}
                                                     <li onClick={() => {
                                                         dispatch({type: 'START_PAGE'})
                                                     }} className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}

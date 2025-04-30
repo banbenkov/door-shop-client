@@ -83,8 +83,8 @@ const Footer = () => {
                                                                             className="menu-list-link">Экошпон лайт</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CATEGORY_WHITE_ROUTE}
                                                                             className="menu-list-link">Белые двери</NavLink></li>
-                                    <li className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}
-                                                                            className="menu-list-link">Классика</NavLink></li>
+                                    {/*<li className="menu-list-item"><NavLink to={CATEGORY_CLASSIC_ROUTE}*/}
+                                    {/*                                        className="menu-list-link">Классика</NavLink></li>*/}
                                     <li className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
                                                                             className="menu-list-link">Эмаль</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}

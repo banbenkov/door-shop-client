@@ -25,7 +25,7 @@ const Card = ({door}) => {
                     <div onClick={() => {addFavor()}} className="action"><i className="icon-heart"></i></div>
                     <NavLink to={`../doors/${door.id}`}>
                         <img itemprop="image" class="img-card" src={`https://dveri-arsenal.ru:444/static/images/doors/${doorImg1}`} alt="Image"/>
-                        {doorImg2 !== '' && (<img class="img-card" src={`https://dveri-arsenal.ru:444/static/images/doors/${doorImg2}`} alt="Image"/>)}
+                        {/*{doorImg2 !== '' && (<img class="img-card" src={`https://dveri-arsenal.ru:444/static/images/doors/${doorImg2}`} alt="Image"/>)}*/}
                     </NavLink>
                     {door.isNew && (<span className="badge badge-success">Новое</span>)}
 

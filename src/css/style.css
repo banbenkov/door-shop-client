@@ -22836,6 +22836,11 @@ div.code-toolbar > .toolbar span:focus {
 }
 
 @media (min-width: 360px) { .img-card {
+    width: 95%;
+    height: 400px;
+} }
+
+@media (min-width: 500px) { .img-card {
     width: 85%;
     height: 400px;
 } }

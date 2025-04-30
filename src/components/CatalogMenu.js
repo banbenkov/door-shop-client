@@ -50,9 +50,9 @@ const CatalogMenu = () => {
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_WHITE_ROUTE}>Белые двери</NavLink>
                                 </li>
-                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                    <NavLink className="nav-link" to={CATEGORY_CLASSIC_ROUTE}>Классика</NavLink>
-                                </li>
+                                {/*<li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>*/}
+                                {/*    <NavLink className="nav-link" to={CATEGORY_CLASSIC_ROUTE}>Классика</NavLink>*/}
+                                {/*</li>*/}
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_EMAL_ROUTE}>Эмаль</NavLink>
                                 </li>
