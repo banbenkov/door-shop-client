@@ -22852,7 +22852,7 @@ div.code-toolbar > .toolbar span:focus {
 
 @media (max-width: 575px) {
     .img-carousel {
-        height: 400px;
+        height: 240px;
     }
 }
 
@@ -22864,7 +22864,7 @@ div.code-toolbar > .toolbar span:focus {
 
 @media (min-width: 768px) {
     .img-carousel {
-        height: 600px;
+        height: 500px;
     }
 }
 
