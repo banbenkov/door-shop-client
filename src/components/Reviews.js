@@ -11,8 +11,8 @@ const Reviews = () => {
                         <h2>Отзывы клиентов</h2>
                     </div>
                     <div className="col-4 col-md-6 text-right">
-                        <a href='https://www.avito.ru/sankt-peterburg/remont_i_stroitelstvo/dveri_mezhkomnatnye_1256978277#open-reviews-list'
-                           className="underlined">Посмотреть все отзывы</a>
+                        {/*<a href='https://www.avito.ru/sankt-peterburg/remont_i_stroitelstvo/dveri_mezhkomnatnye_1256978277#open-reviews-list'*/}
+                        {/*   className="underlined">Посмотреть все отзывы</a>*/}
                     </div>
                 </div>
                 <div className="row">

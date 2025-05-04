@@ -15,7 +15,7 @@ import {
     CONTACTS_ROUTE, FAVORITES,
     INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI
 } from "../utils/consts";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchDoor} from "../actions/door";
 import {useCookies} from "react-cookie";
@@ -29,13 +29,72 @@ const NavBar = () => {
 
     const [collapseMenu, setCollapseMenu] = useState(false);
     const [searchText, setSearchText] = useState('');
-    const [collapseMenuMob, setCollapseMenuMob] = useState(false)
+    const [collapseMenuMob, setCollapseMenuMob] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isOpenSearch, setIsOpenSearch] = useState(false);
+    const [isOpenFavorite, setIsOpenFavorite] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+    const hideTimeoutCatalog = useRef(null);
+    const hideTimeoutSearch = useRef(null);
+    const hideTimeoutFavorite = useRef(null);
     const location = useLocation();
     const showModal = useSelector(state => state.modal.show);
     const favorDoors = useSelector(state => state.favorDoors.doors);
 
+    const handleMouseEnter = () => {
+        if (isDesktop) {
+            clearTimeout(hideTimeoutCatalog.current);
+            setIsOpen(true);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (isDesktop) {
+            hideTimeoutCatalog.current = setTimeout(() => {
+                setIsOpen(false);
+            }, 300);
+        }
+    };
+
+    const handleSearchMouseEnter = () => {
+        if (isDesktop) {
+            clearTimeout(hideTimeoutSearch.current);
+            setIsOpenSearch(true);
+        }
+    };
+
+    const handleSearchMouseLeave = () => {
+        if (isDesktop) {
+            hideTimeoutSearch.current = setTimeout(() => {
+                setIsOpenSearch(false);
+            }, 300);
+        }
+    };
+
+    const handleFavoriteMouseEnter = () => {
+        if (isDesktop) {
+            clearTimeout(hideTimeoutFavorite.current);
+            setIsOpenFavorite(true);
+        }
+    };
+
+    const handleFavoriteMouseLeave = () => {
+        if (isDesktop) {
+            hideTimeoutFavorite.current = setTimeout(() => {
+                setIsOpenFavorite(false);
+            }, 300);
+        }
+    };
+
     useEffect(() => {
         dispatch(fetchFavor(cookies.userId));
+
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth > 1199.98);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, [])
 
 
@@ -83,15 +142,28 @@ const NavBar = () => {
                                     Главная
                                 </NavLink>
                             </li>
-                            <li className="nav-item dropdown dropdown-lg dropdown-hover">
-                                <NavLink to={CATALOG_ROUTE} id="navbarDropdown-2"
-                                         role="button"
-                                         data-toggle="dropdown"
-                                         aria-haspopup="true" aria-expanded="false" activeClassName='curr'
-                                         className={({isActive}) => (isActive ? `nav-link ${!collapseMenu && 'dropdown-toggle'} text-red` : `nav-link ${!collapseMenu && 'dropdown-toggle'}`)}>
+                            <li
+                                className={`nav-item dropdown dropdown-lg dropdown-hover ${isOpen ? 'show' : ''}`}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <NavLink
+                                    to={CATALOG_ROUTE}
+                                    id="navbarDropdown-2"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded={isOpen ? 'true' : 'false'}
+                                    className={({ isActive }) =>
+                                        `nav-link ${!collapseMenu ? 'dropdown-toggle' : ''} ${isActive ? 'text-red curr' : ''}`
+                                    }
+                                >
                                     Каталог
                                 </NavLink>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown-2">
+
+                                <div
+                                    className={`dropdown-menu ${isOpen ? 'show' : ''}`}
+                                    aria-labelledby="navbarDropdown-2"
+                                >
                                     <div className="container">
                                         <div className="row gutter-2">
                                             <div className="col-lg-2">
@@ -204,7 +276,9 @@ const NavBar = () => {
                         <ul className="navbar-nav ml-auto position-relative">
 
                             {/*search*/}
-                            <li className={`nav-item dropdown dropdown-md dropdown-hover ${collapseMenuMob && 'show'}`}>
+                            <li className={`nav-item dropdown dropdown-md dropdown-hover ${isOpenSearch && 'show'} ${collapseMenuMob && 'showMobile'}`}
+                                onMouseEnter={handleSearchMouseEnter}
+                                onMouseLeave={handleSearchMouseLeave}>
                                 <a className="nav-icon dropdown-toggle" id="navbarDropdown-4" role="button"
                                    data-toggle="dropdown"
                                    aria-haspopup="true" aria-expanded={collapseMenuMob}
@@ -212,7 +286,7 @@ const NavBar = () => {
                                     <i className="icon-search d-none d-lg-inline-block"></i>
                                     <span className="d-inline-block d-lg-none">Поиск</span>
                                 </a>
-                                <div className={`dropdown-menu ${collapseMenuMob && 'show'}`}
+                                <div className={`dropdown-menu ${isOpenSearch && 'show'} ${collapseMenuMob && 'showMobile'}`}
                                      aria-labelledby="navbarDropdown-4">
                                     <div className="input-group">
                                         <input type="text" className="form-control" id="searchForm"
@@ -277,10 +351,12 @@ const NavBar = () => {
                             {/*</li>*/}
 
                             {/*favourites*/}
-                            <li className="d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover">
+                            <li className={`d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover ${isOpenFavorite && 'show'}`}
+                                onMouseEnter={handleFavoriteMouseEnter}
+                                onMouseLeave={handleFavoriteMouseLeave}>
                                 <a className="nav-icon" id="navbarDropdown-7" role="button" data-toggle="dropdown"
                                    aria-haspopup="true" aria-expanded="false"><i className="icon-heart"></i></a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown-7">
+                                <div className={`dropdown-menu ${isOpenFavorite && 'show'}`} aria-labelledby="navbarDropdown-7">
                                     <div className="row gutter-3">
                                         <div className="col-12">
                                             <h3 className="eyebrow text-dark fs-16 mb-1">Избранные товары</h3>

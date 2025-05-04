@@ -24,65 +24,72 @@ const Carousel = () => {
                         </div>
                     </div>
                 <Slider {...settings}>
-                        <div className="card card-product col-lg-10 ml-3">
+                        <div className="card card-product col-lg-10">
                             <figure className="card-image">
-                                <NavLink to="/doors/73">
-                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product73-1.jpg" alt="Image" />
-                                        <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product73-2.jpg" alt="Image" />
+                                <NavLink to="/doors/104">
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product104-1.jpg" alt="Image" />
                                 </NavLink>
 
                             </figure>
-                            <NavLink to="/doors/1" className="card-body">
-                                <h3 className="card-title">Урбан Лайт</h3>
-                                <span className="price">3100.00₽</span>
+                            <NavLink to="/doors/104" className="card-body">
+                                <h3 className="card-title">Триумф ДО</h3>
+                                <span className="price">9500.00₽</span>
                             </NavLink>
 
                         </div>
-                        <div className="card card-product col-lg-10 ml-3">
+                        <div className="card card-product col-lg-10">
                             <figure className="card-image">
-                                <NavLink to="/doors/74">
-                                    <img className="img-carousel" src="	https://dveri-arsenal.ru:444/static/images/doors/product74-1.jpg" alt="Image" />
-                                    <img className="img-carousel" src="	https://dveri-arsenal.ru:444/static/images/doors/product74-2.jpg" alt="Image" />
+                                <NavLink to="/doors/120">
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product120-1.jpg" alt="Image" />
                                 </NavLink>
                             </figure>
-                            <NavLink to="/doors/22" className="card-body">
-                                <h3 className="card-title">Гранд Лайт</h3>
-                                <span className="price">3500.00₽</span>
+                            <NavLink to="/doors/120" className="card-body">
+                                <h3 className="card-title">Каскад (зеркало)</h3>
+                                <span className="price">6000.00₽</span>
                             </NavLink>
                         </div>
-                        <div className="card card-product col-lg-10 ml-3">
+                        <div className="card card-product col-lg-10">
                             <figure className="card-image">
-                                <NavLink to="/doors/75">
-                                    <img className="img-carousel" src="	https://dveri-arsenal.ru:444/static/images/doors/product75-1.jpg" alt="Image" />
-                                    <img className="img-carousel" src="	https://dveri-arsenal.ru:444/static/images/doors/product75-2.jpg" alt="Image" />
+                                <NavLink to="/doors/121">
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product121-1.jpg" alt="Image" />
                                 </NavLink>
                             </figure>
-                            <NavLink to="/doors/13" className="card-body">
-                                <h3 className="card-title">Меркурий лайт</h3>
-                                <span className="price">3300.00₽</span>
+                            <NavLink to="/doors/121" className="card-body">
+                                <h3 className="card-title">Горизонталь ДО</h3>
+                                <span className="price">4100.00₽</span>
                             </NavLink>
                         </div>
-                    <div className="card card-product col-lg-10 ml-3">
+                    <div className="card card-product col-lg-10">
                         <figure className="card-image">
-                            <NavLink to="/doors/60">
-                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product60-1.jpg" alt="Image" />
+                            <NavLink to="/doors/112">
+                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product112-1.jpg" alt="Image" />
                             </NavLink>
                         </figure>
-                        <NavLink to="/doors/16" className="card-body">
-                            <h3 className="card-title">Скандинавия</h3>
-                            <span className="price">3500.00₽</span>
+                        <NavLink to="/doors/112" className="card-body">
+                            <h3 className="card-title">Нордик 1</h3>
+                            <span className="price">11000.00₽</span>
                         </NavLink>
                     </div>
-                    <div className="card card-product col-lg-10 ml-3">
+                    <div className="card card-product col-lg-10">
                         <figure className="card-image">
-                            <NavLink to="/doors/46">
-                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product46-1.jpg" alt="Image" />
-                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product46-2.jpg" alt="Image" />
+                            <NavLink to="/doors/113">
+                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product113-1.jpg" alt="Image" />
                             </NavLink>
                         </figure>
-                        <NavLink to="/doors/16" className="card-body">
-                            <h3 className="card-title">Прима 3 ДГ</h3>
-                            <span className="price">5500.00₽</span>
+                        <NavLink to="/doors/113" className="card-body">
+                            <h3 className="card-title">Нордик 2</h3>
+                            <span className="price">11000.00₽</span>
+                        </NavLink>
+                    </div>
+                    <div className="card card-product col-lg-10">
+                        <figure className="card-image">
+                            <NavLink to="/doors/114">
+                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product114-1.jpg" alt="Image" />
+                            </NavLink>
+                        </figure>
+                        <NavLink to="/doors/114" className="card-body">
+                            <h3 className="card-title">Нордик 3</h3>
+                            <span className="price">11000.00₽</span>
                         </NavLink>
                     </div>
                 </Slider>
