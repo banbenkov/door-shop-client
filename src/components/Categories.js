@@ -24,8 +24,8 @@ const Categories = () => {
                                 <div className="equal">
                                     <span className="image">
                                         <img
-                                            src="https://dveri-arsenal.ru:444/static/images/doors/product24-1.jpg"
-                                            alt="Белые двери"
+                                            src="https://dveri-arsenal.ru:444/static/images/doors/product89-4.jpg"
+                                            alt="Экошпон лайт"
                                             width="300"
                                             height="300"
                                             decoding="async"
@@ -43,8 +43,8 @@ const Categories = () => {
                                 <div className="equal">
                                     <span className="image">
                                         <img
-                                            src="https://dveri-arsenal.ru:444/static/images/doors/product22-4.jpg"
-                                            alt="Белые двери"
+                                            src="https://dveri-arsenal.ru:444/static/images/doors/product104-1.jpg"
+                                            alt="Экошпон"
                                             width="300"
                                             height="300"
                                             decoding="async"
@@ -62,7 +62,7 @@ const Categories = () => {
                                 <div className="equal">
                                     <span className="image">
                                         <img
-                                            src="https://dveri-arsenal.ru:444/static/images/doors/product24-1.jpg"
+                                            src="https://dveri-arsenal.ru:444/static/images/doors/product60-1.jpg"
                                             alt="Белые двери"
                                             width="300"
                                             height="300"
@@ -82,7 +82,7 @@ const Categories = () => {
                                     <span className="image">
                                         <img
                                             src="https://dveri-arsenal.ru:444/static/images/doors/product106-1.jpg"
-                                            alt="Белые двери"
+                                            alt="Эмалит"
                                             width="300"
                                             height="300"
                                             decoding="async"
