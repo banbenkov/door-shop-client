@@ -21,8 +21,17 @@ const Categories = () => {
                     <div className="col-6 col-lg-3">
                         <NavLink to='/ekoshpon-light'>
                             <figure className="category category--alt">
-                                <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product8-3.jpg)`}}></span>
+                                <div className="equal">
+                                    <span className="image">
+                                        <img
+                                            src="https://dveri-arsenal.ru:444/static/images/doors/product24-1.jpg"
+                                            alt="Белые двери"
+                                            width="300"
+                                            height="300"
+                                            decoding="async"
+                                            style={{objectFit: 'cover', width: '100%', height: '100%'}}
+                                        />
+                                    </span>
                                 </div>
                                 <figcaption>Экошпон лайт</figcaption>
                             </figure>
@@ -31,8 +40,17 @@ const Categories = () => {
                     <div className="col-6 col-lg-3">
                         <NavLink to='/ekoshpon'>
                             <figure className="category category--alt">
-                                <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product22-4.jpg)`}}></span>
+                                <div className="equal">
+                                    <span className="image">
+                                        <img
+                                            src="https://dveri-arsenal.ru:444/static/images/doors/product22-4.jpg"
+                                            alt="Белые двери"
+                                            width="300"
+                                            height="300"
+                                            decoding="async"
+                                            style={{objectFit: 'cover', width: '100%', height: '100%'}}
+                                        />
+                                    </span>
                                 </div>
                                 <figcaption>Экошпон</figcaption>
                             </figure>
@@ -41,8 +59,17 @@ const Categories = () => {
                     <div className="col-6 col-lg-3">
                         <NavLink to='/white'>
                             <figure className="category category--alt">
-                                <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product24-1.jpg)`}}></span>
+                                <div className="equal">
+                                    <span className="image">
+                                        <img
+                                            src="https://dveri-arsenal.ru:444/static/images/doors/product24-1.jpg"
+                                            alt="Белые двери"
+                                            width="300"
+                                            height="300"
+                                            decoding="async"
+                                            style={{objectFit: 'cover', width: '100%', height: '100%'}}
+                                        />
+                                    </span>
                                 </div>
                                 <figcaption>Белые двери</figcaption>
                             </figure>
@@ -51,8 +78,17 @@ const Categories = () => {
                     <div className="col-6 col-lg-3">
                         <NavLink to={CATEGORY_EMALIT_ROUTE}>
                             <figure className="category category--alt">
-                                <div className="equal"><span className="image"
-                                                             style={{backgroundImage: `url(https://dveri-arsenal.ru:444/static/images/doors/product106-1.jpg)`}}></span>
+                                <div className="equal">
+                                    <span className="image">
+                                        <img
+                                            src="https://dveri-arsenal.ru:444/static/images/doors/product106-1.jpg"
+                                            alt="Белые двери"
+                                            width="300"
+                                            height="300"
+                                            decoding="async"
+                                            style={{objectFit: 'cover', width: '100%', height: '100%'}}
+                                        />
+                                    </span>
                                 </div>
                                 <figcaption>Эмалит</figcaption>
                             </figure>
