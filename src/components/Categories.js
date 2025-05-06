@@ -28,7 +28,7 @@ const Categories = () => {
                                             alt="Экошпон лайт"
                                             width="300"
                                             height="300"
-                                            decoding="async"
+                                            fetchPriority="high"
                                             style={{objectFit: 'cover', width: '100%', height: '100%'}}
                                         />
                                     </span>
@@ -47,7 +47,7 @@ const Categories = () => {
                                             alt="Экошпон"
                                             width="300"
                                             height="300"
-                                            decoding="async"
+                                            fetchPriority="high"
                                             style={{objectFit: 'cover', width: '100%', height: '100%'}}
                                         />
                                     </span>
@@ -66,7 +66,7 @@ const Categories = () => {
                                             alt="Белые двери"
                                             width="300"
                                             height="300"
-                                            decoding="async"
+                                            fetchPriority="high"
                                             style={{objectFit: 'cover', width: '100%', height: '100%'}}
                                         />
                                     </span>
@@ -85,7 +85,7 @@ const Categories = () => {
                                             alt="Эмалит"
                                             width="300"
                                             height="300"
-                                            decoding="async"
+                                            fetchPriority="high"
                                             style={{objectFit: 'cover', width: '100%', height: '100%'}}
                                         />
                                     </span>
