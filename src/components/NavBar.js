@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from '../css/style.css';
 import {NavLink, useLocation} from "react-router-dom";
-import logo from '../img/logo.png'
+import logo from '../img/logo.webp'
 import {
     ABOUT_ROUTE,
     CATALOG_ROUTE,
