@@ -22818,6 +22818,32 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-bezhevi{
+    background-image: url("../../public/images/texture/bezhevi.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-bezhevi::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.texture-mokko{
+    background-image: url("../../public/images/texture/mokko.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-mokko::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 .slick-prev:before,
 .slick-next:before {
     color: #4d4646;
