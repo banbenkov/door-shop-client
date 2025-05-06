@@ -192,14 +192,14 @@ const Content = () => {
 
                             <li>
                       <span>Сортировать по
-                      <span className={collapse === true ? 'dropdown show' : 'dropdown'}>
+                      <span className={collapse === true ? 'dropdown showMobile' : 'dropdown'}>
                         <a onClick={() => {
                             clickDropDown()
                         }} className="dropdown-toggle underline" role="button" id="dropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {sort ? ' Цене' : ' Популярности'}
                         </a>
-                        <span className={collapse === true ? 'dropdown-menu show' : 'dropdown-menu'}
+                        <span className={collapse === true ? 'dropdown-menu dropdown-menu-sort' : 'dropdown-menu'}
                               aria-labelledby="dropdownMenuLink">
                           <a onClick={() => {
                               clickSort()
