@@ -25,7 +25,7 @@ const Swiper = () => {
                         clickable: true,
                     }}
                     autoplay={{
-                        delay: 350000,
+                        delay: 4000,
                         disableOnInteraction: false,
                     }}
                     navigation={false}
