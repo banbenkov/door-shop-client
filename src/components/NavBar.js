@@ -20,6 +20,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchDoor} from "../actions/door";
 import {useCookies} from "react-cookie";
 import {deleteFavor, fetchFavor} from "../actions/favor";
+import {priceFormatter} from "../utils/formatter";
 
 
 const NavBar = () => {
@@ -375,7 +376,7 @@ const NavBar = () => {
                                                                     <h5 className="cart-item-title">{elem.title}</h5>
                                                                     {/*<small>Межкомнатная дверь</small>*/}
                                                                     <ul className="list list--horizontal fs-14">
-                                                                        <li>{elem.price}</li>
+                                                                        <li>{priceFormatter(elem.price, 0)}</li>
                                                                     </ul>
                                                                 </div>
                                                                 <div className="col-3 text-right">

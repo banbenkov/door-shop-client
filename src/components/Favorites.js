@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {NavLink} from "react-router-dom";
 import {deleteFavor} from "../actions/favor";
 import {useCookies} from "react-cookie";
+import {priceFormatter} from "../utils/formatter";
 
 const Favorites = () => {
     const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const Favorites = () => {
                                                         <div className="card-footer">
                                                             <h3 className="card-title"><a href="">{elem.title}</a>
                                                             </h3>
-                                                            <span className="price">{elem.price}₽</span>
+                                                            <span className="price">{priceFormatter(elem.price, 0)}₽</span>
                                                         </div>
                                                     </div>
                                                     <NavLink to={`../doors/${elem.id}`} className="btn btn-primary btn-block">Посмотреть</NavLink>
