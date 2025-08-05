@@ -105,7 +105,6 @@ const NavBar = () => {
 
     return (
         <header className="header">
-            {location.pathname === '/' && (
                 <div className="py-1 bg-dark">
                     <div className="container">
                         <div className="row">
@@ -121,13 +120,13 @@ const NavBar = () => {
                             </div>
                             <div className="col-md-4">
                                 <h6 className="fs-14 text-uppercase text-center text-white m-0"><i
-                                    className="bi bi-telephone mr-1 text-opaque"></i>+7 (812) 985-94-58</h6>
+                                    className="bi bi-telephone mr-1 text-opaque"></i><a href="tel:+78129859458">+7 (812) 985-94-58</a></h6>
                             </div>
 
 
                         </div>
                     </div>
-                </div>)}
+                </div>
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <NavLink to={INDEX_ROUTE} className="navbar-brand order-1 order-lg-2"><img src={logo}

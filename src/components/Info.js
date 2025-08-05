@@ -18,7 +18,7 @@ const Info = () => {
                                 <div className="card-body text-center">
                                     <i className="icon-phone-call fs-40 mb-4"></i>
                                     <h3 className="mb-1">Позвоните нам</h3>
-                                    <span className="fs-18 text-dark">+7 (812) 985-94-58</span>
+                                    <span className="fs-18 text-dark"><a href="tel:+78129859458">+7 (812) 985-94-58</a></span>
                                     <p className="mt-1">Понедельник - Пятница 8:00-21:00</p>
                                 </div>
                             </div>

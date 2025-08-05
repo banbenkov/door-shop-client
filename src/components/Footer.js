@@ -127,13 +127,13 @@ const Footer = () => {
                             </h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="bi bi-telephone mr-1 text-opaque"></i>
-                                <span itemProp="telephone">+7 (812) 985-94-58</span></h6>
+                                <span itemProp="telephone"><a href="tel:+78129859458">+7 (812) 985-94-58</a></span></h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="mr-3 text-opaque"></i>
-                                <span itemProp="telephone">+7 (812) 332-45-40</span></h6>
+                                <span itemProp="telephone"><a href="tel:+78123324540">+7 (812) 332-45-40</a></span></h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="mr-3 text-opaque"></i>
-                                <span itemProp="telephone">+7 (905) 223-39-39</span></h6>
+                                <span itemProp="telephone"><a href="tel:+79052233939">+7 (905) 223-39-39</a></span></h6>
                             <h6 className="fs-14 text-white m-0"><i
                                 className="bi bi-mailbox mr-1 text-opaque"></i>
                                 <span>arsenalstroy_08@mail.ru</span>
