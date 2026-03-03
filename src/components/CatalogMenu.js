@@ -9,7 +9,7 @@ import {
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI
+    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC
 } from "../utils/consts";
 import {useParams} from "react-router";
 import {useDispatch} from "react-redux";
@@ -63,10 +63,10 @@ const CatalogMenu = () => {
                                     <NavLink className="nav-link" to={CATEGORY_SOSNA_ROUTE}>Массив сосны</NavLink>
                                 </li>
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                    <NavLink className="nav-link" to={CATEGORY_DUB_ROUTE}>Массив дуба</NavLink>
+                                    <NavLink className="nav-link" to={CATEGORY_GRAFFITI}>Граффити</NavLink>
                                 </li>
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
-                                    <NavLink className="nav-link" to={CATEGORY_GRAFFITI}>Граффити</NavLink>
+                                    <NavLink className="nav-link" to={CATEGORY_ABC}>Экошпон в АБС кромке</NavLink>
                                 </li>
                             </ul>
                         </div>

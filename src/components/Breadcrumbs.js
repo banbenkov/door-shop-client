@@ -8,7 +8,7 @@ import {
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI
+    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
@@ -74,11 +74,6 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_SOSNA_ROUTE;
                     orderName = door.title;
                     break;
-                case '8':
-                    nameCategoryDoor = 'Массив дуба';
-                    linkCategoryDoor = CATEGORY_DUB_ROUTE;
-                    orderName = door.title;
-                    break;
                 case '9':
                     nameCategoryDoor = 'Экошпон лайт';
                     linkCategoryDoor = CATEGORY_EKOSHPON_LIGHT_ROUTE;
@@ -87,6 +82,11 @@ const Breadcrumbs = () => {
                 case '10':
                     nameCategoryDoor = 'Граффити';
                     linkCategoryDoor = CATEGORY_GRAFFITI;
+                    orderName = door.title;
+                    break;
+                case '11':
+                    nameCategoryDoor = 'Экошпон в АБС кромке';
+                    linkCategoryDoor = CATEGORY_ABC;
                     orderName = door.title;
                     break;
                 default:
@@ -137,10 +137,6 @@ const Breadcrumbs = () => {
             nameCategory = 'Массив сосны';
             linkCategory = CATEGORY_SOSNA_ROUTE;
             break;
-        case CATEGORY_DUB_ROUTE:
-            nameCategory = 'Массив дуба';
-            linkCategory = CATEGORY_DUB_ROUTE;
-            break;
         case CATEGORY_EKOSHPON_LIGHT_ROUTE:
             nameCategory = 'Экошпон лайт';
             linkCategory = CATEGORY_EKOSHPON_LIGHT_ROUTE;
@@ -148,6 +144,10 @@ const Breadcrumbs = () => {
         case CATEGORY_GRAFFITI:
             nameCategory = 'Граффити';
             linkCategory = CATEGORY_GRAFFITI;
+            break;
+        case CATEGORY_ABC:
+            nameCategory = 'Экошпон в АБС кромке';
+            linkCategory = CATEGORY_ABC;
             break;
         default:
             nameCategory = 'Все двери';

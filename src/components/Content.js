@@ -8,7 +8,7 @@ import {
     CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
     CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI
+    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC
 } from "../utils/consts";
 import Loading from "./Loading";
 import {priceFormatter} from "../utils/formatter";
@@ -97,13 +97,6 @@ const Content = () => {
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Массив сосны';
                     break;
-                case CATEGORY_DUB_ROUTE:
-                    doors = doorsFetch.filter(door => door.category === '8'
-                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
-                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
-                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
-                    categoryName = 'Массив дуба';
-                    break;
                 case CATEGORY_EKOSHPON_LIGHT_ROUTE:
                     doors = doorsFetch.filter(door => door.category === '9'
                         && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
@@ -117,6 +110,13 @@ const Content = () => {
                         && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Граффити';
+                    break;
+                case CATEGORY_ABC:
+                    doors = doorsFetch.filter(door => door.category === '11'
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Экошпон в АБС кромке';
                     break;
                 default:
                     doors = doorsFetch.filter(door => priceFormatter(door.price, 0) >= priceFilter.currMinPrice

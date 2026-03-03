@@ -39,6 +39,19 @@ const Carousel = () => {
                         </div>
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
+                                <NavLink to="/doors/130">
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product130-1.jpg" alt="Image" />
+                                </NavLink>
+
+                            </figure>
+                            <NavLink to="/doors/130" className="card-body">
+                                <h3 className="card-title">Лавр 1</h3>
+                                <span className="price">8500.00₽</span>
+                            </NavLink>
+
+                        </div>
+                        <div className="card card-product col-lg-10">
+                            <figure className="card-image">
                                 <NavLink to="/doors/120">
                                     <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product120-1.jpg" alt="Image" />
                                 </NavLink>

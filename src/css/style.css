@@ -22533,6 +22533,19 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-dub-svetli-abc {
+    background-image: url("../../public/images/texture/dub-svetli-abc.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-dub-svetli-abc::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 .texture-milan-oreh {
     background-image: url("../../public/images/texture/milan-oreh.jpg") !important;
     border-radius: 100%;

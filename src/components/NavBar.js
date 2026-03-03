@@ -13,7 +13,7 @@ import {
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE, FAVORITES,
-    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI
+    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC
 } from "../utils/consts";
 import {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
@@ -216,13 +216,18 @@ const NavBar = () => {
                                                     </li>
                                                     <li onClick={() => {
                                                         dispatch({type: 'START_PAGE'})
-                                                    }} className="menu-list-item"><NavLink to={CATEGORY_DUB_ROUTE}
-                                                                                           className="menu-list-link">Массив дуба</NavLink>
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_GRAFFITI}
+                                                                                           className="menu-list-link">Граффити</NavLink>
                                                     </li>
                                                     <li onClick={() => {
                                                         dispatch({type: 'START_PAGE'})
                                                     }} className="menu-list-item"><NavLink to={CATEGORY_GRAFFITI}
                                                                                            className="menu-list-link">Граффити</NavLink>
+                                                    </li>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_ABC}
+                                                                                           className="menu-list-link">Экошпон в АБС кромке</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>
