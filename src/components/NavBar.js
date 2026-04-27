@@ -5,15 +5,25 @@ import logo from '../img/logo.webp'
 import {
     ABOUT_ROUTE,
     CATALOG_ROUTE,
-    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_DUB_ROUTE,
     CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
-    CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE,
+    CATEGORY_EMAL_ROUTE,
+    CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
-    CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
+    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
-    CONTACTS_ROUTE, FAVORITES,
-    INDEX_ROUTE, PORTFOLIO_ROUTE, SEARCH, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC
+    CONTACTS_ROUTE,
+    FAVORITES,
+    INDEX_ROUTE,
+    PORTFOLIO_ROUTE,
+    SEARCH,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_GRAFFITI,
+    CATEGORY_ABC,
+    CATEGORY_EMAL_BUDGET_ROUTE
 } from "../utils/consts";
 import {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
@@ -203,6 +213,11 @@ const NavBar = () => {
                                                         dispatch({type: 'START_PAGE'})
                                                     }} className="menu-list-item"><NavLink to={CATEGORY_EMAL_ROUTE}
                                                                                            className="menu-list-link">Эмаль</NavLink>
+                                                    </li>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_EMAL_BUDGET_ROUTE}
+                                                                                           className="menu-list-link">Эмаль бюджет</NavLink>
                                                     </li>
                                                     <li onClick={() => {
                                                         dispatch({type: 'START_PAGE'})

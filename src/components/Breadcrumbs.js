@@ -8,7 +8,7 @@ import {
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
     CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC
+    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC, CATEGORY_EMAL_BUDGET_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
@@ -89,6 +89,10 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_ABC;
                     orderName = door.title;
                     break;
+                case '12':
+                    nameCategoryDoor = 'Эмаль бюджет';
+                    linkCategoryDoor = CATEGORY_EMAL_BUDGET_ROUTE;
+                    orderName = door.title;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'
@@ -148,6 +152,10 @@ const Breadcrumbs = () => {
         case CATEGORY_ABC:
             nameCategory = 'Экошпон в АБС кромке';
             linkCategory = CATEGORY_ABC;
+            break;
+        case CATEGORY_EMAL_BUDGET_ROUTE:
+            nameCategory = 'Эмаль бюджет';
+            linkCategory = CATEGORY_EMAL_BUDGET_ROUTE;
             break;
         default:
             nameCategory = 'Все двери';

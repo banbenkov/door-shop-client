@@ -22871,6 +22871,19 @@ div.code-toolbar > .toolbar span:focus {
     opacity: 1;
 }
 
+.texture-shampan{
+    background-image: url("../../public/images/texture/shampan.jpg") !important;
+    border-radius: 100%;
+}
+
+.texture-shampan::after {
+    content: '\e937' !important;
+    font-family: 'icomoon';
+    font-size: 1.45rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 .slick-prev:before,
 .slick-next:before {
     color: #4d4646;

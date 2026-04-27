@@ -15,7 +15,12 @@ import {
     CATEGORY_SOSNA_ROUTE,
     CATEGORY_DUB_ROUTE,
     SEARCH,
-    FAVORITES, CATEGORY_EKOSHPON_LIGHT_ROUTE, PRIVACY_POLICY, CATEGORY_GRAFFITI, CATEGORY_ABC
+    FAVORITES,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    PRIVACY_POLICY,
+    CATEGORY_GRAFFITI,
+    CATEGORY_ABC,
+    CATEGORY_EMAL_BUDGET_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -78,6 +83,10 @@ export const publicRoutes = [
         path: CATEGORY_EMAL_ROUTE,
         Component: <Catalog />
     },
+    {
+        path: CATEGORY_EMAL_BUDGET_ROUTE,
+        Component: <Catalog />
+    }
     {
         path: CATEGORY_EMALIT_ROUTE,
         Component: <Catalog />
