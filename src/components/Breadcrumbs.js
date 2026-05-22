@@ -93,6 +93,7 @@ const Breadcrumbs = () => {
                     nameCategoryDoor = 'Эмаль бюджет';
                     linkCategoryDoor = CATEGORY_EMAL_BUDGET_ROUTE;
                     orderName = door.title;
+                    break;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'

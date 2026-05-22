@@ -86,7 +86,7 @@ export const publicRoutes = [
     {
         path: CATEGORY_EMAL_BUDGET_ROUTE,
         Component: <Catalog />
-    }
+    },
     {
         path: CATEGORY_EMALIT_ROUTE,
         Component: <Catalog />

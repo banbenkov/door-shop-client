@@ -362,7 +362,7 @@ const Product = () => {
                                 </span>
                                     </div>
                                 </div>
-                                {((door.category === '1' || door.category === '4' || door.category === '5' || door.category === '9' || door.category === '10') && (
+                                {((door.category === '1' || door.category === '4' || door.category === '5' || door.category === '9' || door.category === '10' || door.category === '12') && (
                                         <AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>))
                                     || ((door.category === '2' || door.category === '3' || door.category === '6' || door.category === '11') && (
                                         <AdditionCat2 door={door} soldCheckbox={soldCheckbox}/>))
