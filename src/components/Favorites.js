@@ -40,7 +40,7 @@ const Favorites = () => {
                                                         <figure className="card-image">
                                                             <div onClick={() => {delFavor(elem.id)}} className="action"><i className="icon-x"></i></div>
                                                             <NavLink to={`../doors/${elem.id}`}>
-                                                                <img className="img-card-favor" src={`https://dveri-arsenal.ru:444/static/images/doors/${elem.img.split(';')[0]}`}
+                                                                <img className="img-card-favor" src={`https://191.44.38.17:444/static/images/doors/${elem.img.split(';')[0]}`}
                                                                      alt="Image"/>
                                                             </NavLink>
                                                         </figure>

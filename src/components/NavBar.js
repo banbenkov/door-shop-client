@@ -387,7 +387,7 @@ const NavBar = () => {
                                             {favorDoors.length === 0 ? 'Нет избранных товаров' : favorDoors.map((elem, index) =>
                                                     index < 2 && (<div className="cart-item" key={index}>
                                                         <NavLink to={`../doors/${elem.id}`} className="cart-item-image"><img
-                                                            src={`https://dveri-arsenal.ru:444/static/images/doors/${elem.img.split(';')[0]}`}
+                                                            src={`https://191.44.38.17:444/static/images/doors/${elem.img.split(';')[0]}`}
                                                             alt="Image"/></NavLink>
                                                         <div className="cart-item-body">
                                                             <div className="row">
