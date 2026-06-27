@@ -6,7 +6,7 @@ export const fetchPicture = () => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_PICTURES'})
-            const response = await axios.get(`https://dveri-arsenal.ru:444/portfolio`)
+            const response = await axios.get(`https://191.44.38.17:444/portfolio`)
             dispatch({type: 'FETCH_PICTURES_SUCCESS', payload: response.data})
         } catch (e) {
             dispatch({
@@ -21,7 +21,7 @@ export const fetchPicturesForDoor = (doorId) => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_PICTURES'})
-            const response = await axios.get(`https://dveri-arsenal.ru:444/portfolio/${doorId}`)
+            const response = await axios.get(`https://191.44.38.17:444/portfolio/${doorId}`)
             dispatch({type: 'FETCH_PICTURES_SUCCESS', payload: response.data})
         } catch (e) {
             dispatch({
