@@ -7,7 +7,7 @@ export const fetchDoors = () => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_DOORS'})
-            const response = await axios.get(`https://191.44.38.17:444/door`)
+            const response = await axios.get(`https://dveri-arsenal.ru:444/door`)
             response.data.forEach(elem => {
                 if (min > priceFormatter(elem.price,0)|| min === 0) {
                     min = priceFormatter(elem.price,0);
@@ -35,7 +35,7 @@ export const fetchDoor = (id) => {
         try {
             dispatch({type: 'FETCH_DOOR_DETAIL'})
             dispatch({type: 'FETCH_DOOR_IMAGE'})
-            const response = await axios.get(`https://191.44.38.17:444/door/${id}`)
+            const response = await axios.get(`https://dveri-arsenal.ru:444/door/${id}`)
             if (response.data.img.indexOf(';') !== -1) {
                 imgArr = response.data.img.split(';')
                 img = imgArr.map((elem) => {

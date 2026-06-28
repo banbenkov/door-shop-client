@@ -27,12 +27,12 @@ const Gallery = () => {
                         {pictures.map((item) => (
                             <a
                                 className="gallery-item"
-                                data-src={'https://191.44.38.17:444/' + 'static/' + item.src}
+                                data-src={'https://dveri-arsenal.ru:444/' + 'static/' + item.src}
                                 data-sub-html={item.html}
                             >
                                 <img
                                     className="img-responsive"
-                                    src={'https://191.44.38.17:444/' + 'static/' + item.src}
+                                    src={'https://dveri-arsenal.ru:444/' + 'static/' + item.src}
                                 />
                             </a>
                         ))}

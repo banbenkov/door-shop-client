@@ -341,7 +341,7 @@ const Product = () => {
                                                     addFavor()
                                                 }} className="action"><i className="icon-heart"></i></div>
                                                 <img className="img-product" itemprop="image"
-                                                     src={`https://191.44.38.17:444/static/images/doors/${elem}`}/>
+                                                     src={`https://dveri-arsenal.ru:444/static/images/doors/${elem}`}/>
                                             </figure>
                                         </div>
                                     ))}

@@ -27,7 +27,7 @@ const Carousel = () => {
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <NavLink to="/doors/104">
-                                    <img className="img-carousel" src="https://191.44.38.17:444/static/images/doors/product104-1.jpg" alt="Image" />
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product104-1.jpg" alt="Image" />
                                 </NavLink>
 
                             </figure>
@@ -40,7 +40,7 @@ const Carousel = () => {
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <NavLink to="/doors/130">
-                                    <img className="img-carousel" src="https://191.44.38.17:444/static/images/doors/product130-1.jpg" alt="Image" />
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product130-1.jpg" alt="Image" />
                                 </NavLink>
 
                             </figure>
@@ -53,7 +53,7 @@ const Carousel = () => {
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <NavLink to="/doors/120">
-                                    <img className="img-carousel" src="https://191.44.38.17:444/static/images/doors/product120-1.jpg" alt="Image" />
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product120-1.jpg" alt="Image" />
                                 </NavLink>
                             </figure>
                             <NavLink to="/doors/120" className="card-body">
@@ -64,7 +64,7 @@ const Carousel = () => {
                         <div className="card card-product col-lg-10">
                             <figure className="card-image">
                                 <NavLink to="/doors/121">
-                                    <img className="img-carousel" src="https://191.44.38.17:444/static/images/doors/product121-1.jpg" alt="Image" />
+                                    <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product121-1.jpg" alt="Image" />
                                 </NavLink>
                             </figure>
                             <NavLink to="/doors/121" className="card-body">
@@ -75,7 +75,7 @@ const Carousel = () => {
                     <div className="card card-product col-lg-10">
                         <figure className="card-image">
                             <NavLink to="/doors/112">
-                                <img className="img-carousel" src="https://191.44.38.17:444/static/images/doors/product112-1.jpg" alt="Image" />
+                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product112-1.jpg" alt="Image" />
                             </NavLink>
                         </figure>
                         <NavLink to="/doors/112" className="card-body">
@@ -86,7 +86,7 @@ const Carousel = () => {
                     <div className="card card-product col-lg-10">
                         <figure className="card-image">
                             <NavLink to="/doors/113">
-                                <img className="img-carousel" src="https://191.44.38.17:444/static/images/doors/product113-1.jpg" alt="Image" />
+                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product113-1.jpg" alt="Image" />
                             </NavLink>
                         </figure>
                         <NavLink to="/doors/113" className="card-body">
@@ -97,7 +97,7 @@ const Carousel = () => {
                     <div className="card card-product col-lg-10">
                         <figure className="card-image">
                             <NavLink to="/doors/114">
-                                <img className="img-carousel" src="https://191.44.38.17:444/static/images/doors/product114-1.jpg" alt="Image" />
+                                <img className="img-carousel" src="https://dveri-arsenal.ru:444/static/images/doors/product114-1.jpg" alt="Image" />
                             </NavLink>
                         </figure>
                         <NavLink to="/doors/114" className="card-body">
