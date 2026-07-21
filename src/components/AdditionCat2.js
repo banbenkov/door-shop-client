@@ -28,9 +28,17 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
             setInset(1000);
         }
 
-        if (door.category === '2' || door.category === '6' || door.category === '11') {
+        if (door.category === '11') {
             setPriceBox(2500);
             setPriceNalich(2500);
+            setPriceDobor(700);
+            setAssemBlock(1000);
+            setInset(1500);
+        }
+
+        if (door.category === '2' || door.category === '6') {
+            setPriceBox(2500);
+            setPriceNalich(3000);
             setPriceDobor(700);
             setAssemBlock(1000);
             setInset(1500);
