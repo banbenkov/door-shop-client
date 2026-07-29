@@ -5,10 +5,19 @@ import {fetchDoors} from "../actions/door";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation, useParams, useHistory} from "react-router-dom";
 import {
-    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_DUB_ROUTE,
     CATEGORY_3D_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_ROUTE, CATEGORY_EMALIT_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC, CATEGORY_EMAL_BUDGET_ROUTE
+    CATEGORY_EKOSHPON_ROUTE,
+    CATEGORY_EMAL_ROUTE,
+    CATEGORY_EMALIT_ROUTE,
+    CATEGORY_SOSNA_ROUTE,
+    CATEGORY_WHITE_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_GRAFFITI,
+    CATEGORY_ABC,
+    CATEGORY_EMAL_BUDGET_ROUTE,
+    CATEGORY_PET
 } from "../utils/consts";
 import Loading from "./Loading";
 import {priceFormatter} from "../utils/formatter";
@@ -124,6 +133,13 @@ const Content = () => {
                         && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Эмаль бюджет';
+                    break;
+                case CATEGORY_PET:
+                    doors = doorsFetch.filter(door => door.category === '13'
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'ПЭТ в алюминиевой кромке';
                     break;
                 default:
                     doors = doorsFetch.filter(door => priceFormatter(door.price, 0) >= priceFilter.currMinPrice

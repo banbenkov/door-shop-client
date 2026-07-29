@@ -20,7 +20,7 @@ import {
     PRIVACY_POLICY,
     CATEGORY_GRAFFITI,
     CATEGORY_ABC,
-    CATEGORY_EMAL_BUDGET_ROUTE
+    CATEGORY_EMAL_BUDGET_ROUTE, CATEGORY_PET
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -105,6 +105,10 @@ export const publicRoutes = [
     },
     {
         path: CATEGORY_ABC,
+        Component: <Catalog />
+    },
+    {
+        path: CATEGORY_PET,
         Component: <Catalog />
     },
     {

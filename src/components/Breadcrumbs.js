@@ -1,14 +1,21 @@
 import React, {useEffect} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
 import {
-    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_DUB_ROUTE,
     CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
-    CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC, CATEGORY_EMAL_BUDGET_ROUTE
+    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_SOSNA_ROUTE,
+    CATEGORY_WHITE_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_GRAFFITI,
+    CATEGORY_ABC,
+    CATEGORY_EMAL_BUDGET_ROUTE,
+    CATEGORY_PET
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
@@ -94,6 +101,11 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_EMAL_BUDGET_ROUTE;
                     orderName = door.title;
                     break;
+                case '13':
+                    nameCategoryDoor = 'ПЭТ в алюминиевой кромке';
+                    linkCategoryDoor = CATEGORY_PET;
+                    orderName = door.title;
+                    break;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'
@@ -158,10 +170,13 @@ const Breadcrumbs = () => {
             nameCategory = 'Эмаль бюджет';
             linkCategory = CATEGORY_EMAL_BUDGET_ROUTE;
             break;
+        case CATEGORY_PET:
+            nameCategory = 'ПЭТ в алюминиевой кромке';
+            linkCategory = CATEGORY_PET;
+            break;
         default:
             nameCategory = 'Все двери';
             linkCategory = '/doors';
-
     }
 
 

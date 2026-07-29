@@ -23,7 +23,7 @@ import {
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
     CATEGORY_GRAFFITI,
     CATEGORY_ABC,
-    CATEGORY_EMAL_BUDGET_ROUTE
+    CATEGORY_EMAL_BUDGET_ROUTE, CATEGORY_PET
 } from "../utils/consts";
 import {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
@@ -223,6 +223,11 @@ const NavBar = () => {
                                                         dispatch({type: 'START_PAGE'})
                                                     }} className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
                                                                                            className="menu-list-link">Эмалит</NavLink>
+                                                    </li>
+                                                    <li onClick={() => {
+                                                        dispatch({type: 'START_PAGE'})
+                                                    }} className="menu-list-item"><NavLink to={CATEGORY_PET}
+                                                                                           className="menu-list-link">ПЭТ в алюминиевой кромке</NavLink>
                                                     </li>
                                                     <li onClick={() => {
                                                         dispatch({type: 'START_PAGE'})

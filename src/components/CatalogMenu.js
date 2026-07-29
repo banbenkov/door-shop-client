@@ -2,14 +2,21 @@ import React, {useEffect, useState} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
 import {
     CATALOG_ROUTE,
-    CATEGORY_CLASSIC_ROUTE, CATEGORY_DUB_ROUTE,
+    CATEGORY_CLASSIC_ROUTE,
+    CATEGORY_DUB_ROUTE,
     CATEGORY_3D_ROUTE,
     CATEGORY_EKOSHPON_ROUTE,
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE,
-    CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_SOSNA_ROUTE,
-    CATEGORY_WHITE_ROUTE, CATEGORY_EKOSHPON_LIGHT_ROUTE, CATEGORY_GRAFFITI, CATEGORY_ABC, CATEGORY_EMAL_BUDGET_ROUTE
+    CATEGORY_FURNITURE_LATCH_ROUTE,
+    CATEGORY_SOSNA_ROUTE,
+    CATEGORY_WHITE_ROUTE,
+    CATEGORY_EKOSHPON_LIGHT_ROUTE,
+    CATEGORY_GRAFFITI,
+    CATEGORY_ABC,
+    CATEGORY_EMAL_BUDGET_ROUTE,
+    CATEGORY_PET
 } from "../utils/consts";
 import {useParams} from "react-router";
 import {useDispatch} from "react-redux";
@@ -61,6 +68,9 @@ const CatalogMenu = () => {
                                 </li>
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_EMALIT_ROUTE}>Эмалит</NavLink>
+                                </li>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                    <NavLink className="nav-link" to={CATEGORY_PET}>ПЭТ в алюминиевой кромке</NavLink>
                                 </li>
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_SOSNA_ROUTE}>Массив сосны</NavLink>
