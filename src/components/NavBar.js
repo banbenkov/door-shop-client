@@ -241,11 +241,6 @@ const NavBar = () => {
                                                     </li>
                                                     <li onClick={() => {
                                                         dispatch({type: 'START_PAGE'})
-                                                    }} className="menu-list-item"><NavLink to={CATEGORY_GRAFFITI}
-                                                                                           className="menu-list-link">Граффити</NavLink>
-                                                    </li>
-                                                    <li onClick={() => {
-                                                        dispatch({type: 'START_PAGE'})
                                                     }} className="menu-list-item"><NavLink to={CATEGORY_ABC}
                                                                                            className="menu-list-link">Экошпон в АБС кромке</NavLink>
                                                     </li>
