@@ -44,8 +44,8 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                 setInset(1500);
                 break
             case '12':
-                setPriceBox(1500);
-                setPriceNalich(1500);
+                setPriceBox(2000);
+                setPriceNalich(2000);
                 setPriceDobor(700);
                 setAssemBlock(1000);
                 setInset(1500);
