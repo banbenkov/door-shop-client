@@ -21,7 +21,7 @@ export const fetchDoorhandle = (id) => {
     return async dispatch => {
         try {
             dispatch({type: 'FETCH_FURNITURE_DETAIL'})
-            const response = await axios.get(`https://dveri-arsenal.ru.ru:444/doorhandle/${id}`)
+            const response = await axios.get(`https://dveri-arsenal.ru:444/doorhandle/${id}`)
             dispatch({type: 'FETCH_FURNITURE_DETAIL_SUCCESS', payload: response.data})
         } catch (e) {
             dispatch({
