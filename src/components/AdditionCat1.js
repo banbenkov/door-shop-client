@@ -94,11 +94,11 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
             </div>
             <div className="custom-control custom-checkbox mb-1">
                 <input
-                    onChange={e => soldCheckbox(e, priceInset, `Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт): ${priceInset}₽`)}
+                    onChange={e => soldCheckbox(e, priceInset, `Замок защелка с фиксацией "Morelli" под ручку + петли(Бабочка 2шт): ${priceInset}₽`)}
                     type="checkbox"
                     className="custom-control-input" id="customCheck4"/>
                 <label className="custom-control-label" htmlFor="customCheck4">
-                    Замок защелка с фиксацией "Avers" под ручку + петли(Бабочка 2шт): {priceInset}₽
+                    Замок защелка с фиксацией "Morelli" под ручку + петли(Бабочка 2шт): {priceInset}₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
@@ -110,19 +110,19 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
             </div>
             <div className="custom-control custom-checkbox mb-1">
                 <input
-                    onChange={e => soldCheckbox(e, 900, 'Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы: 900₽')}
+                    onChange={e => soldCheckbox(e, 900, 'Ручка "RUCETTI" (Испания) крепление на стяжках, не саморезы: 900₽')}
                     type="checkbox" className="custom-control-input"
                     id="customCheck6"/>
                 <label className="custom-control-label" htmlFor="customCheck6">
-                    Ручка "Code Deco" (Испания) крепление на стяжках, не саморезы: 900₽
+                    Ручка "RUCETTI" (Испания) крепление на стяжках, не саморезы: 900₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
-                <input onChange={e => soldCheckbox(e, 800, 'Завертка сантехника "Code Deco" (Испания) на стяжках: 800₽')}
+                <input onChange={e => soldCheckbox(e, 800, 'Завертка сантехника "RUCETTI" (Испания) на стяжках: 800₽')}
                        type="checkbox" className="custom-control-input"
                        id="customCheck7"/>
                 <label className="custom-control-label" htmlFor="customCheck7">
-                    Завертка сантехника "Code Deco" (Испания) на стяжках: 800₽
+                    Завертка сантехника "RUCETTI" (Испания) на стяжках: 800₽
                 </label>
             </div>
             <div className="custom-control custom-checkbox mb-1">
