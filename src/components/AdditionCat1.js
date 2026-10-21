@@ -51,11 +51,16 @@ const AdditionCat1 = ({soldCheckbox, door}) => {
                 setInset(1500);
                 break;
             case '13':
-                setPriceBox(2000);
-                setPriceNalich(2000);
+                setPriceBox(2500);
+                setPriceNalich(3000);
                 setPriceDobor(700);
                 setAssemBlock(1000);
                 setInset(1500);
+                //Исключение одна дверь
+                if (door.id === 136) {
+                    setPriceBox(2000);
+                    setPriceNalich(2000);
+                }
                 break;
             default:
                 setPriceBox(1000);
