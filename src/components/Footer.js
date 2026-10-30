@@ -11,7 +11,7 @@ import {
     CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_BUDGET_ROUTE,
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
-    CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_PET,
+    CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_PET, CATEGORY_SHPON_DUBA,
     CATEGORY_SOSNA_ROUTE,
     CATEGORY_WHITE_ROUTE,
     CONTACTS_ROUTE,
@@ -97,6 +97,8 @@ const Footer = () => {
                                                                             className="menu-list-link">Массив сосны</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CATEGORY_ABC}
                                                                             className="menu-list-link">Экошпон в АБС кромке</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_SHPON_DUBA}
+                                                                            className="menu-list-link">Шпон дуба</NavLink></li>
                                 </ul>
                             </div>
                         </div>

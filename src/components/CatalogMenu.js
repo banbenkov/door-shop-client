@@ -16,7 +16,7 @@ import {
     CATEGORY_GRAFFITI,
     CATEGORY_ABC,
     CATEGORY_EMAL_BUDGET_ROUTE,
-    CATEGORY_PET
+    CATEGORY_PET, CATEGORY_SHPON_DUBA
 } from "../utils/consts";
 import {useParams} from "react-router";
 import {useDispatch} from "react-redux";
@@ -80,6 +80,9 @@ const CatalogMenu = () => {
                                 </li>
                                 <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
                                     <NavLink className="nav-link" to={CATEGORY_ABC}>Экошпон в АБС кромке</NavLink>
+                                </li>
+                                <li onClick={() => {dispatch({type: 'START_PAGE'})}} className={({isActive}) => (isActive ? 'nav-item active' : 'nav-item')}>
+                                    <NavLink className="nav-link" to={CATEGORY_SHPON_DUBA}>Шпон дуба</NavLink>
                                 </li>
                             </ul>
                         </div>

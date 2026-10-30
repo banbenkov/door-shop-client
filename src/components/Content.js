@@ -17,7 +17,7 @@ import {
     CATEGORY_GRAFFITI,
     CATEGORY_ABC,
     CATEGORY_EMAL_BUDGET_ROUTE,
-    CATEGORY_PET
+    CATEGORY_PET, CATEGORY_SHPON_DUBA
 } from "../utils/consts";
 import Loading from "./Loading";
 import {priceFormatter} from "../utils/formatter";
@@ -140,6 +140,13 @@ const Content = () => {
                         && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'ПЭТ в алюминиевой кромке';
+                    break;
+                case CATEGORY_SHPON_DUBA:
+                    doors = doorsFetch.filter(door => door.category === '14'
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Шпон дуба';
                     break;
                 default:
                     doors = doorsFetch.filter(door => priceFormatter(door.price, 0) >= priceFilter.currMinPrice
