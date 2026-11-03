@@ -15,6 +15,7 @@ import Loading from "./Loading";
 import {useCookies} from "react-cookie";
 import {sendFavor} from "../actions/favor";
 import {priceFormatter} from "../utils/formatter";
+import AdditionCat5 from "./AdditionCat5";
 
 const Product = () => {
     const {id} = useParams();
@@ -120,7 +121,7 @@ const Product = () => {
 
     const soldCheckbox = ({target: {checked}}, value, addition) => {
         if (checked === true) {
-            if (addition !== 'Доставка по городу до парадной-1500₽') {
+            if (addition !== 'Доставка по городу до парадной: 3000₽') {
                 setAdditionalPrice(additionalPrice + value);
                 setGeneralPrice(generalPrice + value * countProduct);
             } else {
@@ -142,7 +143,7 @@ const Product = () => {
                 idDoor: door.id
             })
         } else {
-            if (addition !== 'Доставка по городу до парадной-1400₽') {
+            if (addition !== 'Доставка по городу до парадной: 3000₽') {
                 setAdditionalPrice(additionalPrice - value);
                 setGeneralPrice(generalPrice - value * countProduct);
             } else {
@@ -163,9 +164,9 @@ const Product = () => {
                 idDoor: door.id
             })
         }
-        if (addition === 'Доставка по городу до парадной-1400₽' && checked === true) {
+        if (addition === 'Доставка по городу до парадной: 3000₽' && checked === true) {
             setDelivery(true);
-        } else if (addition === 'Доставка по городу до парадной-1400₽' && checked === false) {
+        } else if (addition === 'Доставка по городу до парадной: 3000₽' && checked === false) {
             setDelivery(false);
         }
 
@@ -373,7 +374,9 @@ const Product = () => {
                                     || ((door.category === '7' && (
                                         <AdditionCat3 door={door} soldCheckbox={soldCheckbox}/>)))
                                     || ((door.category === '8' && (
-                                        <AdditionCat4 door={door} soldCheckbox={soldCheckbox}/>)))}
+                                        <AdditionCat4 door={door} soldCheckbox={soldCheckbox}/>)))
+                                    || ((door.category === '14' && (
+                                        <AdditionCat5 door={door} soldCheckbox={soldCheckbox}/>)))}
 
                                 <div className="row gutter-2">
                                     <div className="col-12">
