@@ -371,12 +371,12 @@ const Product = () => {
                                         <AdditionCat1 door={door} soldCheckbox={soldCheckbox}/>))
                                     || ((door.category === '2' || door.category === '3' || door.category === '6' || door.category === '11') && (
                                         <AdditionCat2 door={door} soldCheckbox={soldCheckbox}/>))
-                                    || ((door.category === '7' && (
-                                        <AdditionCat3 door={door} soldCheckbox={soldCheckbox}/>)))
-                                    || ((door.category === '8' && (
-                                        <AdditionCat4 door={door} soldCheckbox={soldCheckbox}/>)))
-                                    || ((door.category === '14' && (
-                                        <AdditionCat5 door={door} soldCheckbox={soldCheckbox}/>)))}
+                                    || ((door.category === '7' || door.category === '15') && (
+                                        <AdditionCat3 door={door} soldCheckbox={soldCheckbox}/>))
+                                    || (door.category === '8' && (
+                                        <AdditionCat4 door={door} soldCheckbox={soldCheckbox}/>))
+                                    || (door.category === '14' && (
+                                        <AdditionCat5 door={door} soldCheckbox={soldCheckbox}/>))}
 
                                 <div className="row gutter-2">
                                     <div className="col-12">

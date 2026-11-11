@@ -13,6 +13,10 @@ const AdditionCat3 = ({soldCheckbox, door}) => {
             setPriceBox(2500);
             setPriceNalich(3500);
             setPriceDobor(700);
+        } else if (door.category === '15') {
+            setPriceBox(3500);
+            setPriceNalich(3500);
+            setPriceDobor(700);
         }else {
             setPriceBox(2100);
             setPriceNalich(2500);

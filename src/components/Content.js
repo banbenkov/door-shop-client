@@ -17,7 +17,7 @@ import {
     CATEGORY_GRAFFITI,
     CATEGORY_ABC,
     CATEGORY_EMAL_BUDGET_ROUTE,
-    CATEGORY_PET, CATEGORY_SHPON_DUBA
+    CATEGORY_PET, CATEGORY_SHPON_DUBA, CATEGORY_EMAL_PREMIUM_ROUTE
 } from "../utils/consts";
 import Loading from "./Loading";
 import {priceFormatter} from "../utils/formatter";
@@ -133,6 +133,13 @@ const Content = () => {
                         && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
                         && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
                     categoryName = 'Эмаль бюджет';
+                    break;
+                case CATEGORY_EMAL_PREMIUM_ROUTE:
+                    doors = doorsFetch.filter(door => door.category === '15'
+                        && priceFormatter(door.price, 0) >= priceFilter.currMinPrice
+                        && priceFormatter(door.price, 0) <= priceFilter.currMaxPrice
+                        && ((viewFilter.dg && door.view === 1) || (viewFilter.do && door.view === 2)));
+                    categoryName = 'Эмаль премиум';
                     break;
                 case CATEGORY_PET:
                     doors = doorsFetch.filter(door => door.category === '13'

@@ -20,7 +20,7 @@ import {
     PRIVACY_POLICY,
     CATEGORY_GRAFFITI,
     CATEGORY_ABC,
-    CATEGORY_EMAL_BUDGET_ROUTE, CATEGORY_PET, CATEGORY_SHPON_DUBA
+    CATEGORY_EMAL_BUDGET_ROUTE, CATEGORY_PET, CATEGORY_SHPON_DUBA, CATEGORY_EMAL_PREMIUM_ROUTE
 } from "./utils/consts";
 import DoorPage from "./pages/DoorPage";
 import Index from "./pages/Index";
@@ -113,6 +113,10 @@ export const publicRoutes = [
     },
     {
         path: CATEGORY_SHPON_DUBA,
+        Component: <Catalog />
+    },
+    {
+        path: CATEGORY_EMAL_PREMIUM_ROUTE,
         Component: <Catalog />
     },
     {

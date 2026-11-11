@@ -8,7 +8,7 @@ import {
     CATEGORY_CLASSIC_ROUTE,
     CATEGORY_DUB_ROUTE,
     CATEGORY_EKOSHPON_LIGHT_ROUTE,
-    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_BUDGET_ROUTE,
+    CATEGORY_EKOSHPON_ROUTE, CATEGORY_EMAL_BUDGET_ROUTE, CATEGORY_EMAL_PREMIUM_ROUTE,
     CATEGORY_EMAL_ROUTE,
     CATEGORY_EMALIT_ROUTE,
     CATEGORY_FURNITURE_DOORHANDLE_ROUTE, CATEGORY_FURNITURE_LATCH_ROUTE, CATEGORY_PET, CATEGORY_SHPON_DUBA,
@@ -89,6 +89,8 @@ const Footer = () => {
                                                                             className="menu-list-link">Эмаль</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CATEGORY_EMAL_BUDGET_ROUTE}
                                                                             className="menu-list-link">Эмаль бюджет</NavLink></li>
+                                    <li className="menu-list-item"><NavLink to={CATEGORY_EMAL_PREMIUM_ROUTE}
+                                                                            className="menu-list-link">Эмаль премиум</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CATEGORY_EMALIT_ROUTE}
                                                                             className="menu-list-link">Эмалит</NavLink></li>
                                     <li className="menu-list-item"><NavLink to={CATEGORY_PET}

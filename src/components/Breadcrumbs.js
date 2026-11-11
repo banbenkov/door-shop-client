@@ -15,7 +15,7 @@ import {
     CATEGORY_GRAFFITI,
     CATEGORY_ABC,
     CATEGORY_EMAL_BUDGET_ROUTE,
-    CATEGORY_PET, CATEGORY_SHPON_DUBA
+    CATEGORY_PET, CATEGORY_SHPON_DUBA, CATEGORY_EMAL_PREMIUM_ROUTE
 } from "../utils/consts";
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
@@ -111,6 +111,11 @@ const Breadcrumbs = () => {
                     linkCategoryDoor = CATEGORY_SHPON_DUBA;
                     orderName = door.title;
                     break;
+                case '15':
+                    nameCategoryDoor = 'Эмаль премиум';
+                    linkCategoryDoor = CATEGORY_EMAL_PREMIUM_ROUTE;
+                    orderName = door.title;
+                    break;
                 default:
                     nameCategoryDoor = 'Все двери';
                     linkCategoryDoor = '/doors'
@@ -174,6 +179,10 @@ const Breadcrumbs = () => {
         case CATEGORY_EMAL_BUDGET_ROUTE:
             nameCategory = 'Эмаль бюджет';
             linkCategory = CATEGORY_EMAL_BUDGET_ROUTE;
+            break;
+        case CATEGORY_EMAL_PREMIUM_ROUTE:
+            nameCategory = 'Эмаль премиум';
+            linkCategory = CATEGORY_EMAL_PREMIUM_ROUTE;
             break;
         case CATEGORY_PET:
             nameCategory = 'ПЭТ в алюминиевой кромке';
