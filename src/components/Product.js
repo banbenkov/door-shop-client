@@ -485,7 +485,7 @@ const Product = () => {
                                                      data-parent="#accordion-1">
                                                     <div itemprop="description" className="card-body">
                                                         <ul className="list list--unordered">
-                                                            <li>Коробка МДФ: {door.kmdf} мм</li>
+                                                            <li>Коробка {`${door.category === '15' ? 'дерево' : 'МДФ'}`}: {door.kmdf} мм</li>
                                                             <li>Наличник МДФ: {door.nmdf} мм</li>
                                                             <li>Доборный брус МДФ: {door.dbmdf}</li>
                                                             <li>Толщина: {door.thickness}</li>
