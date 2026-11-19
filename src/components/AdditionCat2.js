@@ -43,6 +43,14 @@ const AdditionCat2 = ({soldCheckbox, door}) => {
             setAssemBlock(1000);
             setInset(1500);
         }
+
+        if (door.id === 144 || door.id === 145) {
+            setPriceBox(2000);
+            setPriceNalich(2000);
+            setPriceDobor(700);
+            setAssemBlock(1000);
+            setInset(1500);
+        }
     }, [door])
 
     return (
